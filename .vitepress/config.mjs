@@ -6,7 +6,7 @@ export default withMermaid(defineConfig({
 	description: "Цифрова Держава Суверенних Громадян",
 	lang: 'uk-UA',
 	// Якщо репозиторій називається 'willni', розкоментуй наступний рядок:
-	// base: '/willni/',
+	base: '/willni/',
 
 	// Увімкнення темної теми
 	appearance: 'dark',
