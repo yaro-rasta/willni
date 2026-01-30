@@ -1,0 +1,99 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Максимальна ширина контенту для діаграм
+ */
+:root {
+  /* Збільшуємо ширину контенту */
+  --vp-layout-max-width: 1920px;
+
+  /* Ширина основного контенту */
+  --vp-content-max-width: 100%;
+
+  /* Відступи */
+  --vp-sidebar-width: 280px;
+}
+
+/**
+ * Робимо контент на всю ширину
+ */
+.VPDoc.has-sidebar .content-container,
+.VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+.VPDoc .content {
+  max-width: 100% !important;
+  padding: 32px 48px !important;
+}
+
+/**
+ * Mermaid діаграми на повну ширину
+ */
+.vp-doc .mermaid {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.vp-doc .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Покращення для мобільних
+ */
+@media (max-width: 960px) {
+  .VPDoc .content {
+    padding: 24px 24px !important;
+  }
+}
+
+/**
+ * Кольорова схема для діаграм (темна тема)
+ */
+.dark .mermaid {
+  background: transparent;
+}
+
+/**
+ * Згортання sidebar та aside
+ */
+.VPSidebar {
+  transition: transform 0.3s ease;
+}
+
+.VPDocAside {
+  transition: transform 0.3s ease;
+}
+
+/**
+ * Покращення читабельності
+ */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vp-doc p {
+  line-height: 1.7;
+}
+
+/**
+ * Стилі для blockquote
+ */
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  background: var(--vp-c-bg-soft);
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-radius: 4px;
+}
