@@ -6,7 +6,13 @@
 	"scripts": {
 		"dev": "vitepress dev .",
 		"build": "vitepress build .",
-		"preview": "vitepress preview ."
+		"preview": "vitepress preview .",
+		"lint": "node scripts/lint_markdown.js superintellect",
+		"lint:all": "node scripts/lint_markdown.js .",
+		"fix": "node scripts/autofix_markdown.js superintellect",
+		"fix:all": "node scripts/autofix_markdown.js .",
+		"precommit": "node scripts/lint_markdown.js .",
+		"sync": "node scripts/sync_terminology.js"
 	},
 	"keywords": [],
 	"author": "",

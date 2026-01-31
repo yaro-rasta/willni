@@ -47,8 +47,8 @@ flowchart TB
             ID --> Reg
             Reg --> Disc
             Disc --> Exec
-            AI -.->|Аудит| Reg
-            AI -.->|Прогноз| Exec
+            Ші -.->|Аудит| Reg
+            Ші -.->|Прогноз| Exec
         end
     end
     
