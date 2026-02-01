@@ -35,7 +35,19 @@ export default defineConfig({
 						text: 'Матриця Superintellect',
 						items: [
 							{ text: 'Навігація', link: '/superintellect/' },
-							{ text: 'Серії', link: '/superintellect/SERIES' },
+							{ text: 'Огляд Серій', link: '/superintellect/SERIES' },
+							{
+								text: 'Епізоди',
+								collapsed: false,
+								items: [
+									{ text: 'Серія 1: Тривога', link: '/superintellect/series_1' },
+									{ text: 'Серія 2: Ідея', link: '/superintellect/series_2' },
+									{ text: 'Серія 3: Стовпи', link: '/superintellect/series_3' },
+									{ text: 'Серія 4: Архітектор', link: '/superintellect/series_4' },
+									{ text: 'Серія 5: Місія', link: '/superintellect/series_5' },
+									{ text: 'Серія 6: Маніфест', link: '/superintellect/series_6' }
+								]
+							},
 							{ text: 'Економіка', link: '/superintellect/economy' },
 							{ text: 'Управління', link: '/superintellect/governance' },
 							{ text: 'Наставництво', link: '/superintellect/mentorship' },
@@ -69,7 +81,19 @@ export default defineConfig({
 						text: 'Superintellect Matrix',
 						items: [
 							{ text: 'Navigation', link: '/en/superintellect/' },
-							{ text: 'Series', link: '/en/superintellect/SERIES' },
+							{ text: 'Series Overview', link: '/en/superintellect/SERIES' },
+							{
+								text: 'Episodes',
+								collapsed: false,
+								items: [
+									{ text: 'Series 1: Anxiety', link: '/en/superintellect/series_1' },
+									{ text: 'Series 2: Idea', link: '/en/superintellect/series_2' },
+									{ text: 'Series 3: Pillars', link: '/en/superintellect/series_3' },
+									{ text: 'Series 4: Architect', link: '/en/superintellect/series_4' },
+									{ text: 'Series 5: Mission', link: '/en/superintellect/series_5' },
+									{ text: 'Series 6: Manifesto', link: '/en/superintellect/series_6' }
+								]
+							},
 							{ text: 'Economy', link: '/en/superintellect/economy' },
 							{ text: 'Governance', link: '/en/superintellect/governance' },
 							{ text: 'Mentorship', link: '/en/superintellect/mentorship' },
