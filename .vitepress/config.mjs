@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
 	title: "Will-n-i",
 	description: "Superintellect Series & Mental Matrix",
+	base: "/willni/",
 
 	// Rewrites: мапимо файли з i18n/ у корінь для красивих URL
 	rewrites: {
