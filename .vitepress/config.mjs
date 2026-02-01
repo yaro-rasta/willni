@@ -1,110 +1,96 @@
 import { defineConfig } from 'vitepress'
-import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default withMermaid(defineConfig({
+export default defineConfig({
 	title: "Will-n-i",
-	description: "Цифрова Держава Суверенних Громадян",
-	lang: 'uk-UA',
-	// Якщо репозиторій називається 'willni', розкоментуй наступний рядок:
-	base: '/willni/',
+	description: "Superintellect Series & Mental Matrix",
 
-	// Увімкнення темної теми
-	appearance: 'dark',
+	// Rewrites: мапимо файли з i18n/ у корінь для красивих URL
+	rewrites: {
+		'i18n/:lang/:file(.*)': ':lang/:file'
+	},
 
-	// Налаштування пошуку
-	search: {
-		provider: 'local'
+	srcExclude: ['**/*.backup.*', 'scripts/**', 'playwright-report/**', 'test-results/**'],
+
+	locales: {
+		root: {
+			label: 'Українська',
+			lang: 'uk-UA',
+			themeConfig: {
+				nav: [
+					{ text: 'Матриця', link: '/superintellect/' },
+					{ text: 'Платформи', link: '/PLATFORMS' }
+				],
+				sidebar: [
+					{
+						text: 'Основи',
+						items: [
+							{ text: 'Маніфест', link: '/system' },
+							{ text: 'Правовий фундамент', link: '/law' },
+							{ text: 'Шлях переходу', link: '/transition' },
+							{ text: 'Платформи', link: '/PLATFORMS' }
+						]
+					},
+					{
+						text: 'Матриця Superintellect',
+						items: [
+							{ text: 'Навігація', link: '/superintellect/' },
+							{ text: 'Серії', link: '/superintellect/SERIES' },
+							{ text: 'Економіка', link: '/superintellect/economy' },
+							{ text: 'Управління', link: '/superintellect/governance' },
+							{ text: 'Наставництво', link: '/superintellect/mentorship' },
+							{ text: 'Thinkers Review', link: '/superintellect/THINKERS_REVIEW' },
+							{ text: 'Космічне Право', link: '/superintellect/SPACE_LAW' }
+						]
+					}
+				]
+			}
+		},
+		en: {
+			label: 'English',
+			lang: 'en-US',
+			link: '/en/',
+			themeConfig: {
+				nav: [
+					{ text: 'Matrix', link: '/en/superintellect/' },
+					{ text: 'Platforms', link: '/en/PLATFORMS' }
+				],
+				sidebar: [
+					{
+						text: 'Foundation',
+						items: [
+							{ text: 'Manifesto', link: '/en/system' },
+							{ text: 'Legal Foundation', link: '/en/law' },
+							{ text: 'Transition Guide', link: '/en/transition' },
+							{ text: 'Platforms', link: '/en/PLATFORMS' }
+						]
+					},
+					{
+						text: 'Superintellect Matrix',
+						items: [
+							{ text: 'Navigation', link: '/en/superintellect/' },
+							{ text: 'Series', link: '/en/superintellect/SERIES' },
+							{ text: 'Economy', link: '/en/superintellect/economy' },
+							{ text: 'Governance', link: '/en/superintellect/governance' },
+							{ text: 'Mentorship', link: '/en/superintellect/mentorship' },
+							{ text: 'Thinkers Review', link: '/en/superintellect/THINKERS_REVIEW' },
+							{ text: 'Space Law', link: '/en/superintellect/SPACE_LAW' }
+						]
+					}
+				]
+			}
+		}
 	},
 
 	themeConfig: {
 		logo: '/logo.png',
-		nav: [
-			{ text: 'Головна', link: '/' },
-			{ text: 'Маніфест', link: '/system' },
-			{ text: 'Дорожня Карта', link: '/roadmap' },
-			{ text: '🧠 Суперінтелект', link: '/superintellect/' }
-		],
-		sidebar: [
-			{
-				text: 'Фундамент',
-				items: [
-					{ text: '🔄 Перехід', link: '/transition' },
-					{ text: '⚖️ Правовий Фундамент', link: '/law' },
-					{ text: '🧠 Філософія', link: '/philosophy' }
-				]
-			},
-			{
-				text: 'Реалізація',
-				items: [
-					{ text: '🌐 Мережа', link: '/network' },
-					{ text: '🛣 Дорожня Карта', link: '/roadmap' },
-					{ text: '📜 Маніфест', link: '/system' },
-					{ text: '⚖️ Справедливість', link: '/justice' }
-				]
-			},
-			{
-				text: '🧠 Суперінтелект',
-				collapsed: false,
-				items: [
-					{ text: '📖 Огляд', link: '/superintellect/' },
-					{ text: '📺 Серії', link: '/superintellect/SERIES' },
-					{
-						text: '🎬 Епізоди',
-						collapsed: true,
-						items: [
-							{ text: 'Серія 1: Анатомія Тривоги', link: '/superintellect/series_1' },
-							{ text: 'Серія 2: Ідея (І-де-я)', link: '/superintellect/series_2' },
-							{ text: 'Серія 3: Три Стовпи', link: '/superintellect/series_3' },
-							{ text: 'Серія 4: Архітектор vs Робочий', link: '/superintellect/series_4' },
-							{ text: 'Серія 5: Місія та Дисципліна', link: '/superintellect/series_5' },
-							{ text: 'Серія 6: Маніфест Вільних', link: '/superintellect/series_6' }
-						]
-					},
-					{ text: '⚖️ Природне Право', link: '/superintellect/LAW' },
-					{ text: '🌟 Етичний Кодекс', link: '/superintellect/ETHICS' },
-					{ text: '🧩 Ментальна Матриця', link: '/superintellect/MATRIX' },
-					{ text: '💰 Економіка', link: '/superintellect/economy' }
-				]
-			},
-			{
-				text: '🌍 Голоси Спільноти',
-				collapsed: true,
-				items: [
-					{ text: '📖 Про розділ', link: '/community/' },
-					{ text: 'Наталія: ВОЛЯ vs Вільна', link: '/community/Наталія.Яілатан/post' }
-				]
-			},
-			{
-				text: 'Публікація',
-				items: [
-					{ text: '🚀 Космодрому', link: '/PUBLISH' }
-				]
-			}
-		],
+
 		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/yaro/willni' }
+			{ icon: 'github', link: 'https://github.com/yaro-rasta/willni' }
 		],
+
 		footer: {
-			message: 'Will-n-i: Воля понад усе',
-			copyright: 'мИ є Народ'
-		},
-		outline: {
-			label: 'На цій сторінці',
-			level: [2, 3]
-		},
-		docFooter: {
-			prev: 'Назад',
-			next: 'Далі'
+			message: 'мИ обираємо бути Вільними.',
+			copyright: 'Copyright © 2026 Спільнота "Вільні"'
 		}
-	},
-	markdown: {
-		lineNumbers: true
-	},
-	// Налаштування Mermaid
-	mermaid: {
-		// Опціонально: налаштування теми
-	},
-	mermaidPlugin: {
-		class: "mermaid"
 	}
-}))
+})

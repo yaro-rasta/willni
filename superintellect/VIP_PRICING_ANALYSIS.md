@@ -123,7 +123,7 @@
 **Тактики:**
 1. **Case Studies:** Відео-testimonials від перших клієнтів
 2. **Speaking Engagements:** Виступи на crypto/tech конференціях
-3. **Partnerships:** Альянси з Antigravity, іншими AI-продуктами
+3. **Partnerships:** Альянси з Antigravity, іншими Ші-продуктами
 4. **Webinar Funnels:** Безкоштовний майстер-клас → High-ticket sales call
 
 **KPI:**
