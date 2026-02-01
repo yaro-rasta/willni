@@ -167,6 +167,42 @@ test.describe('Content Validation', () => {
             await expect(page.locator('h1')).toContainText('Series 1: Anatomy of Anxiety');
         });
 
+        test('UK Series 2: Should load and display correct title', async ({ page }) => {
+            await page.goto('/superintellect/series_2');
+            await expect(page.locator('h1')).toContainText('Серія 2: Ідея — Хто Я і Де Я?');
+        });
+        test('EN Series 2: Should load and display correct title', async ({ page }) => {
+            await page.goto('/en/superintellect/series_2');
+            await expect(page.locator('h1')).toContainText('Series 2');
+        });
+
+        test('UK Series 3: Should load and display correct title', async ({ page }) => {
+            await page.goto('/superintellect/series_3');
+            await expect(page.locator('h1')).toContainText('Серія 3: Три Стовпи Суперінтелекту');
+        });
+        test('EN Series 3: Should load and display correct title', async ({ page }) => {
+            await page.goto('/en/superintellect/series_3');
+            await expect(page.locator('h1')).toContainText('Series 3');
+        });
+
+        test('UK Series 4: Should load and display correct title', async ({ page }) => {
+            await page.goto('/superintellect/series_4');
+            await expect(page.locator('h1')).toContainText('Серія 4: Архітектор vs Робочий');
+        });
+        test('EN Series 4: Should load and display correct title', async ({ page }) => {
+            await page.goto('/en/superintellect/series_4');
+            await expect(page.locator('h1')).toContainText('Series 4');
+        });
+
+        test('UK Series 5: Should load and display correct title', async ({ page }) => {
+            await page.goto('/superintellect/series_5');
+            await expect(page.locator('h1')).toContainText('Серія 5: Місія та Щоденна Дисципліна');
+        });
+        test('EN Series 5: Should load and display correct title', async ({ page }) => {
+            await page.goto('/en/superintellect/series_5');
+            await expect(page.locator('h1')).toContainText('Series 5');
+        });
+
         test('UK Series 6: Should load and display correct title', async ({ page }) => {
             await page.goto('/superintellect/series_6');
             await expect(page.locator('h1')).toContainText('Серія 6: Маніфест Вільних');
