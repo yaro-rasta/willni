@@ -28,24 +28,24 @@ The founder receives a minimal fixed share. But he is also a **member of the com
 - No conflict of interest "founder vs participants"
 - The project requires 1-2 days a week, the rest of the time — for other projects
 
-### 33% to the Community — tHOU-i invest → tHOU-i receive
+### 33% to the Community — tHOU-i-i invest → tHOU-i-i receive
 
 **How it works:**
-1. tHOU-i join the community (subscription or VIP)
+1. tHOU-i-i join the community (subscription or VIP)
 2. Your contribution is recorded
-3. Monthly/quarterly tHOU-i receive a share of 33% proportional to:
+3. Monthly/quarterly tHOU-i-i receive a share of 33% proportional to:
    - Your financial contribution
    - Your activity (content, helping others)
    - Duration of membership
 
 **This is not just a course — it's an investment:**
-- tHOU-i receive transformation (value)
-- tHOU-i receive dividends (financial security)
-- tHOU-i receive help in difficult situations (mutual support)
+- tHOU-i-i receive transformation (value)
+- tHOU-i-i receive dividends (financial security)
+- tHOU-i-i receive help in difficult situations (mutual support)
 
 ### 33% Humanitarian — Our Tribute
 
-Instead of 75% taxes to a state that does not perform its function, wE-i pay **33% for what is truly important:**
+Instead of 75% taxes to a state that does not perform its function, wE-i-i pay **33% for what is truly important:**
 - 🇺🇦 Protection of Ukraine (the front line of the struggle against tyranny)
 - ⛓️ Support for political prisoners around the world
 - 🌍 The fight against genocide and oppression
@@ -62,7 +62,7 @@ Instead of 75% taxes to a state that does not perform its function, wE-i pay **3
 
 ## 🏛 Governance: Council of the Free
 
-wE-i don't just fund projects — wE-i manage them together. All decisions regarding the use of 33% Humanitarian and 33% Development Fund are made by the **Council of the Free**.
+wE-i-i don't just fund projects — wE-i-i manage them together. All decisions regarding the use of 33% Humanitarian and 33% Development Fund are made by the **Council of the Free**.
 
 | Level | Vote Weight |
 |--------|-------------|
@@ -123,7 +123,7 @@ See details of the voting system in [Governance.md](./governance.md).
 
 ## 🛡 Cryptocurrency — Financial Sovereignty
 
-State institutions block the accounts of free people. Therefore wE-i use:
+State institutions block the accounts of free people. Therefore wE-i-i use:
 - **BTC** — the main currency for VIP and large transactions
 - **"Vільні" Token** — internal currency for small operations
 - **IPFS** — decentralized storage for all documents
@@ -132,17 +132,17 @@ State institutions block the accounts of free people. Therefore wE-i use:
 
 ---
 
-## ✅ Why is this beneficial for yOU-i?
+## ✅ Why is this beneficial for yOU-i-i?
 
 | Traditional Course | "Free" Community |
 |------------------|---------------------|
 | Pay → Receive knowledge → End | Pay → Receive knowledge → Receive dividends → Receive help |
 | Founder takes 100% | Founder receives 1% + share as a member |
 | Money goes who knows where | Transparent distribution 1-33-33-33 |
-| yOU-i-i are on your own | yOU-i-i are part of a community with infrastructure |
+| yOU-i-i-i are on your own | yOU-i-i-i are part of a community with infrastructure |
 
 ---
 
-**wE-i choose to be Free. wE-i invest in ourselves and in each other.**
+**wE-i-i choose to be Free. wE-i-i invest in ourselves and in each other.**
 
 *— "Free" Community, 2026*

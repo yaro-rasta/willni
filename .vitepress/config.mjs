@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
 	title: "Will-n-i",
 	description: "Superintellect Series & Mental Matrix",
 	base: "/willni/",
@@ -10,7 +11,7 @@ export default defineConfig({
 		'i18n/:lang/:file(.*)': ':lang/:file'
 	},
 
-	srcExclude: ['**/*.backup.*', 'scripts/**', 'playwright-report/**', 'test-results/**'],
+	srcExclude: ['**/*.backup.*', 'scripts/**', 'playwright-report/**', 'test-results/**', 'Наталія.Яілатан/**'],
 
 	locales: {
 		root: {
@@ -28,7 +29,8 @@ export default defineConfig({
 							{ text: 'Маніфест', link: '/system' },
 							{ text: 'Правовий фундамент', link: '/law' },
 							{ text: 'Шлях переходу', link: '/transition' },
-							{ text: 'Платформи', link: '/PLATFORMS' }
+							{ text: 'Платформи', link: '/PLATFORMS' },
+							{ text: 'Технічна Реалізація', link: '/superintellect/IMPLEMENTATION' }
 						]
 					},
 					{
@@ -41,7 +43,7 @@ export default defineConfig({
 								collapsed: false,
 								items: [
 									{ text: 'Серія 1: Тривога', link: '/superintellect/series_1' },
-									{ text: 'Серія 2: Ідея', link: '/superintellect/series_2' },
+									{ text: 'Серія 2: І де Я', link: '/superintellect/series_2' },
 									{ text: 'Серія 3: Стовпи', link: '/superintellect/series_3' },
 									{ text: 'Серія 4: Архітектор', link: '/superintellect/series_4' },
 									{ text: 'Серія 5: Місія', link: '/superintellect/series_5' },
@@ -74,7 +76,8 @@ export default defineConfig({
 							{ text: 'Manifesto', link: '/en/system' },
 							{ text: 'Legal Foundation', link: '/en/law' },
 							{ text: 'Transition Guide', link: '/en/transition' },
-							{ text: 'Platforms', link: '/en/PLATFORMS' }
+							{ text: 'Platforms', link: '/en/PLATFORMS' },
+							{ text: 'Implementation', link: '/en/superintellect/IMPLEMENTATION' }
 						]
 					},
 					{
@@ -87,7 +90,7 @@ export default defineConfig({
 								collapsed: false,
 								items: [
 									{ text: 'Series 1: Anxiety', link: '/en/superintellect/series_1' },
-									{ text: 'Series 2: Idea', link: '/en/superintellect/series_2' },
+									{ text: 'Series 2: I-where-am-I', link: '/en/superintellect/series_2' },
 									{ text: 'Series 3: Pillars', link: '/en/superintellect/series_3' },
 									{ text: 'Series 4: Architect', link: '/en/superintellect/series_4' },
 									{ text: 'Series 5: Mission', link: '/en/superintellect/series_5' },
@@ -117,5 +120,10 @@ export default defineConfig({
 			message: 'мИ обираємо бути Вільними.',
 			copyright: 'Copyright © 2026 Спільнота "Вільні"'
 		}
+	},
+
+	mermaid: {
+		// mermaid config
 	}
-})
+}))
+

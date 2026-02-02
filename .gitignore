@@ -9,3 +9,5 @@ community.backup.*
 docs.backup.*
 .temp
 .cache
+playwright-report
+test-results/

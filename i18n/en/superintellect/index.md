@@ -8,7 +8,7 @@
 
 This is the public space of the **"Free"** community — people who build their own Mental Matrix and live according to the principles of Natural Law.
 
-### What will yOU-i find here?
+### What will yOU-i-i find here?
 
 **📚 Content**
 - [6 Series](./SERIES.md) — from "Future Shock" to the "Manifesto of the Free"
@@ -28,19 +28,19 @@ This is the public space of the **"Free"** community — people who build their 
 
 ## 🎯 For whom is this?
 
-### If tHOU-i...
-- ❓ Feel that **tHOU-i are not keeping up with technology**
+### If tHOU-i-i...
+- ❓ Feel that **tHOU-i-i are not keeping up with technology**
 - 🧠 Want to build **your own Mental Matrix**
 - 🏛️ Strive to live by **Natural Law** instead of tyranny
 - 🚀 Ready to become the **Architect** of your reality
 
-### ...then this is for tHOU-i.
+### ...then this is for tHOU-i-i.
 
 ---
 
 ## 🌍 Vision
 
-wE-i are building not just a course or a business. wE-i are creating a **new social architecture** where:
+wE-i-i are building not just a course or a business. wE-i-i are creating a **new social architecture** where:
 - 🧘 Every person is a **subject**, not an object
 - 🤖 Technology serves the human, not vice versa
 - ⚖️ All positive rights correspond to Natural Law
@@ -61,9 +61,9 @@ wE-i are building not just a course or a business. wE-i are creating a **new soc
 All information is distributed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 **This means:**
-- ✅ yOU-i can freely use, copy, distribute
-- ✅ yOU-i can adapt to your needs
-- ⚠️ yOU-i must provide attribution
+- ✅ yOU-i-i can freely use, copy, distribute
+- ✅ yOU-i-i can adapt to your needs
+- ⚠️ yOU-i-i must provide attribution
 - ⚠️ Derivative works must be distributed under the same license
 
 ---
@@ -78,6 +78,6 @@ Ready to become part of the "Free"?
 
 ---
 
-**wE-i choose to be Free. wE-i choose to be Human.**
+**wE-i-i choose to be Free. wE-i-i choose to be Human.**
 
 *— "Free" Community, 2026*

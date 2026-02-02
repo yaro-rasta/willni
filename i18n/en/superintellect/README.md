@@ -14,7 +14,7 @@
 
 ### 2. Practical Series (Public Content)
 - **[series_1.md](./series_1.md)** — Anatomy of Anxiety: Truth Filter via 4 Laws of Logic
-- **[series_2.md](./series_2.md)** — Idea (In-de-ya): Who am i? Where am i?
+- **[series_2.md](./series_2.md)** — i-where-am-i (Idea): Who am i? Where am i?
 - **[series_3.md](./series_3.md)** — Three Pillars of Superintellect
 - **[series_4.md](./series_4.md)** — Architect vs Worker
 - **[series_5.md](./series_5.md)** — Mission and Daily Discipline
@@ -50,10 +50,9 @@
 
 ## 🚀 Next Steps
 
-1. **Content**: Write a pilot article (Series 2: "Idea").
+1. **Content**: Write a pilot article (Series 2: "i-where-am-i").
 2. **Technology**: 
-   - Create a landing page on `petteri.fi`.
-   - Set up crypto payments (BTC).
+   - Create a landing page and set up crypto payments (BTC).
    - Prepare "Vільні" token and ICO.
 3. **Publicity**: Distribute [LAW.md](./LAW.md) through international organizations (UN, Council of Europe).
 4. **IPFS**: Save all key documents in decentralized protocols for eternal storage.
@@ -78,7 +77,7 @@ For IT teams and C-Level who:
 
 ## 🌍 Global Vision
 
-wE-i are building not just a business. wE-i are building a **new social architecture** where:
+wE-i-i are building not just a business. wE-i-i are building a **new social architecture** where:
 - Every person is a **subject**, not an object.
 - Technology serves the human, not vice versa.
 - Natural Law stands above state laws.

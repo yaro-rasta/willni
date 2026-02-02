@@ -24,7 +24,7 @@ features:
 
 # Welcome
 
-This project is an engineering response to the crisis of trust in centralized institutions. wE-i-i are building a digital infrastructure that serves as a transition stage to full freedom.
+This project is an engineering response to the crisis of trust in centralized institutions. wE-i-i-i are building a digital infrastructure that serves as a transition stage to full freedom.
 
 ::: info i am the People
 The only source of power in Ukraine is the people, and they exercise their power directly.

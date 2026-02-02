@@ -8,12 +8,12 @@ export default defineConfig({
     workers: process.env.CI ? 1 : undefined,
     reporter: 'html',
     use: {
-        baseURL: 'http://localhost:5173',
+        baseURL: 'http://localhost:5173/willni/',
         trace: 'on-first-retry',
     },
     webServer: {
-        command: 'pnpm run dev',
-        url: 'http://localhost:5173',
+        command: 'npm run dev',
+        url: 'http://localhost:5173/willni/',
         reuseExistingServer: !process.env.CI,
     },
     projects: [

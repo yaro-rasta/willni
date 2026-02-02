@@ -11,7 +11,7 @@ In centralized systems, a person often finds themselves in the state of:
 - An object of management.
 
 ## Target State: Free Living Human
-wE-i are heading towards the status of a person who:
+wE-i-i are heading towards the status of a person who:
 - Exercises rights by birthright (natural law).
 - Acts of their own free will.
 - Interacts on the basis of voluntary agreements.

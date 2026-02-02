@@ -4,7 +4,7 @@ test.describe('Basic Content Check', () => {
     // Тестуємо завантаження кореневої сторінки
     test('Root page should load and contain key content', async ({ page }) => {
         // Спробуємо зачекати на завантаження сторінки
-        await page.goto('/', { waitUntil: 'networkidle' });
+        await page.goto('', { waitUntil: 'networkidle' });
 
         // Перевіряємо заголовок сторінки
         await expect(page).toHaveTitle(/Will-n-i/);
@@ -21,7 +21,7 @@ test.describe('Basic Content Check', () => {
 
     // Тестуємо завантаження сторінки Маніфесту (контентна сторінка)
     test('System page (Manifesto) should load', async ({ page }) => {
-        await page.goto('/system', { waitUntil: 'domcontentloaded' });
+        await page.goto('system', { waitUntil: 'domcontentloaded' });
 
         // Перевіряємо H1, який є в Markdown файлі (# Воля понад усе)
         const h1 = page.locator('h1');
@@ -34,7 +34,7 @@ test.describe('Basic Content Check', () => {
 
     // Тестуємо англійську версію
     test('English system page should load', async ({ page }) => {
-        await page.goto('/en/system', { waitUntil: 'domcontentloaded' });
+        await page.goto('en/system', { waitUntil: 'domcontentloaded' });
 
         const h1 = page.locator('h1');
         await expect(h1).toHaveText('Will above all');

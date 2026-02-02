@@ -1,6 +1,6 @@
 # "Free" Ecosystem: A Community with Dividends
 
-> "wE-i are building not just a business, but a new social architecture where everyone is a subject and a co-owner."
+> "wE-i-i are building not just a business, but a new social architecture where everyone is a subject and a co-owner."
 
 ---
 
@@ -140,7 +140,7 @@ Your dividends = (Your contribution × Activity coefficient × Duration) / Total
 
 **For IT teams and C-Level:**
 
-### What yOU-i Receive:
+### What yOU-i-i Receive:
 - Collective Mental Matrix.
 - Shi-Sparring: Shi becomes a partner for the team.
 - Reduction of 75% inefficient time wasting.
@@ -168,11 +168,11 @@ Your dividends = (Your contribution × Activity coefficient × Duration) / Total
 
 Free people are above the state. Our foundation is [Natural Law (LAW)](./LAW.md). 
 
-States were originally created by free people for free living. Today wE-i face a choice: 
+States were originally created by free people for free living. Today wE-i-i face a choice: 
 - Continue to live in outdated structures with 75% taxes.
 - Or build a new system based on Natural Law.
 
-**wE-i choose to build.**
+**wE-i-i choose to build.**
 
 ---
 

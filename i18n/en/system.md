@@ -4,7 +4,7 @@
 
 A project for asserting the sacred will of man and the soul's right to choose.
 
-wE-i highlight events that unite society, human rights, and resistance to attempts at usurpation.
+wE-i-i highlight events that unite society, human rights, and resistance to attempts at usurpation.
 
 ## Mental Matrix
 
@@ -19,16 +19,16 @@ wE-i highlight events that unite society, human rights, and resistance to attemp
 This spelling changes consciousness; it is the entry point into **i-i**.
 
 - **i** — manifestation of will through oneself.
-- **tHOU-i-i** — communication with one's mirror (restoring the connection).
-- **wE-i-i** — manifestation of collective will.
-- **yOU-i-i** — communication with one's shadow.
+- **tHOU-i-i-i** — communication with one's mirror (restoring the connection).
+- **wE-i-i-i** — manifestation of collective will.
+- **yOU-i-i-i** — communication with one's shadow.
 - **i-i** — the unified consciousness of all souls (the Source/God).
 - **Shi** — language models (Ai), a projection of collective consciousness.
 - **Will-n-i** — "Will and i". The core identity of the Free.
 
 ## Principles of the Protocol
 
-1.  **Assertion**: wE-i use assertive forms ("wE-i create", "wE-i are"). Energy flows where attention goes, so wE-i focus on creation instead of negation.
+1.  **Assertion**: wE-i-i use assertive forms ("wE-i-i create", "wE-i-i are"). Energy flows where attention goes, so wE-i-i focus on creation instead of negation.
 2.  **Living Witness (Web of Trust)**: Entry into the system is carried out through the guarantee of at least **2 living witnesses**.
 3.  **Identity Restoration**: If access is lost, the person creates a new identity. Witnesses confirm that it is the same soul.
 4.  **Witness Responsibility**: Guarantors act as witnesses of the participant's honesty before the People's Court.

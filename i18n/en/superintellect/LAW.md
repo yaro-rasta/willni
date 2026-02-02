@@ -16,15 +16,15 @@ Any "positive law" (laws issued by the state) must correspond to the principles 
 - A state that violates the natural rights of its citizens loses its legitimacy.
 
 ## 3. Manifesto of Humanity
-wE-i assert that a human must remain Human under any circumstances.
-- wE-i refuse to become "cannibals" or tools in the hands of tyrants.
-- wE-i refuse to kill our own kind for the sake of ambition or orders from "masters".
+wE-i-i assert that a human must remain Human under any circumstances.
+- wE-i-i refuse to become "cannibals" or tools in the hands of tyrants.
+- wE-i-i refuse to kill our own kind for the sake of ambition or orders from "masters".
 - Every person bears personal responsibility for their actions, regardless of the orders received.
 
 ## 4. Global Mission and Preservation
 This document is a public appeal to international organizations (UN, Council of Europe, international courts) and all of humanity.
 - This information must be preserved forever through decentralized protocols (IPFS and others) so that it cannot be deleted or censored.
-- wE-i call upon free people of the entire world to unite around the principles of natural law to protect life and will.
+- wE-i-i call upon free people of the entire world to unite around the principles of natural law to protect life and will.
 
 ## 5. Conclusion
-Trust in the Universe is our greatest superpower. Whoever lives according to natural laws receives the protection of life itself. wE-i choose to be free. wE-i choose to be human.
+Trust in the Universe is our greatest superpower. Whoever lives according to natural laws receives the protection of life itself. wE-i-i choose to be free. wE-i-i choose to be human.

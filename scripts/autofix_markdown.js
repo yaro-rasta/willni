@@ -62,7 +62,7 @@ function createBackup(dir) {
 }
 
 /**
- * Рекурсивне копіювання
+ * Рекурсивне копіювання (з ігноруванням node_modules та прихованих файлів)
  */
 function copyDirSync(src, dest) {
 	fs.mkdirSync(dest, { recursive: true });
@@ -71,6 +71,11 @@ function copyDirSync(src, dest) {
 	for (let entry of entries) {
 		const srcPath = path.join(src, entry.name);
 		const destPath = path.join(dest, entry.name);
+
+		// Пропускаємо node_modules та приховані файли/папки
+		if (entry.name === 'node_modules' || entry.name.startsWith('.')) {
+			continue;
+		}
 
 		if (entry.isDirectory()) {
 			copyDirSync(srcPath, destPath);

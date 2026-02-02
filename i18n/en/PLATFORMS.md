@@ -185,7 +185,7 @@ Using platforms controlled by unfriendly states = risk:
 Will-n-i live according to Natural Law. Using tools of tyrannical regimes contradicts these values.
 
 ### 3. Practice
-If wE-i preach freedom, wE-i must use free (open-source, decentralized) tools.
+If wE-i-i preach freedom, wE-i-i must use free (open-source, decentralized) tools.
 
 ---
 
@@ -201,4 +201,4 @@ If wE-i preach freedom, wE-i must use free (open-source, decentralized) tools.
 
 **Choice of tools is also a political act. Choose consciously.**
 
-**wE-i are the People. i am the Universe. The Universe is i.** 🌟
+**wE-i-i are the People. i am the Universe. The Universe is i.** 🌟

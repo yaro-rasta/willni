@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Navigation and Sidebar', () => {
     test('UK version should have a functional sidebar', async ({ page }) => {
         // Navigate to a content page where sidebar should be visible
-        await page.goto('/system');
+        await page.goto('system');
 
         // Check main title (content of system.md)
         await expect(page.locator('h1')).toContainText('Воля понад усе');
@@ -23,7 +23,7 @@ test.describe('Navigation and Sidebar', () => {
 
     test('EN version should have a functional sidebar', async ({ page }) => {
         // Navigate to a content page where sidebar should be visible
-        await page.goto('/en/system');
+        await page.goto('en/system');
 
         // Check main title (content of i18n/en/system.md)
         await expect(page.locator('h1')).toContainText('Will above all');
@@ -42,7 +42,7 @@ test.describe('Navigation and Sidebar', () => {
     });
 
     test('Superintellect section navigation', async ({ page }) => {
-        await page.goto('/superintellect/');
+        await page.goto('superintellect/');
 
         const sidebar = page.locator('.VPSidebar');
         await expect(sidebar).toBeVisible();

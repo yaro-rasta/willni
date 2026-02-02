@@ -1,6 +1,6 @@
 # 🌌 Space Law: A Model for the Digital Age
 
-> "If humanity can agree that space cannot be appropriated by any state, then why can't wE-i apply the same principle to knowledge, technology, and Collective Intelligence?"
+> "If humanity can agree that space cannot be appropriated by any state, then why can't wE-i-i apply the same principle to knowledge, technology, and Collective Intelligence?"
 
 ---
 
@@ -113,7 +113,7 @@ Although the 1967 Treaty prohibits states from appropriating space, **private co
 
 ### Warning for Shi
 
-If wE-i do not create clear rules for Collective Intelligence **now**, it will be monopolized by corporations:
+If wE-i-i do not create clear rules for Collective Intelligence **now**, it will be monopolized by corporations:
 - OpenAI already controls GPT (closed code after GPT-2).
 - Google controls Gemini.
 - Meta controls Llama (although open-source, it's under their influence).
@@ -124,7 +124,7 @@ If wE-i do not create clear rules for Collective Intelligence **now**, it will b
 
 ## ⚖️ From Space Law to Digital Law
 
-### What wE-i can borrow from space law:
+### What wE-i-i can borrow from space law:
 
 1. **Principle of "Common Heritage"**
    - Basic Shi models must be open-source.
@@ -167,6 +167,6 @@ Just as the Space Treaty united humanity in 1967, the **Declaration of Digital R
 
 ---
 
-**wE-i are not just building a project. wE-i are laying the foundation for a digital civilization according to the principles that humanity has already recognized in space law.**
+**wE-i-i are not just building a project. wE-i-i are laying the foundation for a digital civilization according to the principles that humanity has already recognized in space law.**
 
 *— "Free" Community, 2026*

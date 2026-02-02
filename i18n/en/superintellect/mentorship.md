@@ -10,7 +10,7 @@ After completing the VIP Transformation, a participant can become a **Mentor** �
 
 ### Why it works:
 
-1. **For yOU-i (Founder):**
+1. **For yOU-i-i (Founder):**
    - Scaling without your time
    - 1-2 days/week = strategy, not operations
    - More participants → more dividends
@@ -141,18 +141,18 @@ When a Mentor leads a VIP participant (1 BTC):
 ## 📈 Scaling
 
 ### Phase 1: Manual (Year 1)
-- yOU-i lead 10-20 VIPs personally
+- yOU-i-i lead 10-20 VIPs personally
 - Select the first potential Mentors
 
 ### Phase 2: Delegation (Year 2)
 - 3-5 Junior Mentors lead new ones
-- yOU-i focus on strategy and content
+- yOU-i-i focus on strategy and content
 - Time: 1-2 days/week
 
 ### Phase 3: Autonomy (Year 3+)
 - 10+ Mentors worldwide
 - The system works automatically
-- yOU-i are the Architect of the system, not the executor
+- yOU-i-i are the Architect of the system, not the executor
 
 ---
 
@@ -178,6 +178,6 @@ The Mentorship Model **does not change** the basic distribution:
 
 ---
 
-**wE-i teach others — wE-i teach ourselves.**
+**wE-i-i teach others — wE-i-i teach ourselves.**
 
 *— "Free" Community, 2026*

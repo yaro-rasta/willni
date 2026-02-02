@@ -12,7 +12,7 @@ All decisions regarding **humanitarian projects (33%)** and the **development fu
 
 ## 📊 Vote Weight
 
-wE-i use a weighted voting system where contributions (financial or mentoring) give more influence on the development of the ecosystem.
+wE-i-i use a weighted voting system where contributions (financial or mentoring) give more influence on the development of the ecosystem.
 
 | Level | Vote Weight | Description |
 |--------|-------------|-------|
