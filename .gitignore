@@ -11,3 +11,7 @@ docs.backup.*
 .cache
 playwright-report
 test-results/
+
+# llimo
+chat/
+/me.md

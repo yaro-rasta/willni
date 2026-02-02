@@ -4,9 +4,9 @@
 	"description": "Я є Всесвіт. Всесвіт є Я.",
 	"main": "index.js",
 	"scripts": {
-		"dev": "vitepress dev . --port 5173",
-		"build": "vitepress build .",
-		"preview": "vitepress preview . --port 5173",
+		"dev": "npx vitepress dev . --port 5173",
+		"build": "npx vitepress build .",
+		"preview": "npx vitepress preview . --port 5173",
 		"lint": "node scripts/lint_markdown.js superintellect",
 		"lint:all": "node scripts/lint_markdown.js .",
 		"fix": "node scripts/autofix_markdown.js superintellect",
