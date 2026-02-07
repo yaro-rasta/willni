@@ -1,34 +1,35 @@
 {
-	"name": "willni",
-	"version": "1.0.0",
-	"description": "Я є Всесвіт. Всесвіт є Я.",
-	"main": "index.js",
-	"scripts": {
-		"dev": "npx vitepress dev . --port 5173",
-		"build": "npx vitepress build .",
-		"preview": "npx vitepress preview . --port 5173",
-		"lint": "node scripts/lint_markdown.js superintellect",
-		"lint:all": "node scripts/lint_markdown.js .",
-		"fix": "node scripts/autofix_markdown.js superintellect",
-		"fix:all": "node scripts/autofix_markdown.js .",
-		"precommit": "pnpm run lint:all",
-		"sync": "node scripts/sync_terminology.js",
-		"test:e2e": "playwright test"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"type": "commonjs",
-	"devDependencies": {
-		"@braintree/sanitize-url": "^7.1.2",
-		"@playwright/browser-chromium": "^1.58.1",
-		"@playwright/test": "^1.58.1",
-		"cytoscape": "^3.33.1",
-		"cytoscape-cose-bilkent": "^4.1.0",
-		"dayjs": "^1.11.19",
-		"mermaid": "^11.12.2",
-		"vitepress": "^1.6.4",
-		"vitepress-plugin-mermaid": "^2.0.17",
-		"vue": "^3.5.27"
-	}
+  "name": "willni",
+  "version": "1.0.0",
+  "description": "Я є Всесвіт. Всесвіт є Я.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx vitepress dev . --port 5173",
+    "build": "npx vitepress build .",
+    "preview": "npx vitepress preview . --port 5173",
+    "lint": "node scripts/lint_markdown.js superintellect",
+    "lint:all": "node scripts/lint_markdown.js .",
+    "fix": "node scripts/autofix_markdown.js superintellect",
+    "fix:all": "node scripts/autofix_markdown.js .",
+    "precommit": "pnpm run lint:all",
+    "sync": "node scripts/sync_terminology.js",
+    "test:all": "pnpm run test:e2e",
+    "test:e2e": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@braintree/sanitize-url": "^7.1.2",
+    "@playwright/browser-chromium": "^1.58.1",
+    "@playwright/test": "^1.58.1",
+    "cytoscape": "^3.33.1",
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "dayjs": "^1.11.19",
+    "mermaid": "^11.12.2",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.27"
+  }
 }
