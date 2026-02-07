@@ -40,7 +40,7 @@ _Текст:_
 
 **Твій вибір сьогодні:** залишитися жертвою системи чи стати Живою Душею, що генерує власне Світло.
 
-Реєстрація: https://yaro-rasta.github.io/willni/registration
+Реєстрація: https://yaro-rasta.github.io/willni/superintellect/registration
 Перша серія: https://yaro-rasta.github.io/willni/superintellect/series_1
 
 **Стань Людиною. Активуй Сонце.**

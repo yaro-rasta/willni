@@ -17,7 +17,7 @@
 https://yaro-rasta.github.io/willni/superintellect/series_1
 
 📋 Реєстрація (Перше Коло, до 14 лютого):
-https://yaro-rasta.github.io/willni/registration
+https://forms.gle/rxzdqFxZswGNzWJ58
 
 Якщо резонує — реєструйся. Потім додам тебе до Signal-спільноти.
 
@@ -40,7 +40,7 @@ https://yaro-rasta.github.io/willni/registration
 Курс асинхронний — проходиш у своєму темпі. 6 серій. Кожна серія — це практика, а не лекція.
 
 📖 Перша серія: https://yaro-rasta.github.io/willni/superintellect/series_1
-📋 Реєстрація: https://yaro-rasta.github.io/willni/registration
+📋 Реєстрація: https://forms.gle/rxzdqFxZswGNzWJ58
 
 Якщо відчуваєш, що це для тебе — реєструйся. Якщо ні — не проблема, мИ залишаємось друзями.
 
@@ -57,7 +57,7 @@ https://yaro-rasta.github.io/willni/registration
 ☀️ Суперінтелект.Активація — мій новий проєкт. Безкоштовний курс для тих, хто хоче мислити ясно в епоху ШІ.
 
 Перша серія: https://yaro-rasta.github.io/willni/superintellect/series_1
-Реєстрація: https://yaro-rasta.github.io/willni/registration
+Реєстрація: https://forms.gle/rxzdqFxZswGNzWJ58
 ```
 
 ---
@@ -70,14 +70,14 @@ https://yaro-rasta.github.io/willni/registration
 6 серій. Твій темп. Без BS.
 
 Реєстрація до 14.02:
-https://yaro-rasta.github.io/willni/registration
+https://forms.gle/rxzdqFxZswGNzWJ58
 ```
 
 ---
 
 ## ⚠️ Після створення Google Form
 
-Заміни посилання `https://yaro-rasta.github.io/willni/registration` на лінк Google Form у всіх текстах вище, **АБО** залиш як є — на сайті буде кнопка-редірект на Google Form.
+Заміни посилання на лінк Google Form у всіх текстах вище, **АБО** залиш як є — на сайті буде кнопка-редірект на форму.
 
 ---
 

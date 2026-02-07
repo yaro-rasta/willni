@@ -24,7 +24,7 @@ export default withMermaid(
     locales: {
       root: {
         label: "Українська",
-        lang: "uk-UA",
+        lang: "uk",
         themeConfig: {
           // Локалізація інтерфейсу
           outline: { label: "На цій сторінці" },
@@ -36,7 +36,7 @@ export default withMermaid(
 
           nav: [
             { text: "Матриця", link: "/superintellect/" },
-            { text: "Реєстрація", link: "/registration" },
+            { text: "Реєстрація", link: "/superintellect/registration" },
             { text: "Платформи", link: "/PLATFORMS" },
           ],
           sidebar: [
@@ -108,7 +108,7 @@ export default withMermaid(
         themeConfig: {
           nav: [
             { text: "Matrix", link: "/en/superintellect/" },
-            { text: "Registration", link: "/en/registration" },
+            { text: "Registration", link: "/en/superintellect/registration" },
             { text: "Platforms", link: "/en/PLATFORMS" },
           ],
           sidebar: [

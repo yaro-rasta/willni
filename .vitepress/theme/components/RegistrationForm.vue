@@ -1,15 +1,15 @@
 <script setup>
 import { reactive, ref, computed } from "vue";
-import { useData } from "vitepress";
+import { useData, withBase } from "vitepress";
 
 const { lang } = useData();
 
-const GOOGLE_FORM_URL = "" // ← ВСТАВ СЮДИ ПОСИЛАННЯ НА GOOGLE FORM
+const GOOGLE_FORM_URL = "https://forms.gle/rxzdqFxZswGNzWJ58" // ← ВСТАВ СЮДИ ПОСИЛАННЯ НА GOOGLE FORM
 
 const t = computed(() => {
   const isEn = lang.value === "en-US";
   return {
-    title: isEn ? "Registration: First Circle" : "Реєстрація: Перше Коло",
+    title: isEn ? "Superintellect.Activation Registration" : "Реєстрація: Суперінтелект.Активація",
     deadline: isEn ? "Deadline: February 14, 2026" : "Дедлайн: 14 лютого 2026",
     description: isEn
       ? "Join the pilot group of Superintellect.Activation — the first asynchronous transformation course."
@@ -30,7 +30,7 @@ const t = computed(() => {
     manifestoLink: isEn
       ? "Natural Law Manifesto"
       : "Маніфестом Природного Права",
-    lawPath: isEn ? "/en/law" : "/law",
+    lawPath: withBase(isEn ? "/en/law" : "/law"),
     // For inline form mode (when no Google Form URL)
     nameLabel: isEn ? "Name / Alias" : "Ім'я / Псевдонім",
     namePlaceholder: isEn ? "What should we call you?" : "Як тебе називати?",
@@ -129,14 +129,14 @@ const submitForm = async () => {
 
         <p class="manifesto-note">
           {{ t.manifestoText }}
-          <a :href="t.lawPath">{{ t.manifestoLink }}</a>.
+          <a :href="t.lawPath" target="_blank">{{ t.manifestoLink }}</a>.
         </p>
 
         <div class="divider">
           <span>{{ t.orText }}</span>
         </div>
 
-        <a href="/willni/superintellect/series_1" class="series-link">
+        <a href="/willni/superintellect/series_1" class="series-link" target="_blank">
           {{ t.seriesBtn }}
         </a>
       </div>
@@ -148,7 +148,7 @@ const submitForm = async () => {
           <p>{{ t.successGreeting }} {{ form.name }}.</p>
           <p>{{ t.successMsg }}</p>
           <div class="next-steps">
-            <a href="/willni/superintellect/series_1" class="btn">{{ t.seriesBtn }}</a>
+            <a href="/willni/superintellect/series_1" class="btn" target="_blank">{{ t.seriesBtn }}</a>
           </div>
         </div>
 

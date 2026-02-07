@@ -7,6 +7,9 @@ hero:
   tagline: "Від кріпака системи до суверенної особистості"
   actions:
     - theme: brand
+      text: Активація Суперінтелекту
+      link: /superintellect/registration
+    - theme: alt
       text: Почати шлях
       link: /transition
     - theme: alt

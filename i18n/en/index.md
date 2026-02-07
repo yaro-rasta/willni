@@ -7,6 +7,9 @@ hero:
   tagline: "From a system serf to a sovereign personality"
   actions:
     - theme: brand
+      text: Activate Superintellect
+      link: /en/superintellect/registration
+    - theme: alt
       text: Start the Journey
       link: /en/transition
     - theme: alt
