@@ -14,7 +14,8 @@
     "precommit": "pnpm run lint:all",
     "sync": "node scripts/sync_terminology.js",
     "test:all": "pnpm run test:e2e",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "deploy": "pnpm build && cd .vitepress/dist && git init && git add -A && git commit -m 'deploy' && git push -f git@github.com:yaro-rasta/willni.git main:gh-pages && cd ../.."
   },
   "keywords": [],
   "author": "",
