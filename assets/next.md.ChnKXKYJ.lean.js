@@ -1,0 +1,1 @@
+import{_ as e,c as l,o as i,a5 as a}from"./chunks/framework.g0c4JhLR.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"next.md","filePath":"next.md"}'),n={name:"next.md"};function p(_,t,o,r,s,c){return i(),l("div",null,[...t[0]||(t[0]=[a("",8)])])}const f=e(n,[["render",p]]);export{m as __pageData,f as default};
