@@ -48,7 +48,7 @@ But in Ukrainian the word **"і де Я"** acquires a different, deeper meaning:
 
 ### Back to the foundation: I am the Universe and the Universe is I
 
-In the [Project Philosophy](../philosophy.md) wE-i assert:
+In the [Project Manifesto](../system.md) wE-i assert:
 
 > **"I am the Universe and the Universe is I."**
 

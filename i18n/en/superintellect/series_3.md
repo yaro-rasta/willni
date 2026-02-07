@@ -164,7 +164,7 @@ It is **full responsibility** for your imaginary world, which yOU-i project onto
 
 ### Key Idea: Every Person Is My Mirror or My Shadow
 
-From [philosophy.md](../philosophy.md)
+From [system.md](../system.md)
 
 > **"I am the Universe and the Universe is I."**
 
