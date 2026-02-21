@@ -1,0 +1,224 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "Інструкція з Деплою"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "1. Локальна збірка статичних файлів"
+		},
+		{
+			"type": "paragraph",
+			"text": "Щоб створити статичну версію сайту:"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "npm run build"
+		},
+		{
+			"type": "paragraph",
+			"text": "Це створить папку `.vitepress/dist` з усіма статичними HTML/CSS/JS файлами, готовими до публікації на будь-якому хостингу."
+		},
+		{
+			"type": "paragraph",
+			"text": "Щоб переглянути збудований сайт локально:"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "npm run preview"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "2. Автоматична публікація на GitHub Pages"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Крок 1: Налаштування репозиторію"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Створи репозиторій на GitHub (наприклад, `willni`)",
+				"Запуш код:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "   git init\n   git add .\n   git commit -m \"Initial commit: Will-n-i manifest\"\n   git branch -M main\n   git remote add origin https://github.com/YOUR_USERNAME/willni.git\n   git push -u origin main"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Крок 2: Увімкнення GitHub Pages"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Перейди в Settings репозиторію",
+				"Знайди розділ \"Pages\" в лівому меню",
+				"В \"Build and deployment\" обери:"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Source**: GitHub Actions"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Збережи зміни"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Крок 3: Налаштування base path (якщо потрібно)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Якщо твій репозиторій НЕ називається `username.github.io`, а має назву типу `willni`, то:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Відкрий `.vitepress/config.mjs`",
+				"Розкоментуй рядок:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "javascript",
+			"text": "   base: '/willni/',"
+		},
+		{
+			"type": "paragraph",
+			"text": "   (замість `willni` підстав назву свого репозиторію)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Крок 4: Автоматичний деплой"
+		},
+		{
+			"type": "paragraph",
+			"text": "Тепер при кожному `git push` в гілку `main`:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"GitHub Actions автоматично запустить workflow",
+				"Збудує статичний сайт",
+				"Опублікує на GitHub Pages"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "Твій сайт буде доступний за адресою:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"`https://YOUR_USERNAME.github.io/willni/` (якщо base встановлено)",
+				"або `https://YOUR_USERNAME.github.io/` (якщо репозиторій `username.github.io`)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "3. Альтернативні варіанти хостингу"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Netlify"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Підключи репозиторій до Netlify",
+				"Build command: `npm run build`",
+				"Publish directory: `.vitepress/dist`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Vercel"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Підключи репозиторій до Vercel",
+				"Framework Preset: VitePress",
+				"Автоматично визначить команди"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Cloudflare Pages"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Підключи репозиторій",
+				"Build command: `npm run build`",
+				"Build output directory: `.vitepress/dist`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "4. Вічне збереження (IPFS)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Після збірки (`npm run build`):"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "# Встанови IPFS Desktop або CLI\nipfs add -r .vitepress/dist\n\n# Отримаєш CID, наприклад: QmXyZ...\n# Доступ: https://ipfs.io/ipfs/QmXyZ..."
+		},
+		{
+			"type": "paragraph",
+			"text": "Для автоматичного пінінгу використовуй сервіси:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Pinata.cloud",
+				"Web3.Storage",
+				"Fleek.co"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Головне**: Після першого push в `main`, GitHub Actions автоматично все зробить за тебе! 🚀"
+		}
+	]
+}

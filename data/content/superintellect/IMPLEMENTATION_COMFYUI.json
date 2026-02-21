@@ -1,0 +1,116 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "🛠️ ComfyUI для M1 Mac: Повне встановлення та оптимізація"
+		},
+		{
+			"type": "paragraph",
+			"text": "Ця інструкція призначена для локального запуску важких AI-моделей (FLUX.2, SVD, Wan2.1) на процесорах Apple Silicon."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "1. Підготовка (Prerequisites)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**macOS**: 13.0+ (рекомендується 14.0 Sonoma або новіша для кращої підтримки Metal).",
+				"**Homebrew**: Повинен бути встановлений.",
+				"**Python**: Рекомендується версія 3.11."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "2. Встановлення (Installation)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Виконай ці команди в терміналі:"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "# Клонуємо репозиторій\ngit clone https://github.com/comfyanonymous/ComfyUI\ncd ComfyUI\n\n# Створюємо віртуальне середовище\npython3 -m venv venv\nsource venv/bin/activate\n\n# Встановлюємо PyTorch для Apple Silicon\npip3 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu\n\n# Встановлюємо залежності\npip install -r requirements.txt"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "3. Запуск та Оптимізація (Crucial!)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Для Apple Silicon (M1/M2/M3/M4) запускай ComfyUI тільки з цими флагами:"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "python main.py --force-fp16 --use-split-cross-attention"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Що дають ці флаги:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"`--force-fp16`: Зменшує споживання VRAM вдвічі. Без цього FLUX.2 може не запуститися на 8GB/16GB версіях M1.",
+				"`--use-split-cross-attention`: Значно прискорює генерацію на архітектурі Metal."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "4. Додавання моделей (Models)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Завантаж моделі та поклади їх у відповідні папки:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**FLUX.2 [dev] або [schnell]**: `models/checkpoints/`",
+				"**SVD (Stable Video Diffusion)**: `models/checkpoints/`",
+				"**Upscalers (для покращення якості відео)**: `models/upscale_models/`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "5. Очікувана продуктивність (M1)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Зображення (FLUX.2 1024x1024)**: ~1-3 хв.",
+				"**Відео (SVD, 2 сек, 25 кадрів)**: ~30-60 хв.",
+				"**Відео (Wan2.1 480p)**: ~1.5 - 2 години."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "6. Лайфхак для відео"
+		},
+		{
+			"type": "paragraph",
+			"text": "Замість того щоб генерувати довге відео одразу, згенеруй **1 ключовий кадр** у FLUX.2, а потім використовуй його як вхідний для **SVD (Image-to-Video)**. Це дасть найкращу якість за найменший час."
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "*Оновлено для Superintellect Series Production, 2026*"
+		}
+	]
+}

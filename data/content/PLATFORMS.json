@@ -1,0 +1,493 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "🛡 Рекомендовані Платформи для Спільноти"
+		},
+		{
+			"type": "blockquote",
+			"text": "\"Використовуй інструменти, які поважають твою приватність та підтримують свободу\""
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Рекомендовані Альтернативи"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "1. Signal (Найкраща для Messaging)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому ТАК:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ E2E encryption за замовчуванням",
+				"✅ Open-source (код перевірений спільнотою)",
+				"✅ Мінімум метаданих",
+				"✅ Фінансується некомерційною організацією",
+				"✅ Використовується журналістами, активістами"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Функції:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Чати 1-на-1",
+				"Групові чати (до 1000 учасників)",
+				"Голосові та відео-дзвінки",
+				"Зникаючі повідомлення",
+				"Нотатки для себе"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Немає публічних каналів (тільки групи)",
+				"Потрібен телефон для реєстрації"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Використання у Will-n-i:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Закриті групи практиків (Subscription tier)",
+				"VIP клієнти (особисті консультації)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Встановити:** https://signal.org"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "2. Element (Matrix) (Найкраща для Communities)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому ТАК:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Децентралізований (неможливо заблокувати)",
+				"✅ Федеративний протокол (як email)",
+				"✅ Open-source",
+				"✅ E2E encryption",
+				"✅ Можна розгорнути свій сервер",
+				"✅ Інтеграції з іншими платформами (bridges)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Функції:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Публічні та приватні кімнати",
+				"Теми (Spaces) для організації",
+				"Голосові/відео конференції (через Jitsi)",
+				"Боти та інтеграції",
+				"Працює у браузері, desktop, mobile"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"UI трохи складніший за шпигунські аналоги",
+				"Немає \"каналів\" у класичному розумінні (але є кімнати)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Використання у Will-n-i:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Публічна спільнота (Free tier)",
+				"Обговорення серій",
+				"Локальні спільноти Вільних"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Встановити:** https://element.io"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3. Revolt (Найкраща для діскорд-подібного Досвіду)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому ТАК:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Open-source",
+				"✅ UI дуже схожий на діскорд (легкий перехід)",
+				"✅ Самохостинг (можна розгорнути свій сервер)",
+				"✅ Немає збору даних",
+				"✅ Активна розробка"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Функції:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Сервери з каналами (як діскорд)",
+				"Голосові канали",
+				"Ролі та права доступу",
+				"Боти та інтеграції",
+				"Markdown підтримка"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Менша спільнота, ніж діскорд",
+				"E2E encryption ще у розробці (планується)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Використання у Will-n-i:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Структуровані обговорення (топіки)",
+				"Воркшопи та події",
+				"Голосові сесії"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Встановити:** https://revolt.chat"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "4. Mattermost (Для Команд)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому ТАК:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Open-source",
+				"✅ Самохостинг",
+				"✅ Enterprise-рівень безпеки",
+				"✅ Інтеграції (GitHub, Jira, тощо)",
+				"✅ Відмінна організація"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Функції:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Канали (публічні/приватні)",
+				"Прямі повідомлення",
+				"Пошук по історії",
+				"File sharing",
+				"Інтеграції та плагіни"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Більше підходить для команд, ніж для публічних спільнот",
+				"Платна версія для розширених функцій"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Використання у Will-n-i:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Внутрішня команда проєкту",
+				"VIP клієнти (трансформаційні програми)",
+				"Організація спільних проєктів"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Встановити:** https://mattermost.com"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Рекомендована Стратегія для Will-n-i"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Tier 1: Free (Публічна Аудиторія)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Платформа:** Element (Matrix)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Децентралізована (не можна заблокувати)",
+				"Безкоштовна для всіх",
+				"Публічні кімнати для обговорення серій",
+				"Bridges до інших платформ (якщо треба)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Setup:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Створити Space \"Will-n-i: Вільні\"",
+				"Кімнати по темах:"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"#загальне",
+				"#серії-обговорення",
+				"#питання",
+				"#локальні-спільноти (по містах)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Tier 2: Subscription (Practical)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Платформа:** Signal + Revolt"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Signal: приватні групи для практикантів",
+				"Revolt: структуровані обговорення та воркшопи"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Setup:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Signal група: \"Will-n-i Практики\" (до 1000 осіб)",
+				"Revolt сервер з каналами:"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"#щоденні-ритуали",
+				"#питання-до-наставників",
+				"#успіхи",
+				"🎤 Голосові канали для weekly calls"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Tier 3: VIP (Трансформація)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Платформа:** Signal або Mattermost"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Максимальна приватність",
+				"Персональна підтримка",
+				"Структурована робота над проєктами"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Setup:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Signal 1-на-1 з наставником",
+				"Mattermost team для командних VIP програм"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "💡 Чому Це Важливо?"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "1. Безпека"
+		},
+		{
+			"type": "paragraph",
+			"text": "Використання платформ, що контролюються недружніми державами (РФ) = ризик:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Витоку даних учасників",
+				"Блокування спільноти",
+				"Використання даних проти учасників"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "2. Етика"
+		},
+		{
+			"type": "paragraph",
+			"text": "Вільні живуть за Природним Правом. Використання інструментів тиранічних режимів суперечить цінностям."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3. Практика"
+		},
+		{
+			"type": "paragraph",
+			"text": "якщо проповідуємо свободу, мають використовувати вільні (open-source, децентралізовані) інструменти."
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🔗 Корисні Посилання"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Signal:** https://signal.org",
+				"**Element:** https://element.io",
+				"**Revolt:** https://revolt.chat",
+				"**Mattermost:** https://mattermost.com",
+				"**Порівняння:** https://www.securemessagingapps.com"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Вибір інструментів — це теж політичний акт. Обирай свідомо.**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**мИ є Народ. Я є Всесвіт. Всесвіт є Я.** 🌟"
+		}
+	]
+}

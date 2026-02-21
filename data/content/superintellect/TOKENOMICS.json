@@ -1,0 +1,792 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "🪙 Токеноміка \"Vільні\": Стратегія ICO та Листинг"
+		},
+		{
+			"type": "blockquote",
+			"text": "\"Tokenomics is the new economics.\" — _Vitalik Buterin_"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Концепція Токена \"WILLNI\" (Free)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Базова Ідея"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Ticker:** `$WILLNI`  \n**Type:** Utility Token (НЕ security, щоб уникнути SEC)  \n**Blockchain:** Solana (низькі комісії, швидкі транзакції, розвинута екосистема)  \n**Standard:** SPL Token"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Use Cases (Утилітарність)"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Доступ до Спільноти**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Холдери $WILLNI отримують доступ до закритих вебінарів, чатів",
+				"Gradient: 100 $WILLNI = базовий доступ, 10,000 $WILLNI = VIP-доступ"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Governance (DAO)**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"1 $WILLNI = 1 голос у рішеннях спільноти",
+				"Голосування за: нові серії, напрямки розвитку, розподіл фонду"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Оплата Послуг**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"VIP-трансформація: оплата в $WILLNI зі знижкою 20% (vs BTC/fiat)",
+				"Підписка: можна платити $WILLNI замість $50/міс"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Staking Rewards**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Застейкали $WILLNI → отримуєш % APY у вигляді нових токенів",
+				"Довгострокові холдери отримують бонуси"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Внутрішня Економіка**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Оплата в хостелах/ресторанах \"Вільних\"",
+				"Покупка мерчу, книг, курсів"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📊 Токеноміка: Розподіл та Емісія"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Total Supply: 1,000,000,000 $WILLNI (1 млрд токенів)"
+		},
+		{
+			"type": "paragraph",
+			"text": "| Категорія             | %   | Кількість | Vesting              | Призначення                         |\n| --------------------- | --- | --------- | -------------------- | ----------------------------------- |\n| **Public Sale (ICO)** | 30% | 300M      | Одразу               | Залучення капіталу та спільноти     |\n| **Community Fund**    | 33% | 330M      | 4 роки (linear)      | Інфраструктура (хостели, ресторани) |\n| **Team & Advisors**   | 15% | 150M      | 2 роки (cliff 6 міс) | Мотивація команди                   |\n| **Ecosystem Growth**  | 10% | 100M      | 3 роки               | Маркетинг, partnerships, grants     |\n| **Staking Rewards**   | 7%  | 70M       | 5 років              | Винагорода за стейкінг              |\n| **Charity (Tithe)**   | 5%  | 50M       | Одразу               | Гуманітарні потреби, захист України |"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Deflationary Mechanism:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Burn:** 1% від кожної транзакції спалюється (дефляція)",
+				"**Buyback:** 10% від прибутку проекту йде на викуп $WILLNI з ринку та burn"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "💰 ICO Strategy: Фази Залучення"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Pre-Seed (Seed Round) — Закритий Раунд"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мета:** Залучити early believers та стратегічних інвесторів."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Кількість:** 30M $WILLNI (10% від public sale)",
+				"**Ціна:** $0.01 / $WILLNI",
+				"**Soft Cap:** $100K",
+				"**Hard Cap:** $300K",
+				"**Учасники:** Crypto angels, friends & family, strategic partners",
+				"**Lock-up:** 6 місяців cliff, потім лінійний unlock 1 рік"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Що дає:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Початковий капітал для юридичних витрат, аудиту, маркетингу",
+				"✅ Репутаційні інвестори (name-dropping для ICO)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Private Sale — Обмежений Доступ"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мета:** Залучити більші чеки від crypto VCs."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Кількість:** 70M $WILLNI (23% від public sale)",
+				"**Ціна:** $0.03 / $WILLNI",
+				"**Soft Cap:** $1M",
+				"**Hard Cap:** $2.1M",
+				"**Учасники:** Crypto VCs (Solana Ventures, Multicoin Capital, Binance Labs)",
+				"**Lock-up:** 3 місяці cliff, 9 місяців vesting"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Що дає:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Капітал для розробки tech (Antigravity, DAO contracts)",
+				"✅ Партнерства з екосистемами (Solana, Jupiter)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Public Sale (ICO) — Відкритий Доступ"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мета:** Створити широку базу холдерів та ліквідність."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Кількість:** 200M $WILLNI (67% від public sale)",
+				"**Ціна:** $0.05 / $WILLNI",
+				"**Soft Cap:** $5M",
+				"**Hard Cap:** $10M",
+				"**Платформа:** Власний launchpad + partnered platforms (CoinList, DAO Maker)",
+				"**Lock-up:** Немає (одразу в ринок)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Що дає:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Капітал для масштабування (хостели, команда)",
+				"✅ Community ownership (тисячі холдерів)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🚀 Листинг: Вихід на ICO Drops та Біржі"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Підготовка до Листингу на ICODrops.com"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Вимоги ICO Drops:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"✅ **White Paper** (детальна токеноміка, roadmap, team)",
+				"✅ **Audited Smart Contracts** (CertiK, Hacken)",
+				"✅ **Legal Opinion** (токен = utility, не security)",
+				"✅ **Working Product** (VitePress site, публічні серії)",
+				"✅ **Team Doxx** (публічні профілі, LinkedIn)",
+				"✅ **Community** (мін. 5K+ followers у Twitter/Signal)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Timeline:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Місяць 1-2:** Написати White Paper, юридичний аудит",
+				"**Місяць 3:** Розробка Solana програм (SPL Token + staking)",
+				"**Місяць 4:** Аудит контрактів (CertiK ~$50K)",
+				"**Місяць 5:** Подати заявку на ICO Drops, CoinList",
+				"**Місяць 6:** Pre-Seed Round",
+				"**Місяць 7-8:** Private Sale",
+				"**Місяць 9:** Public Sale (ICO)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "DEX та CEX Листинг"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Децентралізовані Біржі (DEX) — Одразу після ICO:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Raydium** (Solana — основна ліквідність)",
+				"**Orca** (Solana — concentrated liquidity)",
+				"**Jupiter** (Solana — агрегатор)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Підготовка:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Створити ліквідність пули: $WILLNI/USDC, $WILLNI/SOL",
+				"Seed liquidity: $500K-1M (з ICO funds)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Централізовані Біржі (CEX) — 3-6 місяців після ICO:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Tier 3:** Gate.io, MEXC (легше листинг, ~$50K fee)",
+				"**Tier 2:** KuCoin, Bybit (~$100K-300K fee)",
+				"**Tier 1:** Binance, Coinbase (складно, потрібен великий volume, ~$500K-1M fee)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Реалістична стратегія:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Почати з DEX (no fees)",
+				"Після 6 міс → Gate.io або MEXC",
+				"Після 1 року (якщо volume $10M+/день) → KuCoin",
+				"Binance — лише якщо проект стане топовим"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📈 Marketing для ICO"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Pre-ICO Hype Building (3-6 місяців до ICO)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**1. Content Marketing**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Публікувати серії на Medium, Mirror.xyz",
+				"AMA (Ask Me Anything) сесії на Reddit, Twitter Spaces",
+				"Подкасти: появи у crypto-подкастах (Bankless, Unchained)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**2. Influencer Partnerships**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Оплата crypto-influencers для огляду проекту",
+				"Бюджет: $50K-100K на 10-20 influencers (Tier 2-3)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**3. Community Building**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Signal: росту до 10K+ членів (через airdrop campaigns)",
+				"Twitter: 5K+ followers (content + engagement)",
+				"Revolt: активні дискусії, модерація"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**4. Airdrop Campaign**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Роздати 2% supply (20M $WILLNI) за:",
+				"Підписку на Twitter/Signal",
+				"Реферальну програму",
+				"Ранній whitelist для ICO"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "ICO Launch Marketing"
+		},
+		{
+			"type": "paragraph",
+			"text": "**1. PR Campaign**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Прес-релізи: CoinTelegraph, CoinDesk, Decrypt",
+				"Бюджет: $20K-50K"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**2. Paid Ads**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Google Ads (якщо дозволено для crypto), Twitter Ads",
+				"Crypto-specific platforms: CoinMarketCap, CoinGecko ads",
+				"Бюджет: $50K-100K"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**3. Partnerships**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Альянси з іншими crypto-проектами (cross-promotion)",
+				"Launchpad partnerships: CoinList, DAO Maker (they bring audience)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "⚖️ Юридичні Виклики ICO"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Головна Проблема: Securities vs Utility"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Securities (Цінні Папери):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Якщо токен = інвестиція з очікуванням прибутку → це security",
+				"SEC (США) вимагає реєстрації → складно та дорого"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Utility (Утилітарний Токен):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Якщо токен = доступ до послуг → це utility",
+				"Менше регуляцій"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як зробити $WILLNI utility, а не security:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Немає обіцянок прибутку (\"ROI\", \"investment returns\")",
+				"✅ Токен використовується для доступу до платформи",
+				"✅ Стейкінг rewards = не dividends, а \"governance participation\"",
+				"✅ Юридична Opinion від crypto-lawyers (Hogan Lovells, Cooley)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Юрисдикція для реєстрації:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Швейцарія** (Crypto Valley Zug) — найкращий варіант",
+				"**Сінгапур** — also friendly",
+				"**Ліхтенштейн** — Token Act 2020"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Вартість юридичних витрат:** $100K-300K"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "💎 Реалістична Оцінка Success"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Оптимістичний Сценарій"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"ICO залучає **$10M**",
+				"Листинг на Binance через 1 рік",
+				"Market Cap зростає до **$100M-500M**",
+				"Early investors: 10x-50x ROI"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Ймовірність:** 5-10% (більшість ICO провалюються)"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Реалістичний Сценарій"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"ICO залучає **$2-5M**",
+				"Листинг на Gate.io, KuCoin",
+				"Market Cap стабілізується на **$10M-50M**",
+				"Early investors: 2x-5x ROI"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Ймовірність:** 30-40%"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Песимістичний Сценарій"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"ICO залучає **<$1M** (не досягнуто Soft Cap)",
+				"Токен торгується лише на DEX",
+				"Market Cap **$1M-5M**",
+				"Early investors: breakeven або loss"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Ймовірність:** 50-60% (більшість проектів тут)"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Моя Рекомендація"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Чи Варто Робити ICO Зараз?"
+		},
+		{
+			"type": "paragraph",
+			"text": "**НІ, ще рано.**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Причини:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Немає продукту:** VIP-трансформації ще не провели жодної",
+				"**Немає community:** Потрібно мін. 10K+ активних фоловерів",
+				"**Ринок складний:** 2024-2026 — bear/sideways market для altcoins",
+				"**Регуляції жорсткі:** SEC активно переслідує ICO"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Альтернативний План:**"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 1 (6-12 місяців): Build & Prove"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Запустити VitePress site",
+				"✅ Провести 10-20 VIP трансформацій (кейси)",
+				"✅ Зібрати community 10K+ (Twitter, Signal)",
+				"✅ Генерувати $500K-1M revenue (без ICO)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 2 (12-18 місяців): Token Design"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Написати White Paper",
+				"✅ Розробити смарт-контракти",
+				"✅ Юридичний аудит (Швейцарія)",
+				"✅ Security audit (CertiK)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 3 (18-24 місяці): ICO Launch"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Private Sale ($1-2M)",
+				"✅ Public Sale ($5-10M)",
+				"✅ DEX listing → CEX listing"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому це краще:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"До того часу проект матиме **proof of concept**",
+				"Community вже лояльна (не треба buyers, а є believers)",
+				"Більше шансів на успіх ICO (track record є)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🚀 Швидкий Шлях: Альтернатива ICO"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Варіант: Revenue-Based Financing"
+		},
+		{
+			"type": "paragraph",
+			"text": "Замість ICO:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Залучити **$500K-2M** від crypto VCs через:",
+				"**Revenue share:** інвестор отримує 10-20% revenue поки не поверне 3x investment",
+				"**Equity:** Традиційні акції (але для crypto проекту — складно)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Переваги:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Менше регуляцій",
+				"✅ Не треба token design",
+				"✅ Швидше (3-6 місяців vs 18-24 для ICO)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"❌ Втрата частини revenue",
+				"❌ Не створюється community через token ownership"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🏁 Фінальний Вердикт"
+		},
+		{
+			"type": "paragraph",
+			"text": "**ICO — це можливість, але НЕ зараз.**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**План:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Рік 1:** Build product, community, revenue ($1M+)",
+				"**Рік 2:** Token design + юридична підготовка",
+				"**Рік 3:** ICO Launch + листинг на ICODrops, біржі"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Або:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Рік 1:** Build",
+				"**Рік 2:** Revenue-based financing ($2M)",
+				"**Рік 3:** Profitable without ICO (можливо, ICO вже не потрібне)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Я раджу другий варіант:** Спочатку довести, що бізнес-модель працює БЕЗ ICO. Потім, якщо потрібен масштаб, робити token."
+		}
+	]
+}

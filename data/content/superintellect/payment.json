@@ -1,0 +1,14 @@
+{
+	"layout": "home",
+	"title": "Оплата — Суперінтелект.Активація",
+	"$content": [
+		{
+			"type": "paragraph",
+			"text": "<div class=\"payment-page\">\n  <CryptoPayment />\n</div>"
+		},
+		{
+			"type": "paragraph",
+			"text": "<style>\n.payment-page {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 85vh;\n  width: 100%;\n}\n</style>"
+		}
+	]
+}

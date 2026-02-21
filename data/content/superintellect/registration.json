@@ -1,0 +1,14 @@
+{
+	"layout": "home",
+	"title": "Реєстрація",
+	"$content": [
+		{
+			"type": "paragraph",
+			"text": "<div class=\"registration-page\">\n  <RegistrationForm />\n</div>"
+		},
+		{
+			"type": "paragraph",
+			"text": "<style>\n.registration-page {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 80vh;\n  width: 100%;\n}\n@media (max-width: 768px) {\n  .registration-page {\n    padding: 0 10px;\n  }\n}\n</style>"
+		}
+	]
+}

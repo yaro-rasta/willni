@@ -1,0 +1,489 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "🚀 Наступні дії — willni (17 лют 2026)"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Завершено"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Phase 1: Auth — nan0web Platform Migration"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Встановлено nan0web пакети як npm залежності",
+				"`@nan0web/auth-node`, `@nan0web/auth-core`, `@nan0web/http-node`",
+				"`@nan0web/db`, `@nan0web/db-fs`, `@nan0web/http`, `@nan0web/log`",
+				"`@nan0web/types`, `@nan0web/event`",
+				"[x] `server/index.js` — AuthServer з `@nan0web/auth-node` (74 рядки)",
+				"[x] Видалено `server/auth-setup.js` (більше не потрібний)",
+				"[x] Всі auth endpoints працюють:",
+				"`POST /auth/signup` — реєстрація",
+				"`PUT /auth/signup/:username` — підтвердження кодом",
+				"`POST /auth/signin/:username` — логін → access + refresh tokens",
+				"`GET /auth/signin/:username` — дані користувача (Bearer token)",
+				"`PUT /auth/refresh/:token` — оновлення токенів",
+				"`POST /auth/forgot/:username` — запит скидання паролю",
+				"`PUT /auth/forgot/:username` — скидання паролю",
+				"`DELETE /auth/signin/:username` — логаут",
+				"[x] CORS middleware для VitePress dev-сервера",
+				"[x] Health check (`GET /health`)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 2: Vue → Auth API Integration (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] **auth.js** — централізована утиліта для управління токенами",
+				"Reactive state: `isAuthenticated`, `currentUser`",
+				"API helpers: signup, confirmSignup, signin, fetchUser, refresh, signout",
+				"Token persistence в `localStorage` (`willni_auth` key)",
+				"Auto-init: перевірка → verify → fallback refresh",
+				"[x] **RegistrationForm.vue** — переписано на `/auth/signup`",
+				"Форма: username + email + password + tier selection",
+				"3-step flow: register → confirm code → auto-login → success",
+				"Manifesto agreement checkbox",
+				"Glassmorphism design, dark/light theme",
+				"[x] **AuthGate.vue** — Bearer token auth",
+				"`auth.init()` на mount → localStorage → verify → refresh",
+				"Login form inline (username + password)",
+				"Logout button з `auth.signout()`",
+				"Loading spinner під час init",
+				"[x] **LoginForm.vue** (новий) — окрема сторінка логіну",
+				"`POST /auth/signin/:username` → redirect до курсу",
+				"`superintellect/login.md` page",
+				"[x] **server/index.js** — nan0web code style (no `;`, tabs, single quotes)",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 2b: Design Fix (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Light theme text visibility — h1-h6, p, ul, ol, strong overrides",
+				"[x] Premium table styling — glassmorphism headers, rounded corners, hover effects",
+				"[x] Typography — Inter font stack, anti-aliasing",
+				"[x] Custom blocks (tip, warning) — light theme contrast fix",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 3: AI Chat Widget (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] `ChatWidget.vue` — плаваючий чат-віджет (☀️ toggle → glassmorphism window)",
+				"Premium design: popIn animation, typing indicator, message bubbles",
+				"Dark/light theme support",
+				"Real API fetch до `/api/chat`",
+				"[x] `POST /api/chat` — серверний endpoint (stub, готовий для AI модуля)",
+				"[x] Інтеграція в `Layout.vue` (#layout-bottom slot)",
+				"[x] Глобальна реєстрація в `theme/index.js`",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 3b: AI — Real Intelligence (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Cerebras API інтеграція (gpt-oss-120b → llama3.1-8b fallback)",
+				"[x] System prompt: SunIntelligence ☀️ з контекстом курсу Суперінтелект",
+				"[x] `/api/chat` — реальні AI відповіді, body parsing, model fallback",
+				"[x] `/health` — AI status indicator",
+				"[x] **Server tested** ✓ — AI відповідає українською",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 3c: AI — Streaming & History (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] SSE streaming — токени приходять real-time, ChatWidget показує cursor blink",
+				"[x] Conversation history — in-memory per session (30 min TTL, max 20 messages)",
+				"[x] Session ID — random per widget instance",
+				"[x] **Server tested** ✓ — `data: {\"text\":\"token\"}\\n\\n` format",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 5: Email Verification (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] `nodemailer` — встановлено як npm dependency",
+				"[x] HTML email templates:",
+				"Verification code (glassmorphism dark theme, branded)",
+				"Welcome email (CTA → Series 1)",
+				"[x] `POST /api/send-verification` — відправка коду на пошту",
+				"[x] `POST /api/send-welcome` — welcome email після підтвердження",
+				"[x] Dev mode fallback — `📧 [DEV]` логування в консоль якщо SMTP не налаштовано",
+				"[x] Integration: RegistrationForm.vue → fire-and-forget email calls",
+				"[x] **Server tested** ✓",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "Env vars для production:"
+		},
+		{
+			"type": "code",
+			"text": "SMTP_HOST=smtp.example.com\nSMTP_PORT=587\nSMTP_USER=user\nSMTP_PASS=pass\nSMTP_FROM=noreply@willni.com"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Phase 6: Landing Page (17 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] `LandingPage.vue` — premium single-page landing",
+				"Hero: gradient text, pulsing glow animation, dual CTA",
+				"Features: 3 cards (Async, AI, 6 Series)",
+				"Pricing: 3 tiers (Free/Sub $99/VIP 1 BTC) with featured highlight",
+				"Quote: \"ПОВОЛІ, бо мИ живемо ПО ВОЛІ\"",
+				"Final CTA: single button → registration",
+				"Mobile-first responsive",
+				"Dark/light theme",
+				"[x] `superintellect/start.md` — SEO-ready page",
+				"[x] UTM tracking (sessionStorage)",
+				"[x] **Build verified** ✓"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "⏳ Наступне"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Phase 4: Crypto Payments (Fast Start) ← ЗАРАЗ"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] `CryptoPayment.vue` — сторінка з адресами гаманців (BTC, USDT)",
+				"[x] Форма підтвердження транзакції (TX Hash)",
+				"[x] `POST /api/report-payment` — endpoint для звітування",
+				"[ ] Вставити реальні адреси з Trustee (BTC + USDT TRC-20)",
+				"[ ] Telegram Bot інтеграція для сповіщень про оплату"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Phase 7: BTCPay Server & Automation"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] Налаштування BTCPay Server на VPS (~$15/mo)",
+				"[ ] Інтеграція zPub/xPub від суверенного гаманця (Sparrow/BlueWallet)",
+				"[ ] Автоматизація апгрейду ролей через Webhooks BTCPay",
+				"[ ] Lightning Network для миттєвих мікроплатежів ($99)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Phase 8: nan0web Native Frontend 🌐"
+		},
+		{
+			"type": "paragraph",
+			"text": "Повна міграція з VitePress на nan0web UI stack.\nwillni стає **першим showcase** nan0web web-додатку."
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8a: Build Pipeline — MD → JSON ✅"
+		},
+		{
+			"type": "paragraph",
+			"text": "Конвертація всіх `.md` файлів у `.json` для `@nan0web/db-browser`:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Скрипт `scripts/md-to-json.mjs` — парсить `.md` (frontmatter + content) — 21 unit tests",
+				"[x] Генерує `data/content/*.json` з `$content` масивом (76 файлів)",
+				"[x] CLI: `scripts/build-content.mjs` + `npm run build:content`",
+				"[x] Серверний endpoint: `GET /api/content?path=` — віддає JSON документи — 6 E2E tests",
+				"[x] `db-browser.fetch('superintellect/series_1')` → отримує контент"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8b: ui-lit Core Components"
+		},
+		{
+			"type": "paragraph",
+			"text": "Розширення `@nan0web/ui-lit` для willni (Lit Web Components):"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] `ui-nav` — верхня навігація (Матриця, Курс, Реєстрація, Оплата)",
+				"[ ] `ui-sidebar` — бічна панель з деревом навігації",
+				"[ ] `ui-markdown` — рендер MD контенту (заголовки, списки, код, таблиці)",
+				"[ ] `ui-page` — layout компонент (nav + sidebar + content + footer)",
+				"[ ] `ui-dark-mode` — перемикач теми (вже є CSS vars у theme/)",
+				"[ ] `ui-lang` — перемикач мови (uk/en, інтеграція з `@nan0web/i18n`)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8c: ui-lit Auth Components"
+		},
+		{
+			"type": "paragraph",
+			"text": "Міграція Vue Auth → Lit Web Components:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] `ui-auth-form` — реєстрація/логін (замість RegistrationForm.vue)",
+				"[ ] `ui-auth-gate` — захист контенту (замість AuthGate.vue)",
+				"[ ] Інтеграція з `@nan0web/auth-core` (browser-side)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8d: ui-lit Chat & Payment"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] `ui-chat` — AI чат з SSE streaming (замість ChatWidget.vue)",
+				"[ ] `ui-payment` — крипто платіжна сторінка (замість CryptoPayment.vue)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8e-2: Data-Driven Authorization (18 лют 2026)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] **AccessControl** (`cli/access.mjs`) — data-driven авторизація",
+				"Adapted from `@nan0web/auth-node/AccessControl`",
+				"3-рівнева резолюція: user → group → global",
+				"URL-based: кожна дія = шлях (`/admin`, `/dashboard`, `/course`)",
+				"`ac.check(slug, path, level)` — один виклик замість 30 if/else",
+				"`ac.filterNav(navItems, slug)` — автоматична фільтрація меню",
+				"Unit tests: `cli/access.test.mjs` (34 tests)",
+				"[x] **Data files** — декларативні правила доступу",
+				"`cli/data/.access` — Конституція (global rules)",
+				"`cli/data/.group` — Реєстр груп (group → users)",
+				"`cli/data/nav.yaml` — Навігація як дані (path + icon + flags)",
+				"[x] **main.mjs refactored** — data-driven menu generation",
+				"Замінено ~30 рядків if/else на 1: `ac.filterNav(navItems, slug)`",
+				"Nav items з nav.yaml, доступ з .access/.group",
+				"Убрано хардкоджений `requireAuth` guard для навігації",
+				"[x] **137/137 tests pass** ✓"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Наступний крок — Platform Migration**:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] `@nan0web/auth-core@1.1.0` — AccessControl, Password, Session ✅ (18.02.2026)",
+				"README.md генерується коректно (знайдено і виправлено баг в `db-fs/saveMD`)",
+				"89 unit tests + 15 docs tests = **104/104 pass**",
+				"[ ] `@nan0web/auth-node@1.1.0` — делегує до auth-core (REQUESTS.md написано)",
+				"[ ] willni CLI → `import { AccessControl } from '@nan0web/auth-core'`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8e: ui-cli Integration"
+		},
+		{
+			"type": "paragraph",
+			"text": "Архітектура: `cli/system.md`"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Terminal-інтерфейс до willni через `@nan0web/ui-cli`",
+				"[x] Меню: Панель, Учасники, Вхід, Реєстрація, Оплата, Курс, Економіка",
+				"[x] Session state (in-memory users[], currentUser)",
+				"[x] i18n: uk/en з повним покриттям vocab",
+				"[x] E2E тести: alignment, переклади, vocab completeness",
+				"[x] `Logger.table()` з `prefix` та Unicode-aware `stringWidth()`",
+				"[x] **Persistence (Фаза 1)**: `@nan0web/db-fs` адаптер",
+				"`saveUser/loadUsers` — YAML Golden Dataset `cli/data/users/*.yaml`",
+				"`savePayment` — `cli/data/payments/*.yaml`",
+				"`saveProgress/loadProgress` — `cli/data/progress/*.yaml`",
+				"Graceful fallback: `⚠ DB unavailable → memory-only mode`",
+				"Unit tests: `cli/db.test.mjs` (12 tests)",
+				"[x] **Registration Protocol** (`cli/protocol.mjs`):",
+				"Configurable: `auto` | `confirm` × `moderate: true|false`",
+				"Transport-agnostic: email, phone, 2LW",
+				"Auto-login after register (when protocol = auto + no moderation)",
+				"Unit tests: `cli/protocol.test.mjs` (10 tests)",
+				"[x] **Admin Panel** (`runAdmin`):",
+				"Verify user → save to DB",
+				"Confirm payment → auto-upgrade tier",
+				"Change tier → save to DB",
+				"[x] **Payment → User linkage**:",
+				"Auto `userId = currentUser.email` when logged in",
+				"Warning when not logged in",
+				"[x] **Visual polish**:",
+				"ASCII banner with box-drawing chars",
+				"Colored tiers: VIP(yellow), Mentor(magenta), Sub(cyan), Free(dim)",
+				"Colored verified status, styled course progress",
+				"[ ] Profile: view own data, payment history",
+				"[ ] `willni chat` — AI чат з терміналу"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8f: Server-Side Rendering"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] `AuthServer` віддає `index.html` з `<ui-app>` shell",
+				"[ ] `<script type=\"module\">` завантажує ui-lit components",
+				"[ ] SEO: серверний pre-render meta tags (title, description, og:\\*)",
+				"[ ] Vite для dev-mode HMR"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "Стек Phase 8:"
+		},
+		{
+			"type": "code",
+			"text": "Browser:\n  @nan0web/ui-lit       Lit Web Components (ui-nav, ui-page, ui-markdown...)\n  @nan0web/db-browser   Fetch JSON data від сервера\n  @nan0web/auth-core    Browser-side auth (tokens, user state)\n  @nan0web/i18n         Мультимовність (uk/en)\n\nServer:\n  @nan0web/auth-node    AuthServer (JWT, users)\n  @nan0web/db-fs        Файлове сховище + MD as Data\n  @nan0web/http-node    HTTP server + SSR shell\n\nBuild:\n  Vite                  Dev server + HMR + production bundle\n  scripts/md-to-json    MD → JSON конвертер"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📁 Архітектура"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Поточна (VitePress, Phase 1-6)"
+		},
+		{
+			"type": "code",
+			"text": "willni/\n  server/\n    index.js          ← AuthServer + AI Chat (SSE) + Email + Payments\n    package.json      ← { type: \"module\" }\n    data/             ← DBFS файлове сховище (users, tokens)\n  .vitepress/\n    theme/\n      auth.js         ← Централізована утиліта (tokens, API, reactive state)\n      components/\n        RegistrationForm.vue  ← signup → email → confirm → auto-login\n        LoginForm.vue         ← signin → redirect\n        AuthGate.vue          ← Bearer token guard + inline login\n        ChatWidget.vue        ← AI chat (SSE streaming, floating widget) ☀️\n        LandingPage.vue       ← Premium landing page\n        CryptoPayment.vue     ← BTC/USDT payment page\n        HomePage.vue          ← Home\n        BackgroundScene.vue   ← Canvas animation\n      custom.css      ← Premium стилі (dark + light, tables, typography)\n  superintellect/\n    start.md          ← Landing page (outreach)\n    registration.md   ← Registration page\n    login.md          ← Login page\n    payment.md        ← Crypto payment page\n  package.json        ← nan0web + nodemailer dependencies"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Цільова (nan0web Native, Phase 8)"
+		},
+		{
+			"type": "code",
+			"text": "willni/\n  server/\n    index.js          ← AuthServer + AI + Email + Payments + SSR shell\n    data/             ← DBFS (users, tokens, content JSON)\n  app/\n    index.html        ← SPA shell (<ui-app>)\n    src/\n      index.js        ← Entry: UILit + db-browser + router\n      components/\n        ui-nav.js     ← Lit: навігація\n        ui-sidebar.js ← Lit: бічна панель\n        ui-page.js    ← Lit: layout\n        ui-markdown.js← Lit: MD renderer\n        ui-chat.js    ← Lit: AI chat (SSE)\n        ui-auth.js    ← Lit: auth forms\n        ui-payment.js ← Lit: crypto payments\n      theme/\n        tokens.css    ← CSS custom properties\n        dark.css      ← Dark mode overrides\n  content/\n    *.md              ← Джерельні файли (MD)\n  data/\n    *.json            ← Згенеровані JSON документи ($content)\n  scripts/\n    md-to-json.js     ← Build: MD → JSON конвертер"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📦 Залежності"
+		},
+		{
+			"type": "code",
+			"text": "# Server\n@nan0web/auth-node  ^1.0.2   AuthServer (головний пакет)\n@nan0web/auth-core  ^1.1.0   User, Role, AccessControl, Password, Session\n@nan0web/http-node  ^1.0.1   Server, Router\n@nan0web/http       ^1.0.1   HTTP protocol\n@nan0web/db         ^1.2.2   DB base\n@nan0web/db-fs      ^1.1.1   DBFS файловий драйвер\n@nan0web/log        ^1.1.1   Logger\n@nan0web/types      ^1.2.0   Type utilities\n@nan0web/event      ^1.0.1   Event system\nnodemailer          latest   Email verification & welcome\n\n# Browser (Phase 8)\n@nan0web/ui-lit     workspace  Lit Web Components\n@nan0web/db-browser ^1.0.1     Browser DB client\n@nan0web/i18n       ^1.0.0     Internationalization\nlit                 ^3.3.1     Web Components framework"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🔑 ENV Variables"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "# Required\nCEREBRAS_API_KEY=...       # AI chat\n\n# Optional (defaults shown)\nPORT=3333                  # API server port\nCORS_ORIGIN=http://localhost:5173\nVITE_API_URL=http://localhost:3333\n\n# Email (optional, dev mode = console log)\nSMTP_HOST=\nSMTP_PORT=587\nSMTP_USER=\nSMTP_PASS=\nSMTP_FROM=noreply@willni.com"
+		}
+	]
+}

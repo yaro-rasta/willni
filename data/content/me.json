@@ -1,0 +1,21 @@
+{
+	"$content": [
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "Run npm run build\n\n> willni@1.0.0 build\n> vitepress build .\n\nsh: 1: vitepress: not found\nError: Process completed with exit code 127."
+		},
+		{
+			"type": "paragraph",
+			"text": "Виправ помилку."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[](.vitepress/config.mjs)",
+				"[](package.json)"
+			]
+		}
+	]
+}

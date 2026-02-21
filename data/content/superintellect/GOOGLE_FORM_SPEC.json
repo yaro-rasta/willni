@@ -1,0 +1,214 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "📋 Специфікація Google Форми: Реєстрація «Перше Коло»"
+		},
+		{
+			"type": "blockquote",
+			"text": "Цей файл — **готовий чеклист** для створення Google Form.\nСкопіюй тексти — і створи форму за 5 хвилин."
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Назва форми"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Суперінтелект.Активація — Реєстрація (Перше Коло)**"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Опис форми (Description)"
+		},
+		{
+			"type": "code",
+			"text": "🌟 Вітаю, Вільний!\n\nТи на порозі входу до «Першого Кола» — пілотної групи трансформації.\n\nРеєстрація відкрита: 7-14 лютого 2026.\n\nПісля реєстрації ти отримаєш:\n• Доступ до 6 серій курсу\n• Інструкції для sun.app\n• Запрошення до Signal-спільноти\n\nСтань Людиною. Активуй Сонце. ☀️"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Поля форми"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "1. Ім'я / Псевдонім ⭐"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Short text",
+				"**Required:** ✅ Yes",
+				"**Help text:** `Як тебе називати? Справжнє ім'я або нікнейм.`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "2. Email ⭐"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Short text (Email validation)",
+				"**Required:** ✅ Yes",
+				"**Help text:** `Для зв'язку та інструкцій після реєстрації.`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3. Telegram / Signal ⭐"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Short text",
+				"**Required:** ✅ Yes",
+				"**Help text:** `@username — для додавання до спільноти.`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "4. Рівень Участі ⭐"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Multiple choice (Radio)",
+				"**Required:** ✅ Yes",
+				"**Варіанти:**",
+				"`Free — Курс + sun.app (безкоштовно)`",
+				"`Subscription ($99/міс) — Спільнота + Чат Досягнень`",
+				"`VIP (1 BTC) — Персональна трансформація з архітектором(и)`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "5. Свідки (якщо є)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Short text",
+				"**Required:** ❌ No",
+				"**Help text:** `Імена двох учасників спільноти, які знають тебе особисто. Не обов'язково на старті.`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "6. Маніфест Природного Права ⭐"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Checkbox",
+				"**Required:** ✅ Yes",
+				"**Text:** `Я ознайомився з Маніфестом Природного Права і приймаю його принципи.`",
+				"**Help text:** `Маніфест: https://yaro-rasta.github.io/willni/law`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "7. Як ти дізнався про нас?"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Short text",
+				"**Required:** ❌ No",
+				"**Help text:** `Від друга, з соцмереж, тощо.`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "8. Коментар / Питання"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Тип:** Paragraph (Long text)",
+				"**Required:** ❌ No",
+				"**Help text:** `Є щось, що хочеш сказати або запитати?`"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Після відправки (Confirmation message)"
+		},
+		{
+			"type": "code",
+			"text": "🎉 Заявку прийнято!\n\nДякуємо за реєстрацію в «Першому Колі».\n\nНаступні кроки:\n1. Перевір пошту — ми надішлемо інструкції\n2. Приєднайся до Signal-спільноти (посилання в листі)\n3. Починай з Серії 1: https://yaro-rasta.github.io/willni/superintellect/series_1\n\nСтань Людиною. Активуй Сонце. ☀️\n\nЯRаСлав"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Налаштування форми"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Collect emails:** ✅ Yes (автоматично)",
+				"**Limit to 1 response:** ✅ Yes",
+				"**Edit after submit:** ✅ Yes",
+				"**Show progress bar:** ❌ No",
+				"**Shuffle question order:** ❌ No",
+				"**Theme:** Dark / Custom (якщо можливо)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Після створення"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Скопіюй посилання на форму",
+				"Дай мені — я оновлю кнопку «Реєстрація» на сайті",
+				"Або сам встав у RegistrationForm.vue (рядок з `window.location`)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "_Створено: 7 лютого 2026_"
+		}
+	]
+}

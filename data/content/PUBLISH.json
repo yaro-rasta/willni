@@ -1,0 +1,136 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "Публікація та Збереження Will-n-i (How to Publish Forever)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Цей документ описує стратегію публікації, виконання та вічного збереження маніфесту **Will-n-i**."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "1. Локальне Виконання (Execution)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Щоб зручно читати документацію як веб-сайт локально:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Встановіть залежності (якщо ви хочете гарний інтерфейс):"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "    npx vitepress dev ."
+		},
+		{
+			"type": "paragraph",
+			"text": "    Це запустить локальний сервер, де всі `.md` файли стануть гарним сайтом."
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Або просто використовуйте **VS Code** з розширенням `Markdown Preview Enhanced`."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "2. Публікація в Інтернет (Online Publication)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Найпростіший спосіб, який гарантує доступність 24/7 безкоштовно: **GitHub Pages**."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Кроки:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Ініціалізуйте Git, якщо ще ні (вже зроблено).",
+				"Запуште код на GitHub.",
+				"У налаштуваннях репозиторію (Settings -> Pages) увімкніть **GitHub Pages** з гілки `main`.",
+				"Ваш маніфест буде доступний за адресою `https://your-username.github.io/willni/`."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "3. Вічне Збереження (Forever in the Internet)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Інтернет забуває, сервери падають, акаунти блокують. Щоб зберегти знання **назавжди**, використовуйте децентралізовані мережі."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "IPFS (InterPlanetary File System)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Зберігання на тисячах комп'ютерів замість одного серверу."
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Встановіть [IPFS Desktop](https://docs.ipfs.tech/install/ipfs-desktop/).",
+				"Імпортуйте папку `willni` в IPFS.",
+				"Ви отримаєте **CID** (Content Identifier) — унікальний хеш, наприклад `QmXyZ...`.",
+				"Цей хеш неможливо змінити або видалити, доки хоча б один вузол (ви або хтось інший) зберігає ці дані (\"pin\").",
+				"Доступ через шлюзи: `https://ipfs.io/ipfs/QmXyZ...`"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Arweave"
+		},
+		{
+			"type": "paragraph",
+			"text": "Блокчейн для вічного зберігання даних (платите один раз — зберігається назавжди)."
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"Використайте сервіс [ArDrive](https://ardrive.io/) або CLI інструменти.",
+				"Завантажте папку.",
+				"Отримайте вічне посилання."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Рекомендований Шлях"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**GitHub** — для співпраці та зручного читання зараз.",
+				"**IPFS/Arweave** — для історичного архівування версій (наприклад, `v1.0`)."
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "*Створено як частину навігаційної системи Will-n-i.*"
+		}
+	]
+}

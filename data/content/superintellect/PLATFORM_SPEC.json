@@ -1,0 +1,757 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "🏗️ Фундамент Проекту Superintellect: MVP Definition"
+		},
+		{
+			"type": "blockquote",
+			"text": "\"Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.\" — _Antoine de Saint-Exupéry_"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Що Є Фундаментом? (The Core)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Фундамент — це **мінімальний набір компонентів**, який доставляє цінність та генерує перші revenue/proof of concept."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3 Стовпи Фундаменту"
+		},
+		{
+			"type": "code",
+			"text": "┌─────────────────────────────────────────┐\n│         1. КОНТЕНТ (Value)              │\n│  Безкоштовні серії + практичні інструменти │\n└─────────────────────────────────────────┘\n              ↓\n┌─────────────────────────────────────────┐\n│      2. ПЛАТФОРМА (Delivery)            │\n│   Веб-додаток для практики та трекінгу  │\n└─────────────────────────────────────────┘\n              ↓\n┌─────────────────────────────────────────┐\n│      3. СПІЛЬНОТА (Network)             │\n│    Closed group для підтримки та обміну │\n└─────────────────────────────────────────┘"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📚 Компонент 1: Контент (Вже Є)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Що Маємо ✅"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"6 Серій (базова структура готова)",
+				"LAW.md (маніфест)",
+				"ETHICS.md (етичний кодекс)",
+				"AESTHETICS.md (естетика)",
+				"SECURITY.md (безпека)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Що Потрібно Додати 🔄"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Поглиблені Серії:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Серія 2-6 розписати так само детально, як Серію 1",
+				"Кожна серія = 10-15 сторінок тексту + практичні вправи"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Відео/Аудіо:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Озвучка серій (подкаст формат)",
+				"Короткі відео-інсайти (TikTok/YouTube Shorts)"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Практичні Гайди:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"PDF \"Щоденник Ментальної Матриці\" (printable)",
+				"Чеклісти для кожної серії"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Timeline:** 1-2 місяці  \n**Вартість:** $0 (власна робота) або $5K-10K (якщо наймати письменників/editors)"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "💻 Компонент 2: Платформа (Це Ядро MVP)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Мета Платформи"
+		},
+		{
+			"type": "paragraph",
+			"text": "Дати користувачам **інструменти для практики**, а не просто читати контент."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Ключова відмінність:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"❌ Не просто \"читай статті\"",
+				"✅ \"Будуй свою Ментальну Матрицю день за днем\""
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🛠️ Функціональність Платформи: Детальна Розробка"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Core Features (MVP — Фаза 1)"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "1. **Особистий Профіль та Онбординг**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Онбординг Process:**"
+		},
+		{
+			"type": "code",
+			"text": "Крок 1: Ім'я + Email\n  ↓\nКрок 2: \"Які 3 питання хвилюють тебе найбільше?\"\n  (Вільний текст або вибір з переліку)\n  ↓\nКрок 3: Оцінка поточного стану (Self-Assessment)\n  - Стоїцизм: 1-10\n  - Соліпсизм: 1-10\n  - Логічне мислення: 1-10\n  - Фінансова суб'єктність: 1-10\n  ↓\nКрок 4: Рекомендація персоналізованого шляху\n  \"Тобі варто почати з Серії 2 (ІдеЯ), бо...\""
+		},
+		{
+			"type": "paragraph",
+			"text": "**Профіль користувача:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Аватар + Біо",
+				"Початкові метрики (baseline)",
+				"Мета трансформації (наприклад: \"Стати фінансово незалежним за 6 міс\")"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech Stack:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Frontend: Next.js + React",
+				"Backend: Node.js + PostgreSQL",
+				"Auth: NextAuth (email/password + Google/Metamask)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "2. **Ментальна Матриця (Visual Dashboard)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Концепція:**\nІнтерактивна візуалізація твоєї свідомості."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як це виглядає:**"
+		},
+		{
+			"type": "code",
+			"text": "┌──────────────────────────────────────┐\n│      ТВОЯ МЕНТАЛЬНА МАТРИЦЯ          │\n│                                      │\n│    [Фрактальна візуалізація]         │\n│                                      │\n│   Стоїцизм:    ████████░░ 80%        │\n│   Соліпсизм:   ███░░░░░░░ 30%        │\n│   Логіка:      ██████████ 100%       │\n│   Свобода:     ██████░░░░ 60%        │\n│   Любов:       █████░░░░░ 50%        │\n│                                      │\n│  Загальний Прогрес: 64%              │\n└──────────────────────────────────────┘\n\n[Кнопка: Почати щоденну практику]"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Інтерактивність:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Клік на \"Соліпсизм\" → показує вправи для прокачування",
+				"Візуалізація змінюється в реальному часі (gamification)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Візуалізація: D3.js або Three.js (3D фрактали)",
+				"Дані: розрахунок на основі виконаних вправ"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "3. **Щоденна Практика (Daily Practice)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Формат:**\nКожного дня користувач отримує **одну вправу** з обраної серії."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Приклад вправи (Серія 1: Фільтр Істини):**"
+		},
+		{
+			"type": "code",
+			"text": "┌──────────────────────────────────────┐\n│  📅 Практика на Сьогодні             │\n│                                      │\n│  Серія 1: Анатомія Тривоги           │\n│  Вправа: \"Знайди Кривду у новині\"    │\n│                                      │\n│  Інструкція:                         │\n│  1. Прочитай будь-яку новину (politics/tech)\n│  2. Застосуй 4 закони логіки:        │\n│     - Чи поняття підмінені?          │\n│     - Чи є суперечності?             │\n│     - Чи є чітка позиція?            │\n│     - Чи є докази?                   │\n│  3. Запиши висновки нижче ↓          │\n│                                      │\n│  [Текстове поле для відповіді]       │\n│                                      │\n│  [Кнопка: Зберегти та Перевірити]    │\n└──────────────────────────────────────┘"
+		},
+		{
+			"type": "paragraph",
+			"text": "**AI Feedback (BYOK — Bring Your Own Key):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Користувач вводить власний API-ключ (OpenRouter, Gemini, OpenAI тощо)",
+				"Платформа не несе витрат на AI API — користувач платить напряму",
+				"ШІ аналізує та дає фідбек:",
+				"\"Добре! Ти виявив підміну понять. Але пропустив відсутність доказів.\"",
+				"Оцінка: 7/10"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Щоденні нотифікації (email/push)",
+				"BYOK: користувач додає свій API_KEY (OpenRouter / Gemini / OpenAI) — витрати на AI = $0 для платформи",
+				"Database: зберігання відповідей користувача"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "4. **Журнал Трансформації (Transformation Journal)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Концепція:**\nПриватний щоденник з prompt-асистентом (AI-driven journaling)."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як працює:**"
+		},
+		{
+			"type": "code",
+			"text": "┌──────────────────────────────────────┐\n│  📖 Твій Журнал Трансформації        │\n│                                      │\n│  Запис від 31.01.2026                │\n│                                      │\n│  Ші Prompt:                          │\n│  \"Опиши ситуацію, де сьогодні ти     │\n│   відчув внутрішній конфлікт.\"       │\n│                                      │\n│  [Ти пишеш вільний текст]            │\n│                                      │\n│  Ші Аналіз (після збереження):       │\n│  \"Судячи з твого запису, конфлікт    │\n│   виник через зіткнення двох цінностей:│\n│   свобода vs безпека. Це класичний   │\n│   стоїчний дилема. Рекомендація:     │\n│   Вправа 'Premeditatio Malorum'.\"    │\n│                                      │\n│  [Кнопка: Виконати Вправу]           │\n└──────────────────────────────────────┘"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Особливості:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Приватний (end-to-end шифрування для VIP)",
+				"Ші suggestions на основі аналізу тексту",
+				"Тренди: \"Цього тижня ти найбільше працював над Свободою (+15%)\""
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"AI: BYOK — користувач підключає свій API_KEY (GPT-4, Gemini, Claude тощо)",
+				"Шифрування: AES-256 (опційно)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "5. **Спільнота та Дискусії (Community Forum)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Формат:**\nСхожий на Reddit/Revolt, але вбудований у платформу."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Структура:**"
+		},
+		{
+			"type": "code",
+			"text": "Розділи:\n├── Загальні Обговорення\n├── Серія 1: Анатомія Тривоги\n├── Серія 2: ІдеЯ\n├── ...\n├── VIP Lounge (for paid members only)\n└── Success Stories"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Features:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Пости + коменти (Markdown підтримка)",
+				"Upvote/Downvote",
+				"Badges: \"Практик 30 днів\", \"Допоміг 10 людям\""
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Модерація:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Автоматична (AI filters для токсичності)",
+				"Community moderators (вибрані з активних членів)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Фреймворк: Discourse (open-source) або власна розробка"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "6. **Прогрес Трекінг та Геймификація**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Metrics:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"🔥 **Streak:** Скільки днів поспіль ти практикуєш",
+				"⭐ **Points:** За кожну вправу +10 points",
+				"🏆 **Badges:** \"Стоїк 7 днів\", \"Логік місяця\"",
+				"📈 **Level Up:** Початківець → Практик → Майстер → Архітектор"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Leaderboard (опціонально):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Топ-10 практиків тижня",
+				"Публічний або анонімний (вибір користувача)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Винагороди:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"1000 points = безкоштовний місяць підписки",
+				"5000 points = знижка 10% на VIP",
+				"10000 points = персональна сесія з ментором"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "7. **AI Copilot (Antigravity Integration)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Концепція:**\nПерсональний AI-асистент для роботи з Ментальною Матрицею."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як це працює:**"
+		},
+		{
+			"type": "code",
+			"text": "Користувач:\n\"Я відчуваю тривогу через роботу.\nЩо мені робити?\"\n Ші Copilot:\n\"Проаналізуймо:\n1. Це тривога через невизначеність (Футурошок)?\n2. Чи є у тебе контроль над ситуацією?\n   (Стоїцизм: розділяй що від тебе залежить)\n3. Застосуймо Фільтр Істини:\n   - Що саме ти боїшся? (конкретизація)\n   - Чи поняття підмінені? (4 закони логіки)\n\nРекомендована вправа: Серія 5, День 3\n'Написання Місії на сьогодні'\n\n[Кнопка: Почати вправу]\""
+		},
+		{
+			"type": "paragraph",
+			"text": "**Tech:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"LLM: BYOK — користувач підключає свій API_KEY (будь-який провайдер)",
+				"Промпти: Fine-tuned на базі наших серій (системні промпти)",
+				"Context: доступ до журналу користувача (з дозволу)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Advanced Features (Фаза 2 — після MVP)"
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "8. **VIP-сесії (Virtual Meeting Room)**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Zoom/Google Meet інтеграція",
+				"Календар для букінгу сесій з менторами",
+				"Запис сесій (з дозволу)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "9. **Маркетплейс Знань**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Користувачі можуть публікувати свої insights",
+				"Продавати за points або $WILLNI токени"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"text": "10. **Partnerships з Antigravity**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Прямий доступ до Antigravity API",
+				"Персоналізовані prompts на основі Ментальної Матриці"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📱 Mobile App vs Web App?"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Моя рекомендація: **Web-First (PWA)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ Швидше розробка (один codebase)",
+				"✅ Дешевше (no App Store fees 30%)",
+				"✅ Легше updates (no review process)",
+				"✅ Cross-platform (iOS, Android, Desktop)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**PWA (Progressive Web App):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Користувач відкриває сайт → система пропонує \"Add to Home Screen\"",
+				"Працює як нативний додаток (push notifications, offline mode)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Нативний App (пізніше):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Якщо база користувачів >10K → розробити нативні apps для кращого UX"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🗓️ Roadmap Розробки Платформи"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 1: MVP (3 місяці)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Місяць 1: Design + Backend**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Дизайн у Figma (всі екрани)",
+				"Backend API (auth, database schema)",
+				"PostgreSQL setup (users, progress, journal)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Місяць 2: Frontend + Core Features**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Онбординг + Профіль",
+				"Ментальна Матриця (базова візуалізація)",
+				"Щоденна Практика (без Ші feedback)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Місяць 3: Інтеграції + Testing**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Ші Copilot (BYOK: користувач додає свій API_KEY)",
+				"Community Forum (Discourse embed)",
+				"Beta testing (20-50 користувачів)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Budget:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Розробка: $30K-50K (якщо наймати команду)",
+				"Або: DIY (ти + 1 developer) — 3 місяці full-time"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 2: Post-MVP (Місяці 4-6)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Ші Feedback для вправ",
+				"Журнал Трансформації",
+				"Геймификація (points, badges)",
+				"VIP інтеграції (Zoom, календар)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Що Робити Першим? (Immediate Next Steps)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "План на Наступні 2 Тижні:"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Тиждень 1:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"✅ Завершити контент (Серії 2-6 розписати)",
+				"🎨 Створити wireframes у Figma (основні екрани)",
+				"🗄️ Спланувати database schema"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Тиждень 2:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"💻 Вибрати tech stack остаточно",
+				"👨‍💻 Найняти developer (якщо потрібно) або почати coding",
+				"🚀 Запустити VitePress site (контент вже є) як pre-launch"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "💰 Бюджет на MVP"
+		},
+		{
+			"type": "paragraph",
+			"text": "| Позиція            | Вартість                                      |\n| ------------------ | --------------------------------------------- |\n| **Design (Figma)** | $5K (якщо наймати) або DIY                    |\n| **Development**    | $30K-50K (3 місяці команда)                   |\n| **AI API**         | **$0** (BYOK: користувачі додають свої ключі) |\n| **Hosting**        | $100-300/міс (Vercel + PostgreSQL)            |\n| **Domain + SSL**   | $50/рік                                       |\n| **Total Year 1**   | ~$40K-55K                                     |"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Альтернатива (Bootstrap):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Ти + 1 technical co-founder",
+				"Equity split 50/50",
+				"Вартість: $0 cash, але 3-6 місяців роботи"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🏆 Definition of Success (MVP)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**MVP вважається успішним, якщо:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ 100+ користувачів зареєстровано",
+				"✅ 50+ користувачів активні (повертаються 3+ рази/тиждень)",
+				"✅ Avg. session time >10 хвилин",
+				"✅ 10+ платних підписників ($50/міс)",
+				"✅ 1-3 VIP клієнти (0.1-0.3 BTC)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Timeline:** 6 місяців після запуску MVP"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📊 Фінальний Висновок: Що Є Фундаментом?"
+		},
+		{
+			"type": "code",
+			"text": "ФУНДАМЕНТ = КОНТЕНТ + ПРАКТИЧНА ПЛАТФОРМА + СПІЛЬНОТА\n\n                    ┌─────────────┐\n                    │   КОНТЕНТ   │\n                    │  (Є готовий)│\n                    └──────┬──────┘\n                           │\n                    ┌──────▼──────┐\n                    │  ПЛАТФОРМА  │\n                    │ (MVP 3 міс) │\n                    └──────┬──────┘\n                           │\n                    ┌──────▼──────┐\n                    │  СПІЛЬНОТА  │\n                    │ (Органічно) │\n                    └─────────────┘"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Пріоритет #1:** Розробити MVP платформи (3 місяці)  \n**Пріоритет #2:** Залучити перших 100 користувачів  \n**Пріоритет #3:** Провести 5-10 VIP трансформацій для proof of concept"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Без платформи контент — це просто текст. З платформою — це трансформація.**"
+		}
+	]
+}

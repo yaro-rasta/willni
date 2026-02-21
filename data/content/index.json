@@ -1,0 +1,10 @@
+{
+	"layout": "page",
+	"title": "Will-n-i — Спільнота Людей Волі",
+	"$content": [
+		{
+			"type": "paragraph",
+			"text": "<HomePage />"
+		}
+	]
+}

@@ -1,0 +1,176 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "willni CLI — System"
+		},
+		{
+			"type": "blockquote",
+			"text": "One Logic, Many UI: ті самі моделі, термінальний інтерфейс."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📚 Системні інструкції платформи nan•web"
+		},
+		{
+			"type": "blockquote",
+			"text": "**⚠️ ОБОВ'ЯЗКОВО**: Перед будь-якою роботою ознайомтесь з документацією платформи."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Головні документи"
+		},
+		{
+			"type": "paragraph",
+			"text": "| Документ                 | Шлях                         | Що описує                                            |\n| ------------------------ | ---------------------------- | ---------------------------------------------------- |\n| **Система та Протоколи** | `nan.web/system.md`          | Компас Волі, код-стиль (no `;`, tabs), TDD, Lux UX   |\n| **Архітектура**          | `nan.web/ARCHITECTURE.md`    | Recursive Micro-App, Flow.js (yield), Multi-Modal UI |\n| **Пакети (огляд)**       | `nan.web/packages/system.md` | АрхіТехноМаг — принципи та голос платформи           |"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Пакети, що використовуються в CLI"
+		},
+		{
+			"type": "paragraph",
+			"text": "| Пакет             | system.md                   | me.md                  | Призначення                       |\n| ----------------- | --------------------------- | ---------------------- | --------------------------------- |\n| `@nan0web/db`     | `packages/db/system.md`     | `packages/db/me.md`    | **Основна база даних** (UDA)      |\n| `@nan0web/db-fs`  | `packages/db-fs/system.md`  | `packages/db-fs/me.md` | Адаптер файлової системи          |\n| `@nan0web/ui-cli` | `packages/ui-cli/system.md` | —                      | InputAdapter, Form, Select        |\n| `@nan0web/log`    | `packages/log/system.md`    | `packages/log/me.md`   | Logger, Table, stringWidth        |\n| `@nan0web/i18n`   | `packages/i18n/system.md`   | `packages/i18n/me.md`  | getT(), I18nDb, vocabs            |\n| `@nan0web/ui`     | `packages/ui/system.md`     | —                      | FormInput, TYPES, Model as Schema |\n| `@nan0web/types`  | `packages/types/system.md`  | —                      | Type utilities                    |"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Як читати"
+		},
+		{
+			"type": "paragraph",
+			"text": "Кожен пакет має:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**`system.md`** — технічні правила та API контракти",
+				"**`me.md`** — контекст пакету: хто він, що робить, внутрішні рішення",
+				"**`README.md`** — публічна документація (генерується з `README.md.js`)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "Всі шляхи відносно `/Users/i/src/nan.web/`."
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Архітектура"
+		},
+		{
+			"type": "code",
+			"text": "┌─────────────────────────────────────────────────┐\n│                   CLI (main.mjs)                │\n│  Menu, Forms, Tables, i18n                      │\n├─────────────┬───────────────────────────────────┤\n│  @nan0web/  │  ui-cli     InputAdapter, Form    │\n│             │  log        Logger, Table          │\n│             │  i18n       getT(), vocabs/        │\n├─────────────┼───────────────────────────────────┤\n│  @nan0web/  │  db         ← ОСНОВНА БАЗА ДАНИХ  │\n│  Data Layer │             DB.get/set/fetch/model │\n│             ├───────────────────────────────────┤\n│             │  db-fs      ← адаптер для Node.js │\n│             │             DBFS extends DB        │\n│             │  db-browser ← адаптер для браузера │\n│             │             (IndexedDB/fetch)      │\n├─────────────┼───────────────────────────────────┤\n│  Domain     │  models/    User, Payment, Series  │\n│  Models     │             CourseProgress, Tier   │\n│             │             revenue.js (1-33-33-33)│\n└─────────────┴───────────────────────────────────┘"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Data Layer"
+		},
+		{
+			"type": "paragraph",
+			"text": "**`@nan0web/db`** — це Universal Data Architecture (UDA).\nЦе основний інтерфейс для роботи з даними."
+		},
+		{
+			"type": "paragraph",
+			"text": "**`@nan0web/db-fs`** — це ЛИШЕ адаптер для файлової системи.\nТак само як `db-browser` — адаптер для браузера."
+		},
+		{
+			"type": "paragraph",
+			"text": "CLI **працює з `DB`**, а не з `db-fs` напряму:"
+		},
+		{
+			"type": "code",
+			"lang": "js",
+			"text": "import DB from '@nan0web/db'\nimport DBFS from '@nan0web/db-fs'\n\n// Створюємо DB через адаптер fs\nconst db = new DBFS({ root: './data' })\nawait db.connect()\n\n// Реєструємо моделі — DB знає як hydrate дані\ndb.model('users', User)\ndb.model('payments', Payment)\n\n// CRUD — через УНІФІКОВАНИЙ DB API\nawait db.set('users/sovr', { name: 'Sovereign', ... })\nconst user = await db.get('users/sovr') // → User instance (hydrated)\n\n// Той самий код працює з db-browser (IndexedDB):\n// const db = new BrowserDB({ root: '/api/data' })\n// await db.connect()\n// db.model('users', User)\n// await db.get('users/sovr') // → той самий User"
+		},
+		{
+			"type": "paragraph",
+			"text": "Ключовий принцип: **код CLI не залежить від адаптера**.\nЯкщо завтра підключити `db-mongo` — зміниться лише один рядок: `new DBFS()` → `new MongoDB()`."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Golden Dataset"
+		},
+		{
+			"type": "paragraph",
+			"text": "Дані зберігаються за конвенцією:"
+		},
+		{
+			"type": "code",
+			"text": "data/\n  users/\n    sovr.yaml         ← User record\n    artem.yaml\n  payments/\n    <uuid>.yaml       ← Payment record\n  progress/\n    <email>.yaml      ← CourseProgress"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Session State"
+		},
+		{
+			"type": "paragraph",
+			"text": "CLI тримає в пам'яті:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"`session.users[]` — масив зареєстрованих користувачів",
+				"`session.currentUser` — поточний залогінений користувач (null = адмін)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "При запуску CLI читає дані з DB.\nПри реєстрації/оплаті — записує в DB.\nSession — це in-memory кеш для швидкого доступу."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "i18n"
+		},
+		{
+			"type": "paragraph",
+			"text": "Словник `vocabs/uk.mjs` — ключі англійські, значення українські.\nФункція `t()` з `@nan0web/i18n` — lookup по ключу."
+		},
+		{
+			"type": "paragraph",
+			"text": "Всі рядки UI проходять через `t()`:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Мітки меню, форм, таблиць",
+				"Повідомлення валідації моделей",
+				"Назви тієрів, статусів, серій курсу"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Тести"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "node --test cli/main.test.mjs    # e2e: alignment, i18n, vocab\nnode --test web/src/models/      # unit: models, validation"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Запуск"
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "pnpm cli                         # інтерактивний режим\nnode cli/main.mjs --lang=uk      # українська мова\nnode cli/main.mjs --demo=dashboard  # одна команда"
+		}
+	]
+}

@@ -1,0 +1,83 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "📔 Візуальна Біблія: Superintellect"
+		},
+		{
+			"type": "paragraph",
+			"text": "Цей документ містить фундаментальні візуальні константи проекту для забезпечення цілісності (Consistency) при генерації відео та зображень через VEO, FLUX.2 та інші AI."
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎭 Головний Герой: ЯR (Яр)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Consistency Tag:** `[CYBER_COSSACK_YARA]`"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Обличчя:** Спокійне, мудре. Очі блакитні. Волосся кольору волоського горіха, довжина до плечей, легкі хвилі. Акуратні вуса та маленька борода на підборідді (beardstache style).",
+				"**Одяг:**",
+				"`HEMP_KILT_TENT`: Груба текстура домотканого конопляного полотна (Off-white/Beige).",
+				"`WILL_BELT`: Широкий темно-коричневий пояс, який по суті своїй є батогом.",
+				"`HOODED_SHIRT`: Тонка конопляна сорочка з великим капюшоном.",
+				"**Стиль:** `HIGH_CONTRAST_INK_WASH`. Чорно-біла естетика з акцентами золотого світла та блакитних очей."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🪐 Світ: Ментальна Матриця"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Основа:** Безкінечна біла порожнеча (Void).",
+				"**Підлога:** Чорна дзеркальна поверхня, схожа на розплавлений обсидіан. Будь-який крок створює золоті геометричні кола (фрактали).",
+				"**Архітектура:** Виникає з порожнечі як прозорі креслення (blueprints) світла, що поступово кристалізуються в скляні та металеві структури.",
+				"**Стиль:** Мінімалізм, гострі лінії, священна геометрія (Sacred Geometry)."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🌌 Ші-Ефір (The Entity)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Візуал:** Іридесцентна туманність. Постійно пульсує між \"цифровим шумом\" (glitch) та досконалими формами (Flower of Life).",
+				"**Колір:** Перламутр, срібло, неоновий білий."
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎞️ Кінематографічні налаштування (Cinematographic Constants)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Color Grade:** Dark, moody monochrome with high dynamic range. Highlights are glowing gold.",
+				"**Camera:** Slow, majestic sweeping shots. Focus on macro details of eyes and textures.",
+				"**Lens:** 35mm for wide shots of the void, 85mm for character close-ups."
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "*Will-n-i Production, 2026*"
+		}
+	]
+}

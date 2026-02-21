@@ -1,0 +1,536 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "willni — REQUESTS"
+		},
+		{
+			"type": "blockquote",
+			"text": "Компас Волі: ПОВОЛІ, бо мИ живемо ПО ВОЛІ.  \nЦей файл — канал зв'язку між сесіями."
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-001: DX/UX тестування сайту"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🔴 Критичний (зараз)",
+				"**Статус**: ⏳ В процесі",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Пройти повний user flow локально:\n  Landing → Реєстрація → Email підтвердження → Логін → Курс → AI Chat → Оплата"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Як запустити**:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "  # Вбити старий процес на 3333 якщо є:\n  lsof -ti :3333 | xargs kill -9\n\n  # Запустити:\n  pnpm dev:all\n  # VitePress: http://localhost:5173/willni/\n  # API Server: http://localhost:3333"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Перевірити**:",
+				"[x] Лендінг відкривається",
+				"[x] Реєстрація працює (signup → confirm → auto-login)",
+				"[ ] Логін працює",
+				"[ ] Курс доступний після логіну",
+				"[ ] AI Chat відповідає",
+				"[ ] Сторінка оплати показує адреси",
+				"[ ] Мова uk/en перемикається",
+				"[ ] Mobile view адекватний",
+				"**Баги знайдені 2026-02-18**:",
+				"[x] CORS — dynamic origin для dev (localhost:\\*)",
+				"[x] Server crash — unhandled rejection guard",
+				"[x] Username кирилиця — client-side validation + i18n errors",
+				"[x] Field-level error highlighting (shake + red border)",
+				"[x] Навігація \"Почати Серію 1\" — window.location fix",
+				"[x] Переклад серверних помилок (ERROR_MAP)",
+				"[ ] **Sidebar обрізає текст** — VitePress CSS override war",
+				"[ ] **Контрастність тексту vs фон** — BackgroundScene перекриває",
+				"**Висновок**: VitePress CSS hacking = нескінченні `!important`. Потрібна nan0web міграція (R-003 ↑)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-002: Надійні крипто-гаманці"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🔴 Критичний",
+				"**Статус**: ❌ Не почато",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Замінити Trustee на суверенні self-custody гаманці."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**План**:",
+				"[ ] BTC: **Sparrow Wallet** (desktop) або **BlueWallet** (mobile) — open source, self-custody",
+				"[ ] USDT: Non-custodial гаманець (Rabby або Trust Wallet)",
+				"[ ] Записати seed phrase на папері (offline backup)",
+				"[ ] Отримати публічні адреси для CryptoPayment.vue",
+				"[ ] Оновити `.vitepress/theme/components/CryptoPayment.vue` з реальними адресами",
+				"**Принцип**: Ти тримаєш ключі = ти тримаєш гроші"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-003: Міграція на nan0web платформу"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: � Критичний (↑ підвищено після DX тестування)",
+				"**Статус**: ⏳ Частково (8a ✅, 8e ✅)",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Перейти з VitePress на nan0web UI stack (Lit Web Components)."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Чому зараз**: VitePress CSS override war доведено нежиттєздатним 2026-02-18."
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Sidebar, контрастність, layout — все потребує !important хаків.\n  nan0web мета-дані + власні компоненти = повний контроль."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Чеклист Phase 8**:",
+				"[x] 8a: MD → JSON build pipeline (21 tests)",
+				"[ ] 8b: ui-lit Core Components (nav, sidebar, markdown, page)",
+				"[ ] 8c: ui-lit Auth Components (auth-form, auth-gate)",
+				"[ ] 8d: ui-lit Chat & Payment",
+				"[x] 8e: CLI integration (137 tests)",
+				"[ ] 8f: Server-Side Rendering",
+				"**Залежності**:",
+				"[x] `@nan0web/auth-core@1.1.0` — AccessControl, Password, Session",
+				"[ ] `@nan0web/auth-node@1.1.0` — делегує AC до core",
+				"[ ] willni CLI → `import { AccessControl } from '@nan0web/auth-core'`"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-004: VPS Deploy"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🔴 Критичний",
+				"**Статус**: ❌ Не почато",
+				"**Що**: Deploy willni на існуючий VPS",
+				"**План**:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "  # На VPS:\n  git clone <repo> /var/www/willni\n  cd /var/www/willni && npm install\n  npm run build  # VitePress → .vitepress/dist/\n\n  # Server:\n  CEREBRAS_API_KEY=... PORT=3333 node server/index.js\n\n  # nginx:\n  # static files → .vitepress/dist/\n  # /auth/* /api/* → proxy_pass localhost:3333"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Чеклист**:",
+				"[ ] git clone + npm install",
+				"[ ] nginx config (static + reverse proxy)",
+				"[ ] Let's Encrypt (R-010)",
+				"[ ] systemd service для `server/index.js`",
+				"[ ] ENV vars: CEREBRAS*API_KEY, PORT, CORS_ORIGIN, SMTP*\\*"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-005: Cerebras API — оновити назву моделі"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟢 Легко",
+				"**Статус**: ❌ Не почато",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Оновити `FALLBACK_MODELS` у `server/index.js`:"
+		},
+		{
+			"type": "code",
+			"lang": "javascript",
+			"text": "  const FALLBACK_MODELS = [\"chat-gpt-120b\", \"llama3.1-8b\"];"
+		},
+		{
+			"type": "paragraph",
+			"text": "  (було: `['gpt-oss-120b', 'llama3.1-8b']`)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Файл**: `server/index.js`, рядок ~23"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-006: Домен willni.yaro.page"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟡 Medium",
+				"**Статус**: ❌ Не почато",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Налаштувати піддомен `willni.yaro.page` на VPS."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**План**:",
+				"[ ] DNS A-запис: `willni.yaro.page → VPS IP`",
+				"[ ] nginx server_name: `willni.yaro.page`",
+				"[ ] Let's Encrypt сертифікат",
+				"[ ] Оновити `base` у `.vitepress/config.mjs`: `'/'` (замість `'/willni/'`)",
+				"[ ] Оновити `CORS_ORIGIN` у server env",
+				"**Альтернатива**: $12/рік за `willni.org`",
+				"**Монетизація**: перший учасник курсу = перший дохід"
+			]
+		},
+		{
+			"type": "blockquote",
+			"text": "ЯR: ✅ Опрацьовано — Zoho Mail support@yaro.page → R-007"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-007: Email — Zoho Mail (support@yaro.page)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟡 Medium",
+				"**Статус**: ⏳ Інфраструктура є, треба підключити",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Використати існуючий Zoho Mail `support@yaro.page` для відправки email.\n  Brevo не потрібний."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**План**:",
+				"[ ] ENV vars на VPS:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "    SMTP_HOST=smtp.zoho.com\n    SMTP_PORT=465\n    SMTP_USER=support@yaro.page\n    SMTP_PASS=<zoho-app-password>\n    SMTP_FROM=support@yaro.page"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] Перевірити SMTP доступ у Zoho (Settings → Mail Accounts → SMTP)",
+				"[ ] Створити App Password якщо 2FA увімкнено",
+				"**Fallback**: Brevo (300 free/day) якщо Zoho має ліміти",
+				"**Майбутнє**: `@nan0web/mail.app` — власний mail сервіс на платформі"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-008: Публікація @nan0web/auth-core@1.1.0"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🔴 Критичний",
+				"**Статус**: ⏳ Код готовий, треба npm publish",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Опублікувати auth-core з новими модулями."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Команда**:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "  cd ~/i/src/nan.web/packages/auth-core\n  npm version 1.1.0\n  npm publish"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Зміст v1.1.0**:",
+				"AccessControl — data-driven авторизація",
+				"Password — scrypt hashing",
+				"Session — lightweight persistence",
+				"README.md — повний, згенерований, верифікований",
+				"104/104 тестів (89 unit + 15 docs)",
+				"**Bugfix**: `@nan0web/db-fs` saveMD string guard (задокументовано в db-fs/REQUESTS.md)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-009: Публікація @nan0web/auth-node@1.1.0"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟡 Medium (після R-008)",
+				"**Статус**: ❌ REQUESTS.md написано",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Рефакторити AccessControl → делегація до auth-core."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Баги знайдені при DX тестуванні**:",
+				"`AuthDB.saveUser` кидає `throw new Error('Invalid username format')` замість 400 response",
+				"Кирилічні імена (\"Іван\") крашать сервер — не ловиться в Router",
+				"Потрібно: try-catch в handleSignup → return 400 з повідомленням",
+				"**Деталі**: див. `packages/auth-node/REQUESTS.md`"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-010: Let's Encrypt"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟢 Легко (після R-004, R-006)",
+				"**Статус**: ❌ Не почато",
+				"**Команда**:"
+			]
+		},
+		{
+			"type": "code",
+			"lang": "bash",
+			"text": "  sudo apt install certbot python3-certbot-nginx\n  sudo certbot --nginx -d willni.yaro.page"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Автооновлення — безкоштовно, назавжди."
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-011: PWA (Progressive Web App)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟡 Medium",
+				"**Статус**: ❌ Не почато",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  Зробити willni.yaro.page встановлюваним як додаток."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**План**:",
+				"[ ] `public/manifest.json` — назва, іконки, theme_color",
+				"[ ] Service Worker для offline кешу",
+				"[ ] `<link rel=\"manifest\">` у config.mjs head",
+				"[ ] Іконки: 192x192, 512x512"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-012: Сповіщення — Signal + Telegram"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟢 Потім",
+				"**Статус**: ❌ Не почато",
+				"**Що**:",
+				"Telegram Bot: сповіщення про реєстрації та оплати",
+				"Signal: приватний канал Ради",
+				"Інтеграція з `server/index.js` через webhooks",
+				"**План**:",
+				"[ ] Telegram Bot Token (@BotFather)",
+				"[ ] `POST /api/report-payment` → notify Telegram",
+				"[ ] `POST /auth/signup` → notify Telegram",
+				"[ ] Signal group для Ради (ручне)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "R-013: SSO — Google, GitHub, Microsoft, Facebook"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Пріоритет**: 🟡 Medium (Platform Feature)",
+				"**Статус**: ❌ Архітектура",
+				"**Що**:"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "  OAuth2 SSO через зовнішні провайдери. Частина `@nan0web/auth-node`."
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Провайдери**:",
+				"[ ] Google (OAuth2 + OpenID Connect)",
+				"[ ] GitHub (OAuth2)",
+				"[ ] Microsoft (MSAL / OAuth2)",
+				"[ ] Facebook (OAuth2)",
+				"**Архітектура (nan0web)**:"
+			]
+		},
+		{
+			"type": "code",
+			"text": "  Browser → GET /auth/sso/google → redirect to Google OAuth\n  Google callback → GET /auth/sso/google/callback → exchange code → JWT tokens"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Реалізація**:",
+				"[ ] `@nan0web/auth-node` — SSO middleware (`src/sso/`)",
+				"[ ] `AuthServer.enableSSO({ google: { clientId, secret }, ... })`",
+				"[ ] Автоматичне створення User при першому SSO вході",
+				"[ ] Зв'язка SSO ↔ існуючий акаунт по email",
+				"**Frontend**:",
+				"[ ] SSO кнопки у RegistrationForm.vue та LoginForm.vue",
+				"[ ] Іконки провайдерів (SVG, не emoji)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "Порядок виконання"
+		},
+		{
+			"type": "code",
+			"text": "ЗАРАЗ:\n  R-001  DX/UX тестування ←──── ти зараз тут\n  R-005  Cerebras model name fix\n  R-008  npm publish auth-core@1.1.0\n\nЗАВТРА:\n  R-002  Крипто гаманці (Sparrow + BlueWallet)\n  R-006  DNS willni.yaro.page\n  R-004  VPS deploy\n  R-010  Let's Encrypt\n  R-007  Zoho SMTP (support@yaro.page)\n\nДАЛІ:\n  R-009  auth-node@1.1.0\n  R-011  PWA\n  R-012  Telegram Bot\n  R-013  SSO (Google, GitHub, Microsoft, Facebook)\n  R-003  nan0web migration (ongoing)"
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "Технічний Запит до nan.web (Sun App Web Integration)"
+		},
+		{
+			"type": "paragraph",
+			"text": "Цей документ описує необхідні зміни в репозиторії `nan.web` для інтеграції веб-версії `sun.app` (Passportal)."
+		},
+		{
+			"type": "blockquote",
+			"text": "**Оновлено:** 15.02.2026"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "1. @nan0web/db-fs: Markdown Frontmatter Support"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Статус:** ✅ DONE"
+		},
+		{
+			"type": "paragraph",
+			"text": "Markdown-файли тепер парсяться як структуровані дані через `loadMD()`."
+		},
+		{
+			"type": "code",
+			"text": "data/uk/sun/activation/series-1.md  →  URI: uk/sun/activation/series-1\n                                   →  URL: /uk/sun/activation/series-1.html"
+		},
+		{
+			"type": "paragraph",
+			"text": "Catalog визначається з URL автоматично (директорія = каталог)."
+		},
+		{
+			"type": "paragraph",
+			"text": "**Формат файлу:**"
+		},
+		{
+			"type": "code",
+			"lang": "markdown",
+			"text": "---\ntitle: \"Серія 1: Анатомія Тривоги\"\nseries: 1\ndate: 2026-02-01\nauthor: ЯRаСлав\ntags: [superintellect, activation, truth]\n---\n\n# Серія 1: Анатомія Тривоги\n\n> \"Врятуй себе, і врятуєш тисячі.\""
+		},
+		{
+			"type": "paragraph",
+			"text": "**Результат `loadDocument()`:**"
+		},
+		{
+			"type": "code",
+			"lang": "javascript",
+			"text": "{\n  title: \"Серія 1: Анатомія Тривоги\",\n  series: 1,\n  date: \"2026-02-01\",\n  author: \"ЯRаСлав\",\n  tags: [\"superintellect\", \"activation\", \"truth\"],\n  content: \"# Серія 1: Анатомія Тривоги\\n\\n> \\\"Врятуй себе, і врятуєш тисячі.\\\"\"\n}"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "2. @nan0web/sun (apps/sun.app)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "2.1. Експорт компонента Passportal"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Статус:** 🔴 PENDING"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "2.2. BookGenerator"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Статус:** 🔴 PENDING"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "3. nan0web.app (apps/nan0web.app)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3.1. Markdown Rendering"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Статус:** 🔴 PENDING"
+		},
+		{
+			"type": "paragraph",
+			"text": "Оновити `renderDocument()` в CLI та Web для рендерингу Markdown content через `@nan0web/markdown`."
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "3.2. Passportal Integration"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Статус:** 🔴 PENDING"
+		}
+	]
+}

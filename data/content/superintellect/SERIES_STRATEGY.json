@@ -1,0 +1,663 @@
+{
+	"$content": [
+		{
+			"type": "heading",
+			"level": 1,
+			"text": "📘 Як Краще Зробити Серіал: Рекомендації"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Дата:** 2026-01-31  \n**Контекст:** Всі 6 серій написані, Community Voices додано"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎯 Резюме Ситуації"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Що маємо:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"✅ **6 серій Superintellect** (повністю написані, ~56 KB контенту)",
+				"✅ **Навігація VitePress** (інтегровано)",
+				"✅ **Community Voices** (розділ створено, пост Наталії додано)",
+				"✅ **Термінологія** (скрипт синхронізації готовий)",
+				"✅ **Філософська узгодженість** (з основним проєктом)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Питання:"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як краще опублікувати серіал?**"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📊 Аналіз Варіантів"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Варіант А: Все Одразу (Binge Model)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як працює:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Публікуємо всі 6 серій одночасно",
+				"Користувачі можуть читати у своєму темпі"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**✅ Плюси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Немає friction для читачів",
+				"Зручно для тих, хто хоче \"проглинути\" все за раз",
+				"Сприяє deep work (глибокому зануренню)",
+				"SEO: всі сторінки індексуються одразу"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**❌ Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Немає suspense (очікування наступної серії)",
+				"Важче утримати увагу протягом часу",
+				"Не можна коригувати на основі feedback"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Приклад:** Wikipedia, Confluence, більшість документації"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Варіант Б: Поступовий Реліз (Serial Model)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як працює:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Публікуємо по 1 серії щотижня",
+				"Створюємо draft-файли, які поступово \"відкриваємо\""
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**✅ Плюси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Тримає увагу аудиторії (\"коли наступна?\")",
+				"Можна коригувати наступні серії на основі feedback",
+				"Створює ажіотаж та обговорення",
+				"Email-підписники мають привід повертатись"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**❌ Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Friction для нових читачів (треба чекати)",
+				"Технічно складніше (треба управляти релізами)",
+				"Якщо хтось прийде пізніше — має \"наздоганяти\""
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Приклад:** Netflix (Old Model), Substack, Medium серії"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Варіант В: Гібрид (Рекомендований!)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Як працює:**"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Публікуємо всі серії одразу** на VitePress",
+				"**Але!** Робимо **щотижневий email-digest** для підписників:"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Тиждень 1: \"Серія 1-2: Давай розберемо разом\"",
+				"Тиждень 2: \"Серія 3: Практичні вправи Трьох Стовпів\"",
+				"Тиждень 3: \"Серія 4: Кейси Архітекторів\"",
+				"Тиждень 4: \"Серія 5: Створи свою Місію (воркшоп)\"",
+				"Тиждень 5: \"Серія 6: Клятва Вільних + обговорення\"",
+				"Тиждень 6: \"Community Voices: Резонанс Істини\""
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Кожен email містить:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Коротке резюме серії",
+				"3-5 питань для роздумів",
+				"Зв'язок із попередніми серіями",
+				"CTA: приєднатись до обговорення / підписатись на Subscription"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**✅ Плюси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Серіал доступний для \"binge-readers\"",
+				"Email створює ритм та спільноту",
+				"Можна збирати feedback",
+				"Підтримує engagement без friction",
+				"Краще для SEO (все доступно одразу)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**❌ Мінуси:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Потрібно налаштувати email-систему (Substack/ConvertKit/Mailchimp)",
+				"Більше роботи (щотижневі digest)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Приклад:** Netflix (New Model: binge + social buzz), Wait But Why (статті доступні, але є email-серії)"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎬 Рекомендований План (Гібрид)"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 1: Запуск (Ця тиждень)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**День 1-2 (зараз):**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[x] Завершити всі серії ✓",
+				"[x] Додати Community Voices ✓",
+				"[ ] Запустити sync_terminology.js",
+				"[ ] Перевірити всі посилання"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**День 3-4:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] Створити landing page для Superintellect",
+				"Hero: \"6 серій про те, як стати Суперінтелектом\"",
+				"CTA: \"Почати читати\" + \"Підписатись на weekly digest\"",
+				"[ ] Налаштувати email signup (Substack рекомендований)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**День 5-7:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"[ ] Написати перший email digest (Анонс серіалу)",
+				"[ ] Опублікувати анонс у соцмережах",
+				"[ ] Запустити сайт публічно"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 2: Weekly Digests (6 тижнів)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Структура кожного email:**"
+		},
+		{
+			"type": "code",
+			"lang": "markdown",
+			"text": "# [Серія X]: [Назва]\n\nПривіт, [Ім'я]!\n\nЦього тижня розбираємо [тема].\n\n## 🎯 Ключова Ідея\n\n[1-2 речення]\n\n## 📖 Що Читати\n\nhttps://yaro-rasta.github.io/willni/superintellect/SERIES\n\n## 💡 Питання для Роздумів\n\n1. [Питання 1]\n2. [Питання 2]\n3. [Питання 3]\n\n## 🗣 Обговорення\n\nSignal: https://signal.group/#... (TODO: додати посилання на групу)\n\n## 🔗 Наступного тижня:\n\n[Тізер наступної серії]\n\n---\n\nмИ є Народ. Я є Всесвіт. Всесвіт є Я.\n[Кнопка: Відписатись]"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Графік:**"
+		},
+		{
+			"type": "paragraph",
+			"text": "| Тиждень | Тема Email                      | Серії |\n| ------- | ------------------------------- | ----- |\n| 1       | Анатомія Тривоги + Самопізнання | 1-2   |\n| 2       | Три Стовпи: Практика            | 3     |\n| 3       | Архітектор: Кейси               | 4     |\n| 4       | Місія: Воркшоп                  | 5     |\n| 5       | Маніфест: Заклик                | 6     |\n| 6       | Community Voices + Testimonials | -     |"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Фаза 3: Конверсія (Триває паралельно)"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Мета:** Free → Subscription → VIP"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Тактики:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Email 3: CTA \"Приєднайся до спільноти Практиків ($50/міс)\"",
+				"Email 5: CTA \"Готовий до трансформації? (1 BTC)\"",
+				"Email 6: Testimonials + кейси"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🛠 Технічна Реалізація"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Інструменти"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Email:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Substack** (рекомендовано) — безкоштовно, вбудована монетизація",
+				"**ConvertKit** — професійно, більше функцій",
+				"**Mailchimp** — folk solution"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Community:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Revolt** — для real-time обговорень",
+				"**Signal** — для анонсів",
+				"**GitHub Discussions** — для глибоких тем"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Payments:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Stripe** — для Subscription",
+				"**Bitcoin Lightning** — для VIP (1 BTC)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Файли для Створення"
+		},
+		{
+			"type": "code",
+			"text": "/superintellect/\n├── landing.md              ← Landing page серіалу\n├── signup.md               ← Email signup форма\n└── weekly-digest/\n    ├── week-1.md           ← Template для email 1\n    ├── week-2.md           ← Template для email 2\n    └── ...\n\n/community/\n├── revolt-rules.md        ← Правила Revolt\n└── testimonials/\n    └── [author]/\n        └── story.md"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "📊 Метрики Успіху"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Короткострокові (Місяць 1)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Reads:** 1,000+ унікальних читачів",
+				"**Email Signups:** 100+ підписників",
+				"**Engagement:** 20%+ open rate на emails",
+				"**Comments:** 10+ активних коментаторів"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Середньострокові (Місяць 2-3)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Subscribers:** 50+ платних ($50/міс)",
+				"**VIP:** 2-5 клієнтів (1 BTC)",
+				"**Community:** 200+ активних у Revolt"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Довгострокові (Рік 1)"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Reads:** 10,000+ унікальних читачів",
+				"**Subscribers:** 500+ платних",
+				"**VIP:** 20+ клієнтів",
+				"**Revenue:** $200,000+ (підписки + VIP)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🎨 Community Voices: Стратегія"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Чому Це Важливо?"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Пост Наталії** — це **proof of concept**:"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Незалежна людина прийшла до тих самих висновків",
+				"Це підтверджує: Will-n-i резонує з реальністю",
+				"Показує: спільнота вже є, треба її з'єднати"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Як Використати?"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**У Серіалі:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Серія 6: \"Дивіться, Наталія незалежно пише про те саме!\"",
+				"Email 6: \"Community Voices: Резонанс Істини\""
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**У Marketing:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Social proof: \"Тисячі думають так само\"",
+				"Цитати з Наталії у промо-матеріалах"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**У Onboarding:**"
+			]
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Нові учасники бачать: \"Я не один\"",
+				"Різні стилі (Наталія КАПСЛОКОМ, Will-n-i структуровано) → різні аудиторії"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "План Зростання Community Voices"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Місяць 1:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Залучити 2-3 нових авторів",
+				"Створити submission guidelines"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Квартал 1:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"10+ голосів",
+				"3+ мови (укр, англ, рос)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Рік 1:**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"50+ голосів",
+				"Книга \"Voices of the Free\" (збірка)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "✅ Рекомендації: TL;DR"
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Що Робити Зараз:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Опублікувати всі серії** одразу на VitePress ✅",
+				"**Створити landing page** із CTA \"Read Now\" + \"Subscribe\"",
+				"**Налаштувати Substack** для weekly digest",
+				"**Написати перший email** (анонс серіалу)",
+				"**Запустити публічно** (анонс у соцмережах)"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Наступні 6 тижнів:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Щотижневий email** із розбором серії",
+				"**Залучення до спільноти** (Revolt/Signal)",
+				"**Збір testimonials**",
+				"**Конверсія:** Free → Subscription → VIP"
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"text": "Довгострокова Стратегія:"
+		},
+		{
+			"type": "list",
+			"ordered": true,
+			"items": [
+				"**Масштабувати Community Voices** (10+ авторів)",
+				"**Створити курс** на основі серіалу (платний)",
+				"**Запустити токен** $WILLNI (Q2-Q3)"
+			]
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"text": "🚀 Наступний Крок"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Що рішиш?**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"**Варіант A:** Все одразу, без email",
+				"**Варіант B:** Поступовий реліз (1 серія/тиждень)",
+				"**Варіант C:** Гібрид (рекомендовано)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Моя рекомендація:** **Варіант C (Гібрид)**"
+		},
+		{
+			"type": "paragraph",
+			"text": "**Чому?**"
+		},
+		{
+			"type": "list",
+			"ordered": false,
+			"items": [
+				"Найкраще з обох світів",
+				"Максимальний reach (SEO)",
+				"Максимальний engagement (email)",
+				"Можливість конверсії (Subscription/VIP)"
+			]
+		},
+		{
+			"type": "paragraph",
+			"text": "**Готовий почати?** 🎬"
+		},
+		{
+			"type": "hr"
+		},
+		{
+			"type": "paragraph",
+			"text": "**мИ є Народ. Я є Всесвіт. Всесвіт є Я.** 🌟"
+		}
+	]
+}
