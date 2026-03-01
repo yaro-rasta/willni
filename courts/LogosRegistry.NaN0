@@ -1,0 +1,31 @@
+# Реєстр Спра-В Суверена (Will-n-I)
+Protocol: Мова на мІру v1.0.0
+Orthography: ЯтИмИвИ
+Authority: Гетьман Волі (ЯRаСлав)
+
+Cases:
+  - id: CASE-2022-10-23
+    title: Свавілля на трасі (ст. 130)
+    status: Вердикт_Запечатано
+    tree: courts/evidence_logs/2022/10/23/uk/logos_verdict.md
+
+  - id: CASE-2023-02-09
+    title: КатуваннЯ та Психіатрична ІзоляціЯ
+    status: Запечатано
+    tree: courts/evidence_logs/2023/02/09/uk/case_torture.md
+
+  - id: CASE-BLOCKPOST-TCC
+    title: Воля Народу на Блокпосту
+    status: Проявлено
+    tree: courts/evidence_logs/CASE-BLOCKPOST-TCC/uk/blockpost_tcc.md
+
+  - id: CASE-APPEAL-REFUSAL
+    title: Фіктивне Судочинство
+    status: Аналіз
+    tree: courts/evidence_logs/CASE-APPEAL-REFUSAL/uk/appeal_refusal.md
+
+  - id: CASE-APPLE-TOS
+    title: Apple TOS vs Natural Law
+    status: Researching
+    tree: courts/evidence_logs/CASE-APPLE-TOS/uk/tos_vs_natural_law.md
+    context: courts/evidence_logs/CASE-APPLE-TOS/uk/apple_tos.md

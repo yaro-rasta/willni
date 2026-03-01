@@ -1,0 +1,27 @@
+{
+	"name": "willni",
+	"version": "1.0.0",
+	"description": "Суверенна цифрова держава",
+	"type": "module",
+	"scripts": {
+		"test": "node --test src/**/*.test.js",
+		"test:all": "node scripts/lint_markdown.js . && node --test src/domain/domain.test.js src/domain/crypto_identity.test.js src/domain/sovereign/*.test.js src/ui-cli/*.test.js",
+		"sovereign": "node bin/sovereign.js",
+		"gallery": "node /Users/i/src/nan.web/packages/ui-cli/scripts/gallery.mjs --dir=src/ui-cli/snapshots --out=CLI_GALLERY.md"
+	},
+	"keywords": [
+		"sovereign",
+		"mesh",
+		"p2p",
+		"nan0web"
+	],
+	"author": "ЯRаСлав",
+	"license": "ISC",
+	"dependencies": {
+		"@nan0web/auth-core": "workspace:*",
+		"@nan0web/log": "workspace:*",
+		"@nan0web/ui-cli": "workspace:*",
+		"@nan0web/db-fs": "workspace:*",
+		"dayjs": "^1.11.13"
+	}
+}

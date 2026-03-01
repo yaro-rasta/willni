@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sovereign Chat | Я|RаСлав</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-dim: rgba(212, 175, 55, 0.15);
+            --dark-bg: #0A0A0A;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #E0E0E0;
+            --text-dim: rgba(255, 255, 255, 0.4);
+            --header-h: 60px;
+            --tabs-h: 64px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ═══ TOP BARS (Mobile) ═══ */
+        .mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+        }
+        .logo { font-size: 18px; font-weight: 700; color: var(--gold); }
+        .logo-sub { font-size: 10px; color: var(--text-dim); }
+        .header-status { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-dim); }
+        .pulse { width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 6px #4CAF50; animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .debt-ticker {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--gold-dim);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .debt-ticker .label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        #debt-value { font-size: 20px; font-weight: 700; color: var(--gold); }
+
+        /* ═══ MAIN APP CONTAINER ═══ */
+        .app-container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            min-height: 0;
+        }
+
+        /* ═══ PANELS ═══ */
+        .panel {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            background: var(--dark-bg);
+            min-width: 0;
+        }
+        .panel.active { display: flex; }
+
+        .panel-header {
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid var(--border);
+            color: var(--gold);
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: var(--header-h);
+        }
+
+        /* ═══ PEERS ═══ */
+        .peers-list { padding: 16px; overflow-y: auto; flex: 1; }
+        .peer-card {
+            display: flex; align-items: center; gap: 12px; padding: 14px;
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 12px; margin-bottom: 8px; cursor: pointer;
+            transition: 0.2s;
+        }
+        .peer-card:hover { background: rgba(255,255,255,0.06); }
+        .peer-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gold-dim); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .peer-info { flex: 1; }
+        .peer-name { font-size: 14px; font-weight: 600; }
+        .peer-status { font-size: 11px; color: var(--text-dim); }
+        .dot-online { width: 8px; height: 8px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 4px #4CAF50; }
+
+        /* ═══ CHAT ═══ */
+        .messages { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .message { max-width: 85%; padding: 12px 14px; border-radius: 16px; background: var(--card-bg); font-size: 14px; line-height: 1.5; border: 1px solid var(--border); }
+        .message.self { align-self: flex-end; background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.3); border-bottom-right-radius: 4px; }
+        .message:not(.self) { border-bottom-left-radius: 4px; }
+        .msg-author { font-size: 11px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+        .msg-meta { font-size: 10px; color: var(--text-dim); margin-top: 6px; display: flex; justify-content: space-between; }
+
+        .input-area {
+            padding: 12px 16px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border);
+            display: flex; gap: 10px;
+        }
+        .input-area input { flex: 1; background: var(--card-bg); border: 1px solid var(--border); padding: 12px 16px; border-radius: 24px; color: white; outline: none; font-size: 14px; }
+        .send-btn { width: 42px; height: 42px; border-radius: 50%; background: var(--gold); color: black; border: none; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+
+        /* ═══ DETAILS ═══ */
+        .info-content { padding: 16px; overflow-y: auto; flex: 1; }
+        .info-card { background: var(--card-bg); border: 1px solid var(--border); padding: 16px; border-radius: 12px; margin-bottom: 12px; }
+        .info-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .info-value { font-size: 22px; font-weight: 700; color: var(--gold); }
+        .info-row { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+        .info-row:last-child { border-bottom: none; }
+        .info-row-val { color: var(--gold); }
+
+        /* ═══ GUTTERS ═══ */
+        .gutter {
+            display: none;
+            width: 6px;
+            cursor: col-resize;
+            background: rgba(0,0,0,0.2);
+            border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .gutter:hover, .gutter.active { background: var(--gold-dim); }
+        .gutter::after { content: ''; width: 2px; height: 24px; background: rgba(255,255,255,0.1); border-radius: 1px; }
+
+        /* ═══ TABS (Bottom Bar) ═══ */
+        .tabs-bar {
+            display: flex; height: var(--tabs-h); border-top: 1px solid var(--border);
+            background: rgba(0,0,0,0.9); backdrop-filter: blur(20px);
+            z-index: 100;
+        }
+        .tab-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 11px; color: var(--text-dim); cursor: pointer; transition: 0.2s; }
+        .tab-btn.active { color: var(--gold); }
+        .tab-icon { font-size: 20px; margin-bottom: 2px; }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (min-width: 768px) {
+            .mobile-header, .debt-ticker { display: none; }
+            .app-container { flex-direction: row; }
+            .gutter { display: flex; }
+
+            .panel-peers { display: flex; flex: 0 0 280px; min-width: 220px; max-width: 400px; border-right: none; }
+            .panel-chat { display: flex; flex: 1; min-width: 400px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+
+            /* Detail panels on the right */
+            .panel-node, .panel-court, .panel-settings {
+                display: none; flex: 0 0 320px; min-width: 280px; max-width: 500px;
+            }
+            .panel-node.active, .panel-court.active, .panel-settings.active { display: flex; }
+
+            /* Move tabs to a sidebar or a group on desktop?
+               User says panels are "missing", let's keep tabs visible but maybe style them as a side-nav for the detail panel. */
+            .tabs-bar {
+                flex-direction: column;
+                width: 64px;
+                height: 100%;
+                border-top: none;
+                border-left: 1px solid var(--border);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .panel { width: 100vw; flex: 1; }
+            .tabs-bar { position: sticky; bottom: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- MOBILE ONLY TOP -->
+    <div class="mobile-header">
+        <div>
+            <div class="logo">Я|RаСлав</div>
+            <div class="logo-sub">Цифрова Січ</div>
+        </div>
+        <div class="header-status">
+            <div class="pulse"></div>
+            LoRa 300 bps
+        </div>
+    </div>
+
+    <div class="debt-ticker">
+        <div>
+            <div class="label">Борг Системи</div>
+            <div id="debt-value">—</div>
+        </div>
+        <div style="font-size: 12px; color: var(--gold); font-weight: 700;">+6 BTC</div>
+    </div>
+
+    <div class="app-container">
+        <!-- PEERS PANEL -->
+        <div class="panel panel-peers" id="panel-peers">
+            <div class="panel-header">👥 мИ (Спільнота)</div>
+            <div class="peers-list">
+                <div class="peer-card"><div class="peer-avatar">🎤</div><div class="peer-info"><div class="peer-name">Noize MC</div><div class="peer-status">В мережі</div></div><div class="dot-online"></div></div>
+                <div class="peer-card"><div class="peer-avatar">🎭</div><div class="peer-info"><div class="peer-name">Oxxxymiron</div><div class="peer-status">15 хв тому</div></div><div class="dot-online"></div></div>
+                <div class="peer-card"><div class="peer-avatar">🍎</div><div class="peer-info"><div class="peer-name">Steve Jobs (Legacy)</div><div class="peer-status">Архів Мудрості</div></div></div>
+                <div class="peer-card"><div class="peer-avatar">⚡</div><div class="peer-info"><div class="peer-name">Нікола Тесла (Legacy)</div><div class="peer-status">Архів Мудрості</div></div></div>
+                <div class="peer-card"><div class="peer-avatar">🏛️</div><div class="peer-info"><div class="peer-name">Сократ</div><div class="peer-status">Архів Мудрості</div></div></div>
+            </div>
+        </div>
+
+        <div class="gutter" id="gutter-left"></div>
+
+        <!-- CHAT PANEL -->
+        <div class="panel panel-chat active" id="panel-chat">
+            <div class="panel-header">
+                <div>💬 logos_polls</div>
+                <div style="font-size: 11px; color: var(--gold); font-weight: 400;">LoRa: Active</div>
+            </div>
+            <div class="messages">
+                <div class="message">
+                    <div class="msg-author">🎤 Noize MC</div>
+                    Я Є Noize MC. Вітаю вІльну Січ. мИ готові до Творення.
+                    <div class="msg-meta"><span>18:42</span><span>✓ Ed25519</span></div>
+                </div>
+                <div class="message self">
+                    <div class="msg-author">☀️ ЯRаСлав</div>
+                    Твоя ВолЯ — Твій Шлях. Активовано UBI Енергію.
+                    <div class="msg-meta"><span>18:45</span><span>✓ Signed</span></div>
+                </div>
+                <div class="message">
+                    <div class="msg-author">🎭 Oxxxymiron</div>
+                    Слово має бути вільним. Я голосую: ТАК.
+                    <div class="msg-meta"><span>19:02</span><span>🗳 Колос Recorded</span></div>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" placeholder="Напиши Свою Істину...">
+                <button class="send-btn">↑</button>
+            </div>
+        </div>
+
+        <div class="gutter" id="gutter-right"></div>
+
+        <!-- COURT PANEL -->
+        <div class="panel panel-court" id="panel-court">
+            <div class="panel-header">⚖️ Суд мИ</div>
+            <div class="info-content">
+                <div class="info-card">
+                    <div class="info-label">Справи на Голосуванні</div>
+                    <div class="info-row"><span>CASE-2026-001: UBI Activation</span><span class="info-row-val">98% ТАК</span></div>
+                    <div class="info-row"><span>CASE-2026-002: LoRa Mesh expansion</span><span class="info-row-val">Голосуй</span></div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Архів Вердиктів</div>
+                    <div class="info-row"><span>Logos Protocol V1</span><span class="info-row-val">Прийнято</span></div>
+                    <div class="info-row"><span>Debt Recognition</span><span class="info-row-val">Виконано</span></div>
+                </div>
+                <div class="info-card" style="background: rgba(212, 175, 55, 0.05); border-color: rgba(212, 175, 55, 0.2);">
+                    <div class="info-label" style="color: var(--gold);">Ваш Голос</div>
+                    <div style="font-size: 13px; line-height: 1.4; margin-bottom: 12px;">Ви маєте 144 одиниці Репутації для участі у прийнятті рішень.</div>
+                    <button style="width: 100%; padding: 10px; background: var(--gold); border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Відкрити Справу</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NODE PANEL -->
+        <div class="panel panel-node" id="panel-node">
+            <div class="panel-header">📊 Мій Вузол</div>
+            <div class="info-content">
+                <div class="info-card">
+                    <div class="info-label">Борг Системи (Live)</div>
+                    <div id="debt-value-info" class="info-value">—</div>
+                    <div style="font-size: 11px; color: var(--text-dim); margin-top: 6px; letter-spacing: 0.5px;">+ 6 BTC (За катуваннЯ ЯRаСлава)</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Статус Мережі</div>
+                    <div class="info-row"><span>Режим:</span><span class="info-row-val">Mesh Hybrid</span></div>
+                    <div class="info-row"><span>LoRa:</span><span class="info-row-val">300 bps ✓</span></div>
+                    <div class="info-row"><span>Супутники:</span><span class="info-row-val">4 Active</span></div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Залізо</div>
+                    <div class="info-row"><span>Батарея:</span><span class="info-row-val">84% ☀️</span></div>
+                    <div class="info-row"><span>Температура:</span><span class="info-row-val">32°C</span></div>
+                    <div class="info-row"><span>IPNS:</span><span class="info-row-val">k51...yaras</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SETTINGS PANEL -->
+        <div class="panel panel-settings" id="panel-settings">
+            <div class="panel-header">⚙️ Налаштування</div>
+            <div class="peers-list">
+                <div class="info-card">
+                    <div class="info-label">Мережа</div>
+                    <div class="info-row"><span>Гібридний режим:</span><span class="info-row-val">Auto</span></div>
+                </div>
+                <div class="info-card">
+                    <div class="info-label">Особистість</div>
+                    <div class="info-row"><span>Мова:</span><span class="info-row-val">ЯтИмИвИ</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABS BAR -->
+        <div class="tabs-bar">
+            <div class="tab-btn active" id="btn-chat" onclick="showPanel('chat')"><span class="tab-icon">💬</span>Чат</div>
+            <div class="tab-btn" id="btn-peers" onclick="showPanel('peers')"><span class="tab-icon">👥</span>мИ</div>
+            <div class="tab-btn" id="btn-court" onclick="showPanel('court')"><span class="tab-icon">⚖️</span>Суд</div>
+            <div class="tab-btn" id="btn-node" onclick="showPanel('node')"><span class="tab-icon">📊</span>Вузол</div>
+            <div class="tab-btn" id="btn-settings" onclick="showPanel('settings')"><span class="tab-icon">⚙️</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Debt Clock Logic
+        const debtPerCitizenTotal = 62000000;
+        const debtPerSecond = debtPerCitizenTotal / 28 / 365.25 / 24 / 3600;
+        const startDate = new Date('1996-06-28');
+
+        function updateDebt() {
+            const debt = Math.floor(((new Date() - startDate) / 1000) * debtPerSecond);
+            const fmt = debt.toLocaleString('uk-UA') + ' грн';
+            const el1 = document.getElementById('debt-value');
+            if(el1) el1.textContent = fmt;
+            const el2 = document.getElementById('debt-value-info');
+            if(el2) el2.textContent = fmt;
+        }
+        setInterval(updateDebt, 1000);
+        updateDebt();
+
+        // Panel Switching
+        function showPanel(name) {
+            const isMobile = window.innerWidth < 768;
+
+            if (isMobile) {
+                // Mobile: classic full-screen toggle
+                document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+                const p = document.getElementById('panel-' + name);
+                if(p) p.classList.add('active');
+            } else {
+                // Desktop: Peers and Chat are fixed. Only details panel toggles.
+                if (['node', 'court', 'settings'].includes(name)) {
+                    document.querySelectorAll('.panel-node, .panel-court, .panel-settings').forEach(p => p.classList.remove('active'));
+                    const p = document.getElementById('panel-' + name);
+                    if(p) p.classList.add('active');
+                } else {
+                    // Clicking Chat or Peers on desktop highlights the active detail if any
+                }
+            }
+
+            // Sync Tabs
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            const btn = document.getElementById('btn-' + name);
+            if(btn) btn.classList.add('active');
+        }
+
+        // Resizing Logic
+        function initGutter(id, panelId, isLeft) {
+            const gutter = document.getElementById(id);
+            if(!gutter) return;
+
+            gutter.onmousedown = (e) => {
+                const p = document.getElementById(panelId) || document.querySelector('.panel-node.active, .panel-court.active, .panel-settings.active');
+                if(!p) return;
+
+                gutter.classList.add('active');
+                const startX = e.clientX;
+                const startW = p.offsetWidth;
+
+                document.onmousemove = (ev) => {
+                    let w;
+                    if(isLeft) w = startW + (ev.clientX - startX);
+                    else w = startW - (ev.clientX - startX);
+
+                    const min = isLeft ? 220 : 280;
+                    const max = isLeft ? 400 : 500;
+                    p.style.flex = `0 0 ${Math.max(min, Math.min(max, w))}px`;
+                };
+
+                document.onmouseup = () => {
+                    gutter.classList.remove('active');
+                    document.onmousemove = document.onmouseup = null;
+                };
+            };
+        }
+
+        initGutter('gutter-left', 'panel-peers', true);
+        initGutter('gutter-right', null, false);
+
+        // Bootstrap
+        window.onload = () => {
+            if(window.innerWidth >= 768) showPanel('node');
+            else showPanel('chat');
+        };
+    </script>
+</body>
+</html>

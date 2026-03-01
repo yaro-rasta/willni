@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sovereign Court | Я|RаСлав</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-dim: rgba(212, 175, 55, 0.15);
+            --dark-bg: #0A0A0A;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-hover: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #E0E0E0;
+            --text-dim: rgba(255, 255, 255, 0.5);
+            --danger: #ff6b6b;
+            --danger-dim: rgba(255, 107, 107, 0.1);
+            --success: #51cf66;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            background-image: radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.03), transparent 25%);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: rgba(10,10,10,0.8);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        .logo { font-size: 20px; font-weight: 700; color: var(--gold); display: flex; align-items: center; gap: 8px; margin-bottom: 40px;}
+        .logo span { color: var(--text); font-weight: 300; }
+
+        .nav-item {
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: var(--text-dim);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: var(--card-hover);
+            color: var(--text);
+        }
+
+        .nav-item.active {
+            background: var(--gold-dim);
+            color: var(--gold);
+        }
+
+        .rep-box {
+            margin-top: auto;
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .rep-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 4px; }
+        .rep-val { font-size: 24px; font-weight: 700; color: var(--gold); }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .header-title { font-size: 32px; font-weight: 700; }
+
+        .btn-new {
+            background: var(--gold);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .cases-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .case-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .case-card:hover {
+            background: var(--card-hover);
+            border-color: rgba(212,175,55,0.3);
+        }
+
+        .case-tag {
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .tag-active { background: var(--danger-dim); color: var(--danger); border: 1px solid rgba(255,107,107,0.2); }
+        .tag-resolved { background: rgba(81, 207, 102, 0.1); color: var(--success); border: 1px solid rgba(81, 207, 102, 0.2); }
+
+        .case-meta { font-size: 13px; color: var(--text-dim); margin-top: 8px; display: flex; gap: 16px; }
+
+        .progress-bar {
+            width: 150px;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--gold);
+            width: 65%; /* example */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Я|R <span>Суд</span></div>
+        <a href="#" class="nav-item active">⚖️ Активні Справи</a>
+        <a href="#" class="nav-item">📂 Архів Вироків</a>
+        <a href="#" class="nav-item">🛡️ Я - Присяжний</a>
+        <a href="#" class="nav-item">📑 Створити Позов</a>
+
+        <div class="rep-box">
+            <div class="rep-label">Ваша Вага Голосу</div>
+            <div class="rep-val">144 REP</div>
+            <div style="font-size: 11px; color: var(--text-dim); margin-top: 4px;">Підтверджено 12 свідками</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <div class="header-title">Народний Справедливий Суд</div>
+            <button class="btn-new">+ Подати Докази</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="rep-label">Відкриті Справи</div>
+                <div class="rep-val" style="color: var(--text);">24</div>
+            </div>
+            <div class="stat-card">
+                <div class="rep-label">Активні Присяжні</div>
+                <div class="rep-val" style="color: var(--text);">1,402</div>
+            </div>
+            <div class="stat-card">
+                <div class="rep-label">Виконані Вироки</div>
+                <div class="rep-val" style="color: var(--success);">8</div>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 20px; font-weight: 500;">Справи, що потребують голосу:</h3>
+
+        <div class="cases-list">
+            <div class="case-card">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                        <span class="case-tag tag-active">Голосування</span>
+                        <h4 style="font-size: 18px;">Справа №2026-003: Корупція на державному рівні</h4>
+                    </div>
+                    <div class="case-meta">
+                        <span>Відповідач: Системний Посадовець #12</span>
+                        <span>Доказів: 45 файлів (IPFS)</span>
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 14px; font-weight: 600; color: var(--gold);">68% "Винен" (Потрібно 66%)</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 68%;"></div></div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                        <span class="case-tag tag-active">Розслідування</span>
+                        <h4 style="font-size: 18px;">Справа №2026-008: Узурпація волі (Примус)</h4>
+                    </div>
+                    <div class="case-meta">
+                        <span>Відповідач: Структура "ТЦК-3"</span>
+                        <span>Доказів: 12 відео (IPFS)</span>
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 14px; font-weight: 600; color: var(--text-dim);">Збір присяжних...</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 30%; background: var(--text-dim);"></div></div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                        <span class="case-tag tag-resolved">Вирішено</span>
+                        <h4 style="font-size: 18px;">Справа №2026-001: Визнання Боргу Системи</h4>
+                    </div>
+                    <div class="case-meta">
+                        <span>Народ України</span>
+                        <span>24,000 голосів</span>
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 14px; font-weight: 600; color: var(--success);">ТАК (98%)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

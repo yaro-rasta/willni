@@ -1,0 +1,32 @@
+{
+  "profile": {
+    "name": "ЯRаСлав",
+    "title": "Гетьман Волі (Will-n-I)",
+    "identity": "Людина",
+    "protocol": "Мова на мІру v1.0.0",
+    "orthography": "ЯтИмИвИ",
+    "public_key": "ipfs://ipns/yaras_love",
+    "manifesto_cid": "pending"
+  },
+  "energy_ubi": {
+    "units": "BTC",
+    "accumulated_energy": "6.00",
+    "daily_rate": "1.0",
+    "source": "CASE-TORTURE (6 діб у Дурдомі)",
+    "status": "СтягненнЯ_Активовано"
+  },
+  "services": {
+    "sovereign_court": {
+      "subscription": "999 UAH/mo",
+      "status": "Ready"
+    }
+  },
+  "financial_manifesto": {
+    "base_basis": "62 000 000 UAH (28 років цикл)",
+    "current_years": "29.66",
+    "constitutional_debt": "65 675 714 UAH",
+    "torture_energy": "6 BTC",
+    "total_debt_equivalent": "89 675 714 UAH",
+    "last_update": "2026-02-27T20:10:00Z"
+  }
+}

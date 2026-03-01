@@ -1,0 +1,13 @@
+{
+  "vote_packet": {
+    "case_id": "CASE-APPLE-TOS",
+    "case_ref": "ipfs://ipns/yaras_love/courts/evidence_logs/CASE-APPLE-TOS/tos_vs_natural_law.md",
+    "question": "Чи Є Apple TOS актом корпоративної тиранії?",
+    "options": ["ТАК — Акт Тиранії", "НІ — Потребує Перегляду"],
+    "opinion": "ТАК — Акт Тиранії",
+    "voter": "ЯRаСлав",
+    "voter_id": "ipfs://ipns/yaras_love",
+    "timestamp": "2026-02-27T17:55:00Z",
+    "signature": "<ED25519_SIGNATURE_HERE>"
+  }
+}

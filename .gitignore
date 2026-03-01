@@ -1,0 +1,33 @@
+node_modules/
+.DS_Store
+*.log
+.temp/
+.cache/
+
+# Testing & Reports
+playwright-report/
+test-results/
+src/ui-cli/snapshots/
+
+# Personal & Sensitive Data (CRITICAL)
+cli/data/
+data/
+users/
+chat/
+.env
+session.txt
+auth.json
+
+# Backups & Projects to be separated
+*.backup.*
+superintellect*/
+emanagramma/
+i18n.backup.*/
+
+# Compiled
+dist/
+public/
+public-log/
+build/
+.vitepress/dist/
+.vitepress/cache/

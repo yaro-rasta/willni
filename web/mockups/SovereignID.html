@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sovereign ID | Я|RаСлав</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-dim: rgba(212, 175, 55, 0.15);
+            --dark-bg: #0A0A0A;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-hover: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #E0E0E0;
+            --text-dim: rgba(255, 255, 255, 0.5);
+            --error: #ff6b6b;
+            --success: #51cf66;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.04), transparent 25%),
+                              radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02), transparent 25%);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-size: 20px; font-weight: 700; color: var(--gold); display: flex; align-items: center; gap: 8px;}
+        .logo span { color: var(--text); font-weight: 300; }
+
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 20px;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .page-header p {
+            color: var(--text-dim);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+        }
+
+        .c-form-group {
+            margin-bottom: 24px;
+        }
+
+        .c-label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .c-input {
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 14px 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .c-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px var(--gold-dim);
+        }
+
+        .c-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--gold);
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper label {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .primary-btn {
+            width: 100%;
+            background: var(--gold);
+            color: #000;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            background: #e5c455;
+            box-shadow: 0 4px 12px var(--gold-dim);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .secondary-btn:hover {
+            background: var(--gold-dim);
+        }
+
+        .key-box {
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--border);
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'monospace';
+            font-size: 12px;
+            color: var(--gold);
+            word-break: break-all;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(81, 207, 102, 0.1);
+            color: var(--success);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(81, 207, 102, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 12px 16px; }
+            .page-header h1 { font-size: 32px; }
+            .glass-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Я|R <span>Sovereign Platform</span></div>
+        <div class="status-badge">
+            <span style="width: 6px; height: 6px; background: var(--success); border-radius: 50%; display: inline-block;"></span>
+            Локальний Вузол
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <header class="page-header">
+            <h1>Міжнародна Декларація</h1>
+            <p>Заявіть про свій Суверенітет, право вибору та свободу Волі. Цей запис буде записано у розподілений реєстр (Mesh/IPFS).</p>
+        </header>
+
+        <!-- Step 1: Identity -->
+        <div class="glass-card">
+            <h2 style="font-size: 20px; margin-bottom: 24px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--gold);">1.</span> Ваша Ідентичність
+            </h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="c-form-group">
+                    <label class="c-label">Ім'я (як Живої Людини)</label>
+                    <input type="text" class="c-input" placeholder="Наприклад: Ярослав">
+                </div>
+                <div class="c-form-group">
+                    <label class="c-label">Родове Ім'я</label>
+                    <input type="text" class="c-input" placeholder="Наприклад: з роду...">
+                </div>
+            </div>
+
+            <div class="c-form-group">
+                <label class="c-label">Криптографічний Підпис (Ed25519)</label>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="flex: 1;">
+                        <button class="secondary-btn" onclick="generateKey()">Згенерувати Ключ (На Пристрої)</button>
+                        <div class="key-box" id="key-display" style="display: none;">
+                            <span id="key-text">ed25519:xxxxxxxxxxxxxxxxxxx</span>
+                            <span style="cursor: pointer;" title="Копіювати">📋</span>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 11px; color: var(--text-dim); margin-top: 8px;">Ваш приватний ключ ніколи не залишає браузер. Це ваша е-печатка суверена.</p>
+            </div>
+        </div>
+
+        <!-- Step 2: Declaration -->
+        <div class="glass-card">
+            <h2 style="font-size: 20px; margin-bottom: 24px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--gold);">2.</span> Волевиявлення
+            </h2>
+
+            <div class="c-form-group">
+                <label class="c-label">Текст Декларації</label>
+                <textarea class="c-input c-textarea">Я, жива людина, заявляю про своє вільне волевиявлення, свій суверенітет та повну правоздатність. Ніхто не має права обмежувати мою волю, крім випадків, коли це порушує природне право інших. Я відкликаю згоду на будь-які юрисдикції, які діють без мого прямого свідомого договору.</textarea>
+            </div>
+
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="agree-nature">
+                <label for="agree-nature">Я усвідомлюю відповідальність за свої слова і беру зобов'язання діяти за законами Природного Права і не чинити шкоди іншим.</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="agree-public">
+                <label for="agree-public">Я погоджуюсь зробити цю декларацію публічним міжнародним фактом (фіксується в IPFS та Sovereign Registry).</label>
+            </div>
+
+            <button class="primary-btn" onclick="publish()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Заявити про Суверенітет
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function generateKey() {
+            const keyDisplay = document.getElementById('key-display');
+            keyDisplay.style.display = 'flex';
+            const randomHex = Array.from({length: 32}, () => Math.floor(Math.random() * 16).toString(16)).join('');
+            document.getElementById('key-text').innerText = `ed25519:${randomHex}`;
+        }
+
+        function publish() {
+            const agree1 = document.getElementById('agree-nature').checked;
+            const agree2 = document.getElementById('agree-public').checked;
+            const keyDisp = document.getElementById('key-display').style.display;
+
+            if (keyDisp === 'none') return alert('Будь ласка, згенеруйте криптографічний підпис.');
+            if (!agree1 || !agree2) return alert('Підтвердіть вашу волю та згоду на публікацію.');
+
+            const btn = document.querySelector('.primary-btn');
+            const original = btn.innerHTML;
+            btn.innerHTML = 'Фіксація в реєстрі...';
+            btn.style.opacity = '0.7';
+
+            setTimeout(() => {
+                btn.innerHTML = '✓ Декларацію Успішно Зафіксовано';
+                btn.style.background = 'var(--success)';
+                btn.style.color = '#fff';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

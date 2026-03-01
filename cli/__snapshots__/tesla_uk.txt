@@ -1,0 +1,50 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ℹ willni 
+────────────────────────────────────────────────────────────
+   ☀  ВОЛЯ · willni.yaro.page  ☀
+   Воля і Я
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  💾 DB: DBFS /Users/i/src/apps/willni/cli/data [utf-8]
+  👥 4 members
+
+Дослідити Універсальні Всесвіти:
+ 1) skovoroda
+ 2) tesla
+ 3) yaro
+✔  tesla
+ iVerse: tesla 
+
+📜 Профіль
+Bio: Inventor, electrical engineer, mechanical engineer, and futurist who is best known for his contributions to the design of the modern alternating current (AC) electricity supply system.
+Quote: "The present is theirs; the future, for which I really worked, is mine."
+
+🎨 Продукти та Мистецтво
+ - Alternating Current (AC) System (service)
+   Multi-phase power distribution system that enabled electrification of the modern world.
+ - Tesla Coil (physical)
+   An electrical resonant transformer circuit used to produce high-voltage, low-current, high frequency alternating-current electricity.
+   Price: 33 WILLNI
+ - Wardenclyffe Tower (Wireless Energy) (physical)
+   An early experimental wireless transmission station designed for wireless world-wide telephony, broadcasting, and proof-of-concept for wireless power transmission.
+   Price: 333 WILLNI
+ - Induction Motor (physical)
+   An AC motor where the electric current in the rotor needed to produce torque is obtained by electromagnetic induction from the magnetic field of the stator winding.
+
+⏳ Хронологія
+ [1856-07-10] Born in Smiljan, Austrian Empire (modern-day Croatia).
+ [1875] Enrolled at Austrian Polytechnic in Graz on a Military Frontier scholarship.
+ [1881] Moved to Budapest to work under Tivadar Puskás at a telegraph company, the Budapest Telephone Exchange.
+ [1882] Began working for the Continental Edison Company in France, designing and making improvements to electrical equipment.
+ [1884-06] Arrived in the USA and started working for Thomas Edison.
+ [1887] Tesla Electric Light & Manufacturing was formed. Tested the first brushless alternating current induction motor.
+ [1888-05] First presentation of the induction motor and multi-phase AC system to the AIEE.
+ [1893] Chicago World's Fair (World's Columbian Exposition) lit by Tesla's AC system.
+ [1899] Colorado Springs experiments: proof of wireless energy transmission through Earth and atmosphere.
+ [1901] Construction of Wardenclyffe Tower began.
+ [1943-01-07] Departed from the physical world at the New Yorker Hotel.
+
+⚖️ Протокол Екосистеми
+ UBI: 33% | DEV: 33% | TREASURY: 33% | FEE: 1%
+✔ Натисніть Enter, щоб повернутись...  next

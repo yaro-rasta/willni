@@ -1,0 +1,43 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ℹ willni 
+────────────────────────────────────────────────────────────
+   ☀  ВОЛЯ · willni.yaro.page  ☀
+   Воля і Я
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  💾 DB: DBFS /Users/i/src/apps/willni/cli/data [utf-8]
+  👥 4 members
+
+Дослідити Універсальні Всесвіти:
+ 1) skovoroda
+ 2) tesla
+ 3) yaro
+✔  skovoroda
+ iVerse: skovoroda 
+
+📜 Профіль
+Bio: Philosopher, poet, teacher, and composer. The 'Ukrainian Socrates' who spent most of his life as a wandering philosopher.
+Quote: "The world tried to catch me, but didn't succeed."
+
+🎨 Продукти та Мистецтво
+ - The Garden of Divine Songs (art)
+   A collection of 30 poems characterized by their depth, simplicity, and concern for the moral perfection of humanity.
+ - Fables of Kharkiv (art)
+   Collection of 30 philosophical fables, each ending with a moral called 'force'.
+ - Narcissus. Know Thyself (digital)
+   A philosophical treatise on the importance of self-knowledge and finding one's true nature.
+
+⏳ Хронологія
+ [1722-12-03] Born in Chornukhy, Lubny Regiment, Cossack Hetmanate.
+ [1734] Enrolled at the Kyiv-Mohyla Academy, where he studied for almost 20 years with interruptions.
+ [1741-11] Assigned as a singer to the Imperial Court Chapel in St. Petersburg.
+ [1750-1753] Traveled abroad to Central/Western Europe, visiting Tokaj, Vienna, Presburg, Halle, and other cities.
+ [1759] Invited to teach poetics at the Kharkiv Collegium.
+ [1766] Wrote the treatise 'Entrance into Christian Goodness' for students of the Kharkiv Collegium.
+ [1769] Began his life as a wandering philosopher after being dismissed from the Collegium for his unconventional views.
+ [1794-11-09] Departed from the physical world in Pan-Ivanivka. Legend says he dug his own grave the day before.
+
+⚖️ Протокол Екосистеми
+ UBI: 33% | DEV: 33% | TREASURY: 33% | FEE: 1%
+✔ Натисніть Enter, щоб повернутись...  next

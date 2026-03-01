@@ -1,0 +1,45 @@
+# Workflow для автоматичної публікації на GitHub Pages
+name: Deploy VitePress site to Pages
+
+on:
+  # Запускається при push в gh-pages гілку (dist файли)
+  push:
+    branches: [gh-pages]
+
+  # Дозволяє запускати вручну з вкладки Actions
+  workflow_dispatch:
+
+# Встановлює права GITHUB_TOKEN для дозволу deployment на Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Дозволяє лише один concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,691 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Максимальна ширина контенту для діаграм
+ */
+:root {
+  /* Збільшуємо ширину контенту */
+  --vp-layout-max-width: 1920px;
+
+  /* Ширина основного контенту */
+  --vp-content-max-width: 100%;
+
+  /* Відступи */
+  --vp-sidebar-width: 300px;
+}
+
+/**
+ * Робимо контент на всю ширину
+ */
+.VPDoc.has-sidebar .content-container,
+.VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+.VPDoc .content {
+  max-width: 100% !important;
+  padding: 32px 48px !important;
+}
+
+/**
+ * Mermaid діаграми на повну ширину
+ */
+.vp-doc .mermaid {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.vp-doc .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Покращення для мобільних
+ */
+@media (max-width: 960px) {
+  .VPDoc .content {
+    padding: 24px 24px !important;
+  }
+}
+
+/**
+ * Кольорова схема для діаграм (темна тема)
+ */
+.dark .mermaid {
+  background: transparent;
+}
+
+/* --- Global Layout & Snap Scroll --- */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000510;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.VPContent {
+  padding: 0 !important;
+}
+
+/**
+ * Header & Logo: Steve Jobs Style
+/* --- Header & Navigation --- */
+.VPNav {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  z-index: 100 !important;
+}
+
+/* Logo specific background (Transparent as requested) */
+.VPNavBarTitle {
+  background: transparent !important;
+}
+
+/* Menu area (Glassmorphism) */
+@media (min-width: 960px) {
+  .VPNavBarMenu {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 0 20px;
+    margin-left: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Mobile Menu Button Fix */
+.VPNavBarHamburger {
+  z-index: 110 !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.VPNavBar.is-home {
+  background-color: transparent !important;
+}
+
+.VPNavBarMenuLink {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 13px !important;
+}
+
+.VPNavBarMenuLink:hover {
+  color: #fdf200 !important;
+  text-shadow: 0 0 15px rgba(253, 242, 0, 0.5);
+}
+
+.VPNavBarTitle .logo {
+  height: 48px !important; /* Збільшуємо лого на всю висоту */
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.VPNavBarTitle:hover .logo {
+  transform: scale(1.05);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  font-size: 20px !important;
+}
+
+/* Home Page Styles */
+.VPHome {
+  padding-bottom: 96px !important;
+}
+
+/**
+ * Premium Hero & Background
+ */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+  --vp-home-hero-image-filter: drop-shadow(0 0 40px rgba(0, 153, 255, 0.3));
+}
+
+.dark :root {
+  --vp-home-hero-name-background: linear-gradient(135deg, #fff 30%, #555 100%);
+}
+
+.VPHero {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 153, 255, 0.05),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(250, 242, 0, 0.03),
+      transparent 40%
+    );
+  border-radius: 0 0 64px 64px;
+  margin-bottom: 64px;
+}
+
+.premium-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 40px;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.premium-card:hover::before {
+  opacity: 1;
+}
+
+.premium-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.premium-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 24px;
+  stroke: var(--vp-c-brand-1);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.premium-icon-text {
+  font-size: 48px;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+/* Ховаємо сайдбар ТІЛЬКИ на головній сторінці */
+.VPHome ~ .VPSidebar,
+.is-home .VPSidebar {
+  display: none !important;
+}
+.is-home .VPContent.has-sidebar {
+  padding-left: 0 !important;
+}
+.VPDoc .container {
+  max-width: 100% !important;
+}
+.VPDoc .content {
+  max-width: 100% !important;
+  padding: 32px 48px !important;
+}
+
+/* Backdrop for content readability over animated background */
+.VPDoc {
+  background: rgba(0, 5, 16, 0.85) !important;
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+}
+
+:root:not(.dark) .VPDoc {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Sidebar readability */
+.VPSidebar {
+  background: rgba(0, 5, 16, 0.92) !important;
+  backdrop-filter: blur(12px);
+}
+
+.VPSidebar .item .text {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: initial !important;
+}
+
+:root:not(.dark) .VPSidebar {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+}
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/**
+ * Presentation Slides: Apple Style
+ */
+.presentation-slide {
+  height: calc(100vh - 64px); /* Повна висота мінус хедер */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  margin: 0; /* Прибираємо марджини для безперервності */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.yellow-blue-gradient {
+  background: transparent !important; /* Фон тепер у BackgroundScene.vue */
+  color: #000 !important;
+}
+
+.dark .yellow-blue-gradient {
+  color: #fff !important;
+}
+
+.premium-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  position: relative;
+  padding: 3px; /* Місце для градієнтного бордера */
+  border-radius: 28px;
+  background-clip: padding-box;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-card::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    60deg,
+    var(--vp-c-brand-1),
+    #fdf200,
+    #fff,
+    var(--vp-c-brand-1)
+  );
+  background-size: 300% 300%;
+  z-index: -1;
+  border-radius: 30px;
+  animation: borderRotate 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.premium-card:hover::after {
+  opacity: 1;
+}
+
+.premium-card:hover {
+  transform: scale(1.03);
+}
+
+.card-inner {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 25px;
+  height: 100%;
+}
+
+.dark .card-inner {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slide-title {
+  font-size: clamp(48px, 12vh, 120px) !important;
+  line-height: 0.85 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.06em !important;
+  margin-top: 0 !important;
+}
+
+/**
+ * Покращення читабельності
+ */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vp-doc p {
+  line-height: 1.7;
+}
+
+/**
+ * Стилі для blockquote
+ */
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  background: var(--vp-c-bg-soft);
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-radius: 4px;
+}
+
+/* =============================================
+ * LIGHT THEME OVERRIDES
+ * Fix: white text invisible on light backgrounds
+ * ============================================= */
+
+/* Body text color for light theme */
+:root:not(.dark) body {
+  color: #1a1a2e;
+}
+
+/* Slide titles and text */
+:root:not(.dark) .slide-title {
+  color: #1a1a2e !important;
+  -webkit-text-fill-color: #1a1a2e !important;
+}
+
+:root:not(.dark) .slide-text {
+  color: #333 !important;
+  opacity: 0.9;
+}
+
+/* Premium cards (Три Стовпи section) */
+:root:not(.dark) .premium-card {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+:root:not(.dark) .premium-card:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: #c4a700;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+:root:not(.dark) .card-inner {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .card-inner h3 {
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .card-inner p {
+  color: #333;
+}
+
+/* Navigation menu links */
+:root:not(.dark) .VPNavBarMenuLink {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+:root:not(.dark) .VPNavBarMenuLink:hover {
+  color: #b8960a !important;
+  text-shadow: none;
+}
+
+/* Glassmorphism menu in light theme */
+@media (min-width: 960px) {
+  :root:not(.dark) .VPNavBarMenu {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Quote / Footer slide */
+:root:not(.dark) .main-quote {
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .manifesto-text {
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .copyright {
+  color: #666;
+}
+
+/* VitePress doc content — tables, headings */
+:root:not(.dark) .vp-doc h1,
+:root:not(.dark) .vp-doc h2,
+:root:not(.dark) .vp-doc h3,
+:root:not(.dark) .vp-doc h4 {
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .vp-doc p,
+:root:not(.dark) .vp-doc li {
+  color: #333;
+}
+
+:root:not(.dark) .vp-doc table th {
+  color: #1a1a2e;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+:root:not(.dark) .vp-doc table td {
+  color: #333;
+}
+
+/* Buttons in light theme */
+:root:not(.dark) .VPButton.alt {
+  color: #1a1a2e;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+:root:not(.dark) .VPButton.alt:hover {
+  border-color: #c4a700;
+  color: #b8960a;
+}
+
+/* Registration form card in light theme */
+:root:not(.dark) .landing-card,
+:root:not(.dark) .glass-form {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .landing-card h2,
+:root:not(.dark) .glass-form h2 {
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .landing-card .subtitle,
+:root:not(.dark) .glass-form .subtitle {
+  color: #666;
+}
+
+:root:not(.dark) .landing-card .description,
+:root:not(.dark) .glass-form .description {
+  color: #444;
+}
+
+/* Hamburger icon light theme */
+:root:not(.dark) .VPNavBarHamburger {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile sidebar light theme */
+:root:not(.dark) .VPNavScreenMenuLink {
+  color: #1a1a2e !important;
+}
+
+/* =============================================
+ * PHASE 2b: DESIGN POLISH & TABLES
+ * ============================================= */
+
+/* ─── Typography & Smoothing ─── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Premium Tables (Nan0web Standard) ─── */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table tr {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.vp-doc table th {
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(var(--vp-c-bg-alt-rgb), 0.5);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-bottom: 2px solid var(--vp-c-divider);
+  text-align: left;
+}
+
+.vp-doc table td {
+  padding: 16px 24px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.vp-doc table tr:hover td {
+  background-color: var(--vp-c-bg-alt);
+}
+
+/* Dark Theme specific table styles */
+.dark .vp-doc table {
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.dark .vp-doc table th {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--vp-c-text-1);
+}
+
+/* Light Theme specific table styles */
+:root:not(.dark) .vp-doc table {
+  background: #fff;
+  border-color: rgba(0,0,0,0.08);
+}
+
+:root:not(.dark) .vp-doc table th {
+  background: #f8f9fa;
+  color: #1a1a2e;
+  border-bottom-color: rgba(0,0,0,0.08);
+}
+
+:root:not(.dark) .vp-doc table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* ─── Light Theme Content Fixes ─── */
+:root:not(.dark) .vp-doc h1,
+:root:not(.dark) .vp-doc h2,
+:root:not(.dark) .vp-doc h3,
+:root:not(.dark) .vp-doc h4,
+:root:not(.dark) .vp-doc h5,
+:root:not(.dark) .vp-doc h6 {
+  color: #111827;
+}
+
+:root:not(.dark) .vp-doc p,
+:root:not(.dark) .vp-doc ul,
+:root:not(.dark) .vp-doc ol {
+  color: #374151;
+}
+
+:root:not(.dark) .vp-doc strong {
+  color: #111827;
+}
+
+:root:not(.dark) .vp-doc hr {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+:root:not(.dark) .custom-block.tip {
+  background-color: rgba(var(--vp-c-brand-rgb), 0.05);
+  border-color: rgba(var(--vp-c-brand-rgb), 0.2);
+  color: #1a1a2e;
+}
+
+:root:not(.dark) .custom-block.warning {
+  background-color: rgba(255, 197, 23, 0.05);
+  border-color: rgba(255, 197, 23, 0.3);
+  color: #1a1a2e;
+}

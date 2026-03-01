@@ -1,0 +1,24 @@
+{
+    "members": [
+        {
+            "username": "yaro-rasta",
+            "role": "founder",
+            "weight": 12
+        },
+        {
+            "username": "mentor1",
+            "role": "mentor",
+            "weight": 12
+        },
+        {
+            "username": "vip_investor",
+            "role": "vip",
+            "weight": 9
+        },
+        {
+            "username": "active_subscriber",
+            "role": "subscription",
+            "weight": 1
+        }
+    ]
+}

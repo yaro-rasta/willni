@@ -1,0 +1,44 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ℹ willni 
+────────────────────────────────────────────────────────────
+   ☀  ВОЛЯ · willni.yaro.page  ☀
+   Воля і Я
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  💾 DB: DBFS /Users/i/src/apps/willni/cli/data [utf-8]
+  👥 4 members
+
+Дослідити Універсальні Всесвіти:
+ 1) skovoroda
+ 2) tesla
+ 3) yaro
+✔  yaro
+ iVerse: yaro 
+
+📜 Профіль
+Bio: Психо-соціальний архітектор мета-світів. Суверен. Творець екосистеми NaN0Web та архітектури Універсальних Урядових Систем.
+Quote: "мИ живемо по Волі"
+
+[ІМ'Я (I AM IA) | LICENSE PLATE]: ЯRаСлав
+
+🎨 Продукти та Мистецтво
+ - NaN0Web Universal Engine (digital)
+   Core architecture and implementation patterns for the nan•web universal engine, establishing the Sovereign Digital State via the Matrix Dispatcher.
+ - WILLNI (Воля і Я) (service)
+   The Superintellect Activation platform and Sovereign Identity ecosystem implementing the 1-33-33-33 economic model.
+   Price: 33 WILLNI
+ - LLiMo (Language Living Models) (digital)
+   A conversational agentic system for autonomous software development and task execution.
+   Price: 33 WILLNI
+ - Horod (Box-2026) (physical)
+   Indoor farming system and agronomic management for autonomous, decentralized ecological longevity.
+   Price: 333 WILLNI
+
+⏳ Хронологія
+ [2026-02-06] Запуск "First Circle" проекту Superintellect: Sovereignty Portal та імплементація $WILLNI.
+ [2026-02-28] Інтеграція Sovereign iVerse до термінального виміру (CLI). Активація профілю.
+
+⚖️ Протокол Екосистеми
+ UBI: 33% | DEV: 33% | TREASURY: 33% | FEE: 1%
+✔ Натисніть Enter, щоб повернутись...  next

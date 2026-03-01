@@ -1,0 +1,16 @@
+{
+  "name": "@willni/sovereign-sync",
+  "version": "0.1.0",
+  "description": "Sovereign Sync — P2P Registry Synchronization Protocol",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/benchmark.js",
+    "demo": "node src/demo.js"
+  },
+  "dependencies": {
+    "cbor-x": "^1.6.0",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1"
+  }
+}
