@@ -1,4 +1,4 @@
-# 🚀 Наступні дії — willni (28 лют 2026)
+# 🚀 Наступні дії — willni (15 бер 2026)
 
 ## ✅ Завершено
 
@@ -160,6 +160,23 @@ SMTP_FROM=noreply@willni.com
 
 ---
 
+### ✅ Phase 10b: OLMUI Scenario Tests & DB Integration (15 бер 2026)
+
+- [x] **Model-DB Injection**: `UBIModel`, `VerificationModel`, `CouncilCaseModel` приймають `db` через `constructor({ db })`
+- [x] **Generator DB Mutations**: `async *run()` зберігає стан у DB (`this.db.saveDocument`)
+  - `UBIModel.run()` → зберігає розподіл до `economy/ubi_distribution`
+  - `VerificationModel.run()` → зберігає верифікацію до `identity/verified`
+  - `CouncilCaseModel.run()` → зберігає справу до `council/cases`
+- [x] **`executeDecision()` generator**: новий OLMUI генератор для екзекуції рішень Ради
+  - Мутує `council/cases` (статус) та `council/disconnected` (реєстр від'єднаних)
+- [x] **Cross-Runtime Tests**: `node:test` + `node:assert/strict` — працюють і в `bun test`, і в `node --test`
+- [x] **In-Memory DB**: `new DB({ predefined: [...] })` — Zero Side Effects, ізольовані тести
+- [x] **`runGenerator()` integration**: тести використовують `@nan0web/ui` OLMUI runner з mock `ask` адаптером
+- [x] **Залежності**: додано `@nan0web/ui ^1.7.0`, `@nan0web/db` (через `@nan0web/ui`)
+- [x] **78/78 tests pass** (bun) + **8/8 pass** (node) ✓
+
+---
+
 ## ⏳ Наступне
 
 ### ✅ Phase 10: Architecture & Sovereign Identity (1 бер 2026)
@@ -184,9 +201,12 @@ SMTP_FROM=noreply@willni.com
   - [x] Перевірка підпису в тестах (`crypto_identity.test.js`).
 - [x] **Code Style Standardized:** весь код у `src/domain` та `ui-cli` рефакторовано на використання табуляції та відсутність крапок з комою. Створено `.prettierrc` та `.editorconfig`.
 - [x] **P2P Transport Layer:** реалізовано UDP Broadcast транспорт (`MeshTransport.js`). Тепер вузли реально спілкуються в локальній мережі без сервера. Додано режим `sovereign logs -f` для Live-моніторингу ефіру.
-- [ ] **WebSync:** підключення `Sovereign.js` моделей до веб-інтерфейсу (Sovereign App Showcase).
+- [x] **Sovereign Court Protocol:** реалізовано `CaseHandler` для створення та перегляду судових справ через Mesh. Додано детальні e2e тести зі снепшотами.
+- [x] Phase 11: Transport Layer (P2P Mesh). UDP broadcast, message signing.
+- [x] Phase 12: WebSync (Showcase App). WebSocket Bridge, Live Mesh Feed, UIAppAPI.
+- [x] Phase 13: UI Court Registry. Visual cases mock (Data-Driven UI delegated to nan0web.app).
+- [ ] Phase 14: Integration with `nan0web.app`. The willni UI should be fully rendered via the universal Data-Driven runner based on `data/` folder, not hardcoded Lit elements.
 - [ ] **Mesh Map:** візуалізація пірів та інтенсій на мапі (на основі точних GPS координат з bit-sovereign).
-- [ ] **Governance Logic:** реєстрація доказів (evidence) та повноцінне голосування (розподіл 33% казначейства) через CLI.
 
 ### Phase 4: Crypto Payments (Fast Start)
 
@@ -390,14 +410,19 @@ willni/
 ## 📦 Залежності
 
 ```
+# Core (package.json)
+@nan0web/auth-core  ^1.2.0   Crypto, Identity, AccessControl
+@nan0web/ui         ^1.7.0   OLMUI Engine (runGenerator, ask, progress, result)
+@nan0web/ui-cli     ^2.5.1   Terminal UI components
+@nan0web/db-fs      ^1.2.0   DBFS файловий драйвер
+@nan0web/log        ^1.1.1   Logger
+dayjs               ^1.11.13 Date utility
+
 # Server
 @nan0web/auth-node  ^1.0.2   AuthServer (головний пакет)
-@nan0web/auth-core  ^1.1.0   User, Role, AccessControl, Password, Session
 @nan0web/http-node  ^1.0.1   Server, Router
 @nan0web/http       ^1.0.1   HTTP protocol
-@nan0web/db         ^1.2.2   DB base
-@nan0web/db-fs      ^1.1.1   DBFS файловий драйвер
-@nan0web/log        ^1.1.1   Logger
+@nan0web/db         ^1.2.2   DB base (In-Memory + drivers)
 @nan0web/types      ^1.2.0   Type utilities
 @nan0web/event      ^1.0.1   Event system
 nodemailer          latest   Email verification & welcome
