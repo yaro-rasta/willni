@@ -197,7 +197,7 @@ SMTP_FROM=noreply@willni.com
 
 - [x] **Sovereign Identity (Crypto):** реальна Ed25519 сигнатура через `@nan0web/auth-core` (Crypto API).
   - [x] `IdentityManager`: генерація та збереження ключів у `cli/data/identity.json`.
-  - [x] Інтеграція в `bin/sovereign.js`: кожне повідомлення в Mesh підписується автоматично.
+  - [x] Інтеграція в `bin/sovereign.js`: кожне повідомлення в Mesh подписується автоматично.
   - [x] Перевірка підпису в тестах (`crypto_identity.test.js`).
 - [x] **Code Style Standardized:** весь код у `src/domain` та `ui-cli` рефакторовано на використання табуляції та відсутність крапок з комою. Створено `.prettierrc` та `.editorconfig`.
 - [x] **P2P Transport Layer:** реалізовано UDP Broadcast транспорт (`MeshTransport.js`). Тепер вузли реально спілкуються в локальній мережі без сервера. Додано режим `sovereign logs -f` для Live-моніторингу ефіру.
@@ -323,7 +323,7 @@ willni стає **першим showcase** nan0web web-додатку.
 - [ ] `AuthServer` віддає `index.html` з `<ui-app>` shell
 - [ ] `<script type="module">` завантажує ui-lit components
 - [ ] SEO: серверний pre-render meta tags (title, description, og:\*)
-- [ ] Vite для dev-mode HMR
+- [ ] Vite for dev-mode HMR
 
 #### Стек Phase 8:
 
@@ -343,6 +343,21 @@ Build:
   Vite                  Dev server + HMR + production bundle
   scripts/md-to-json    MD → JSON конвертер
 ```
+
+---
+
+### ✅ Phase 15: Analysis & Manifestation of the Sovereign (Research)
+
+- [x] **Пошук та Індексація:** Знайти всі згадки "суверен" у Markdown-файлах проекту. Створити центральний індекс (`index.md`) з посиланнями на знайдені матеріали.
+- [x] **Аналіз системної маніпуляції:**
+  - Деконструкція методів пригнічення гідності через незаконні зупинки поліцією та привчання до "показу документів".
+  - Аналіз карантинних обмежень (COVID) як етапу легітимізації контролю.
+  - Розрізнення: **Людина** (суб'єкт) vs. **Фізична особа** (контракт/протокол взаємодії з державою).
+- [x] **Дослідження правового статусу та порушень:**
+  - Перевірка офіційного листа України до Ради Європи (2023/24) про неможливість забезпечення прав людини.
+  - Аналіз перетворення людей на рабів: спільні дії "сикунів" (ТЦК), поліцейських, СБУшників та інших структур. Масові викрадення людей, п'яні відео-звіти ("ми тепер вас ловимо і відправляємо на фронт") всупереч Конституції, де на них лежить завдання людей захищати, а не викрадати. Цинічне ставлення до народу та порушення базових прав.
+  - Концепція "спалення паспорта" як акту виходу з деградованої системи, що не виконує Конституцію.
+- [x] **Розробка протоколу Суверена:** Як повернути гідність та суб'єктність. "Давай це розберемо". "Протокол Суверена" створено у `sovereign/sovereign_protocol.md`.
 
 ---
 
@@ -415,6 +430,7 @@ willni/
 @nan0web/ui         ^1.7.0   OLMUI Engine (runGenerator, ask, progress, result)
 @nan0web/ui-cli     ^2.5.1   Terminal UI components
 @nan0web/db-fs      ^1.2.0   DBFS файловий драйвер
+@nan0web/db         ^1.2.2   DB base (In-Memory + drivers)
 @nan0web/log        ^1.1.1   Logger
 dayjs               ^1.11.13 Date utility
 
@@ -422,7 +438,6 @@ dayjs               ^1.11.13 Date utility
 @nan0web/auth-node  ^1.0.2   AuthServer (головний пакет)
 @nan0web/http-node  ^1.0.1   Server, Router
 @nan0web/http       ^1.0.1   HTTP protocol
-@nan0web/db         ^1.2.2   DB base (In-Memory + drivers)
 @nan0web/types      ^1.2.0   Type utilities
 @nan0web/event      ^1.0.1   Event system
 nodemailer          latest   Email verification & welcome
@@ -452,3 +467,9 @@ SMTP_USER=
 SMTP_PASS=
 SMTP_FROM=noreply@willni.com
 ```
+
+---
+
+## 🎙 Аудіонотатки (Очікують опрацювання)
+
+- **30 Березня 2026:** "Продовжуй з next MD, подивись що ще не реалізовано, що реалізовано і там був дуже серйозний серйозне питання стосовно MCP ерори полетіли Окей ну то пізніше виправимо. Короче подивись стосовно того що людей перетворили на рабів сикуни разом з поліцейськими збушниками і всіма іншими."
