@@ -5,12 +5,49 @@
 
 ---
 
+## 🖥 Екран: `CHAT` (`chat.txt`)
+
+```text
+Intention sent: 'Hello Mesh!'
+```
+
+> **💬 Коментарі щодо CHAT:**
+> *(напишіть тут що змінити: кольори, відступи, тексти, логіку)*
+
+---
+
+## 🖥 Екран: `HELP` (`help.txt`)
+
+```text
+
+  ⚜️  Sovereign — Will & I Activation CLI
+  Decentralized interface for sovereign units
+
+  Usage:  sovereign <command> [options]
+
+  Commands:
+    chat      Send intention to the mesh (-t "message")
+    sos       Broadcast life-threat alert with coordinates
+    raid      Alert mesh about TCC/Police encounter
+    help      Request assistance from peers
+    logs      View recent mesh intentions
+    peers     Find other nodes in the mesh
+    status    Show node state and reputation
+
+
+```
+
+> **💬 Коментарі щодо HELP:**
+> *(напишіть тут що змінити: кольори, відступи, тексти, логіку)*
+
+---
+
 ## 🖥 Екран: `LOGS` (`logs.txt`)
 
 ```text
 Last 1 intentions discovered from history:
 
-[DD.MM.YYYY HH:MM:SS] 💬 test-nod: Legacy message
+[YYYY-MM-DD HH:MM:SS.SSS] 💬 test-nod: Legacy message
 ```
 
 > **💬 Коментарі щодо LOGS:**
@@ -30,37 +67,28 @@ Mesh packet: 'test-node:fake-signature:sos:177...' (56 bytes)
 
 ---
 
-## 🖥 Екран: `CHAT` (`chat.txt`)
+## 🖥 Екран: `SOSCASE_CREATE` (`soscase_create.txt`)
 
 ```text
-Intention sent: 'Hello Mesh!'
+Case #CASEID successfully registered. Status: INVESTIGATION.
 ```
 
-> **💬 Коментарі щодо CHAT:**
+> **💬 Коментарі щодо SOSCASE_CREATE:**
 > *(напишіть тут що змінити: кольори, відступи, тексти, логіку)*
 
 ---
 
-## 🖥 Екран: `HELP` (`help.txt`)
+## 🖥 Екран: `SOSCASE_LIST` (`soscase_list.txt`)
 
 ```text
-⚜️  Sovereign — Will & I Activation CLI
-  Decentralized interface for sovereign units
+🏛️ Sovereign Court Protocol: Active Cases (1)
 
-  Usage:  sovereign <command> [options]
+⚖️ [#CASEID] Violation of Privacy
+   Defendant: Apple
+   Status: INVESTIGATION | Verdict: PENDING
 
-  Commands:
-    chat      Send intention to the mesh (-t "message")
-    sos       Broadcast life-threat alert with coordinates
-    raid      Alert mesh about TCC/Police encounter
-    help      Request assistance from peers
-    logs      View recent mesh intentions
-    peers     Find other nodes in the mesh
-    status    Show node state and reputation
 ```
 
-> **💬 Коментарі щодо HELP:**
+> **💬 Коментарі щодо SOSCASE_LIST:**
 > *(напишіть тут що змінити: кольори, відступи, тексти, логіку)*
-
----
 

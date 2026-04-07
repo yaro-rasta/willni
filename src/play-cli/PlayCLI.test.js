@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
-import { SovereignCLI } from './SovereignCLI.js'
+import { PlayCLI } from './PlayCLI.js'
 import { Chat } from '../domain/messages/ChatMessage.js'
 import { Logs } from '../domain/messages/LogsMessage.js'
 import { SOS } from '../domain/messages/AlertMessages.js'
@@ -37,7 +37,7 @@ const context = {
 	getSelfId: () => 'test-node',
 }
 
-const SNAPSHOT_DIR = path.join(process.cwd(), 'src/ui-cli/snapshots')
+const SNAPSHOT_DIR = path.join(process.cwd(), 'src/play-cli/snapshots')
 
 if (!fs.existsSync(SNAPSHOT_DIR)) {
 	fs.mkdirSync(SNAPSHOT_DIR, { recursive: true })
@@ -51,7 +51,7 @@ if (fs.existsSync(CASES_PATH)) fs.unlinkSync(CASES_PATH)
 if (fs.existsSync(INTENTIONS_PATH)) fs.unlinkSync(INTENTIONS_PATH)
 
 async function runScenario(name, argv) {
-	const cli = new SovereignCLI({
+	const cli = new PlayCLI({
 		argv,
 		Messages: [Chat, Logs, SOS, SOScase],
 		handlers,
@@ -69,11 +69,11 @@ async function runScenario(name, argv) {
 		.join('\n')
 		.replace(/\x1b\[[0-9;]*m/g, '') // remove ANSI colors for snapshot
 		.replace(
-			/[0-9]{2}\.[0-9]{2}\.[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}/g,
-			'DD.MM.YYYY HH:MM:SS',
-		) // normalize dates
+			/[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}/g,
+			'YYYY-MM-DD HH:MM:SS.SSS',
+		) // ISO order for better sorting
 		.replace(/[0-9]{13}/g, 'TIMESTAMP') // normalize timestamps
-		.replace(/#[A-Z0-9]{3,20}/g, '#CASEID') // normalize any #ID (like #WOK7ZD7P or [#IFJGIJ])
+		.replace(/#[A-Z0-9]{3,20}/g, '#CASEID') // normalize IDs
 
 	const snapshotPath = path.join(SNAPSHOT_DIR, `${name}.txt`)
 

@@ -31,3 +31,9 @@ public-log/
 build/
 .vitepress/dist/
 .vitepress/cache/
+
+# Private agent under LICENSE
+.agent/
+
+matricies/
+thinkers/

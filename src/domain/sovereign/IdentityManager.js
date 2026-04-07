@@ -1,4 +1,4 @@
-import { Crypto } from '../../../../../nan.web/packages/auth-core/src/index.js'
+import { Crypto } from '@nan0web/auth-core'
 import fs from 'node:fs'
 import path from 'node:path'
 

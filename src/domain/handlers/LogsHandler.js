@@ -83,9 +83,10 @@ export class LogsHandler {
 	}
 
 	#formatLog(log) {
-		const date = new Date(log.timestamp)
-		const dateStr = date.toLocaleDateString('uk-UA')
-		const timeStr = date.toLocaleTimeString('uk-UA')
+		const dateStr = new Date(log.timestamp)
+			.toISOString()
+			.slice(0, 23)
+			.replace('T', ' ')
 
 		const types = {
 			sos: { color: '\x1b[31m', icon: '🆘' },
@@ -99,6 +100,6 @@ export class LogsHandler {
 			? ` \x1b[90m(${log.location[0].toFixed(6)}, ${log.location[1].toFixed(6)})\x1b[0m`
 			: ''
 
-		return `[\x1b[90m${dateStr} ${timeStr}\x1b[0m] ${typeInfo.icon} ${typeInfo.color}**${log.authorId.slice(0, 8)}**\x1b[0m:${locStr} ${log.text}`
+		return `[\x1b[90m${dateStr}\x1b[0m] ${typeInfo.icon} ${typeInfo.color}**${log.authorId.slice(0, 8)}**\x1b[0m:${locStr} ${log.text}`
 	}
 }

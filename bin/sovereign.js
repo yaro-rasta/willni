@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { SovereignCLI } from '../src/ui-cli/SovereignCLI.js'
+import { PlayCLI } from '../src/play-cli/PlayCLI.js'
 import Logger from '@nan0web/log'
 
 // Messages
@@ -51,7 +51,7 @@ const context = {
 
 const logger = new Logger({ level: debug ? 'debug' : 'info' })
 
-const cli = new SovereignCLI({
+const cli = new PlayCLI({
 	argv,
 	Messages: [Chat, Status, Peers, Logs, SOS, RAID, HELP, SOScase],
 	logger,

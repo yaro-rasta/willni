@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { Crypto } from '../../../../nan.web/packages/auth-core/src/index.js'
+import { Crypto } from '@nan0web/auth-core'
 import { MeshMessage, Subject } from './index.js'
 
 test('Sovereign Identity — sign and verify MeshMessage', () => {

@@ -9,9 +9,9 @@ import {
 } from '@nan0web/ui-cli'
 
 /**
- * SovereignCLI - Implements the Message-Handler pattern for Sovereign Chat.
+ * PlayCLI - Terminal Sandbox Interface for Sovereign project.
  */
-export class SovereignCLI {
+export class PlayCLI {
 	constructor({ argv, Messages, handlers, context, logger }) {
 		this.argv = argv
 		this.handlers = handlers

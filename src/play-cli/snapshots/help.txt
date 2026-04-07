@@ -1,0 +1,15 @@
+
+  ⚜️  Sovereign — Will & I Activation CLI
+  Decentralized interface for sovereign units
+
+  Usage:  sovereign <command> [options]
+
+  Commands:
+    chat      Send intention to the mesh (-t "message")
+    sos       Broadcast life-threat alert with coordinates
+    raid      Alert mesh about TCC/Police encounter
+    help      Request assistance from peers
+    logs      View recent mesh intentions
+    peers     Find other nodes in the mesh
+    status    Show node state and reputation
+

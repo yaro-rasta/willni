@@ -18,10 +18,12 @@
 	"author": "ЯRаСлав",
 	"license": "ISC",
 	"dependencies": {
-		"@nan0web/auth-core": "workspace:*",
-		"@nan0web/log": "workspace:*",
-		"@nan0web/ui-cli": "workspace:*",
-		"@nan0web/db-fs": "workspace:*",
+		"@nan0web/auth-core": "^1.2.0",
+		"@nan0web/db": "^1.4.0",
+		"@nan0web/log": "^1.1.1",
+		"@nan0web/ui": "^1.7.0",
+		"@nan0web/ui-cli": "^2.5.1",
+		"@nan0web/db-fs": "^1.2.0",
 		"dayjs": "^1.11.13"
 	}
 }

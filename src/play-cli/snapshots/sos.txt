@@ -1,0 +1,2 @@
+SOS DEPLOYED
+Mesh packet: 'test-node:fake-signature:sos:177...' (56 bytes)

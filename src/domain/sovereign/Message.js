@@ -42,6 +42,23 @@ export class Message {
 	}
 
 	/**
+	 * ISO-like date string for sorting: YYYY-MM-DD HH:MM:SS.SSS
+	 * @returns {string}
+	 */
+	formatDate() {
+		return new Date(this.timestamp).toISOString().slice(0, 23).replace('T', ' ')
+	}
+
+	/**
+	 * Validate packet size for Mesh (LoRa limits ~256 bytes).
+	 * @returns {boolean}
+	 */
+	isValid() {
+		const size = Buffer.byteLength(this.toMesh())
+		return size <= 256
+	}
+
+	/**
 	 * Sign message using IdentityManager.
 	 * @param {import('./IdentityManager').IdentityManager} identity
 	 */

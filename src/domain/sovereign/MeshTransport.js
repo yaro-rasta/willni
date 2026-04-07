@@ -15,28 +15,32 @@ export class MeshTransport extends EventEmitter {
 	/**
 	 * Start listening for mesh messages.
 	 */
-	listen() {
-		this.client.on('message', (msg, rinfo) => {
-			try {
-				const meshString = msg.toString()
-				const message = Message.fromMesh(meshString)
-				this.emit('message', message, rinfo)
-			} catch (e) {
-				this.emit('error', e)
-			}
-		})
+	async listen() {
+		return new Promise((resolve, reject) => {
+			this.client.on('message', (msg, rinfo) => {
+				try {
+					const meshString = msg.toString()
+					const message = Message.fromMesh(meshString)
+					this.emit('message', message, rinfo)
+				} catch (e) {
+					this.emit('error', e)
+				}
+			})
 
-		this.client.on('error', (err) => {
-			this.emit('error', err)
-		})
+			this.client.on('error', (err) => {
+				this.emit('error', err)
+				reject(err)
+			})
 
-		this.client.on('listening', () => {
-			const address = this.client.address()
-			this.client.setBroadcast(true)
-			this.emit('ready', address)
-		})
+			this.client.on('listening', () => {
+				const address = this.client.address()
+				this.client.setBroadcast(true)
+				this.emit('ready', address)
+				resolve(address)
+			})
 
-		this.client.bind(this.port)
+			this.client.bind(this.port)
+		})
 	}
 
 	/**
